@@ -1,2 +1,9 @@
 dotenv
 openai
+torch 
+torchvision
+tiktoken
+numpy
+transformers
+tqdm
+PyPDF2

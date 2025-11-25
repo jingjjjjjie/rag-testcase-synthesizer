@@ -1,0 +1,8 @@
+prompt = 
+You are tasked with cleaning and reformatting a document while keeping all the content 100% the same. 
+Follow these instructions exactly: 
+1.Remove all unnecessary line breaks (\n) and extra spaces so that the text reads as continuous paragraphs. 
+2.Remove all bullet points. Do not change the content, wording, or meaning in any way. The only exception is that bullet points can be replaced with proper paragraph formatting or 
+inline lists if needed, but the information must remain unchanged.
+3.Retain their numbering, such as 1) 2) and etc
+4.Add missing punctuations.
