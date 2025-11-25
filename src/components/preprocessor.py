@@ -72,16 +72,18 @@ if __name__ == "__main__":
     for question in cleaned_questions:
 
     # 1. Extract the question text
-        match = re.match(r"(\d+\))\s*(.*?)(\?)", question)
+        # Match question number, then text until first '?' or '.'
+        match = re.match(r"(\d+\))\s*(.*?)([?.])", question)
         if match:
-            q_number = match.group(1)               # "1)"
-            q_text = match.group(2).strip() + "?"   # "Can workers opt out of the savings program?"
-            question_only = f"{q_number} {q_text}"
-            
+            q_number = match.group(1)                # "1)"
+            q_text = match.group(2).strip()          # text of the question
+            punctuation = match.group(3)             # either '?' or '.'
+            question_only = f"{q_number} {q_text}{punctuation}"
+
             # Remove the extracted question part from the full chunk
             answer_body = question[len(match.group(0)):].strip()
         else:
-            # fallback: no question format detected
+            # fallback
             question_only = ""
             answer_body = question
 
