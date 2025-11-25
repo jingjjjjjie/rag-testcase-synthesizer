@@ -1,7 +1,7 @@
 import re
-from tools.api import call_api
-from json_utils import save_json, load_json
-from string_utils import extract_text_from_pdf, read_text_file
+from ..tools.api import call_api
+from ..tools.json_utils import save_json, load_json
+from ..tools.string_utils import extract_text_from_pdf, read_text_file
 
 
 def split_by_questions(text):
@@ -45,10 +45,10 @@ def process_chunk_text(chunk, counter):
 
 
 if __name__ == "__main__":
-    save_cleaned_questions_path = "../src/data/cleaned_questions.json"
-    save_chunked_questions_path = "../src/data/chunked_questions.json"
-    data_cleaning_prompt_path = "../src/prompts/data_cleaning.txt"
-    pdf_path = "../data/sample_data.pdf"
+    save_cleaned_questions_path = "src/data/cleaned_questions.json"
+    save_chunked_questions_path = "src/data/chunked_questions.json"
+    data_cleaning_prompt_path = "src/prompts/data_cleaning.txt"
+    pdf_path = "src/files/sample_data.pdf"
 
     # read the data cleaning prompt
     data_cleaning_prompt = read_text_file(data_cleaning_prompt_path)
