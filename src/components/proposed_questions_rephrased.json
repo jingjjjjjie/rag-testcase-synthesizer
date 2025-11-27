@@ -1,0 +1,1526 @@
+[
+  {
+    "id": "doc1_question1",
+    "question": "1) Can workers opt out of the savings program?",
+    "origin_context": "1) Can workers opt out of the savings program? The savings program is a structured initiative designed to provide financial support during emergencies, ensuring workers maintain financial stability and security. Participation is strongly encouraged, as consistent savings contribute to long-term financial well-being.",
+    "context": "The savings program is a structured initiative designed to provide financial support during emergencies, ensuring workers maintain financial stability and security [Sen 1]. Participation is strongly encouraged, as consistent savings contribute to long-term financial well-being [Sen 2].",
+    "objective-facts": [
+      "The savings program is a structured initiative aimed at providing financial support during emergencies to ensure workers maintain financial stability and security.",
+      "Participation in the savings program is strongly encouraged to promote long-term financial well-being through consistent savings."
+    ],
+    "sens": [
+      "1",
+      "2"
+    ],
+    "proposed-questions": {
+      "1-questions": {
+        "question": "What is the primary purpose of the savings program?",
+        "objective-facts": "1",
+        "reasoning": "The answer can be deduced from the fact that the savings program is described as a structured initiative aimed at providing financial support during emergencies to ensure workers maintain financial stability and security [Clue 1].",
+        "answer": "The primary purpose of the savings program is to provide financial support during emergencies to ensure workers maintain financial stability and security [Clue 1].",
+        "positive": "The primary purpose of the savings program is to provide financial support during emergencies to ensure workers maintain financial stability and security [Doc doc1_question1, Sen 1].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question1, Sen 1] correctly identifies the sentence that directly states the primary purpose of the savings program: \"The savings program is a structured initiative designed to provide financial support during emergencies, ensuring workers maintain financial stability and security.\" This sentence fully and concisely answers the question without requiring additional context.",
+            "answer": "The primary purpose of the savings program is to provide financial support during emergencies to ensure workers maintain financial stability and security [Doc doc1_question1, Sen 1]."
+          },
+          "long-answer": {
+            "reason": "In addition to the direct answer in [Sen 1], the follow-up sentence [Sen 2] (\"Participation is strongly encouraged, as consistent savings contribute to long-term financial well-being\") supports the overall intent of the program by emphasizing the importance of sustained participation for long-term benefits. While not defining the primary purpose, it aligns with the broader context of financial stability mentioned in the question. Therefore, including [Sen 2] provides supplementary justification for the program's design and goals.",
+            "answer": "The primary purpose of the savings program is to provide financial support during emergencies to ensure workers maintain financial stability and security [Doc doc1_question1, Sen 1,2]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"savings program\" with \"financial reserve initiative,\" a near-synonymous expression that preserves the concept of a structured saving mechanism",
+            "result": "What is the primary purpose of the financial reserve initiative?",
+            "answer": "The primary purpose of the financial reserve initiative is to provide financial support during emergencies to ensure workers maintain financial stability and security [Doc doc1_question1, Sen 1]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by replacing \"primary purpose\" with \"main objective,\" which is semantically similar but allows for interpretive flexibility without altering the required information",
+            "result": "What is the main objective of the financial reserve initiative?",
+            "answer": "The main objective of the financial reserve initiative is to provide financial support during emergencies to ensure workers maintain financial stability and security [Doc doc1_question1, Sen 1]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the viewpoint of an employment benefits advisor evaluating worker support systems",
+            "result": "From the perspective of an employment benefits advisor, what is the main objective of the financial reserve initiative?",
+            "answer": "From the perspective of an employment benefits advisor, the main objective of the financial reserve initiative is to provide financial support during emergencies to ensure workers maintain financial stability and security [Doc doc1_question1, Sen 1]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that the evaluation occurs in the context of economic downturns, increasing complexity while preserving core meaning",
+            "result": "From the perspective of an employment benefits advisor, what is the main objective of the financial reserve initiative during periods of economic downturn?",
+            "answer": "From the perspective of an employment benefits advisor, the main objective of the financial reserve initiative during periods of economic downturn is to provide financial support during emergencies to ensure workers maintain financial stability and security [Doc doc1_question1, Sen 1]."
+          }
+        ]
+      },
+      "2-questions": {
+        "question": "How is worker participation in the savings program characterized?",
+        "objective-facts": "2",
+        "reasoning": "The answer can be deduced from the fact that participation in the savings program is described as being strongly encouraged to promote long-term financial well-being through consistent savings [Clue 2].",
+        "answer": "Worker participation in the savings program is strongly encouraged [Clue 2].",
+        "positive": "Worker participation in the savings program is strongly encouraged [Doc doc1_question1, Sen 2].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question1, Sen 2] correctly identifies the sentence that directly answers the question: \"Participation is strongly encouraged, as consistent savings contribute to long-term financial well-being.\" This sentence explicitly characterizes worker participation as \"strongly encouraged,\" which directly matches the answer. No correction is needed.",
+            "answer": "Worker participation in the savings program is strongly encouraged [Doc doc1_question1, Sen 2]."
+          },
+          "long-answer": {
+            "reason": "In addition to [Sen 2], which directly states that participation is strongly encouraged, [Sen 1] provides contextual alignment with the question by explaining the purpose of the savings program—\"a structured initiative designed to provide financial support during emergencies, ensuring workers maintain financial stability and security.\" This context helps justify why participation is encouraged, making it relevant to the overall characterization of worker participation. Therefore, including [Sen 1] supports a more complete understanding of the answer.",
+            "answer": "Worker participation in the savings program is strongly encouraged [Doc doc1_question1, Sen 1,2]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"worker participation\" with \"employee involvement\" and \"savings program\" with \"retirement savings initiative\" to maintain equivalent meaning using synonymous expressions",
+            "result": "How is employee involvement in the retirement savings initiative characterized?",
+            "answer": "Employee involvement in the retirement savings initiative is strongly encouraged [Doc doc1_question1, Sen 2]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by replacing \"characterized\" with \"described,\" which allows for a broader interpretation while preserving the required information for the same answer",
+            "result": "How is employee involvement in the retirement savings initiative described?",
+            "answer": "Employee involvement in the retirement savings initiative is strongly encouraged [Doc doc1_question1, Sen 2]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Reframe the question from the viewpoint of an organizational policy reviewer assessing internal benefit programs",
+            "result": "From the standpoint of an organizational policy reviewer, how is employee involvement in the retirement savings initiative described?",
+            "answer": "From the standpoint of an organizational policy reviewer, employee involvement in the retirement savings initiative is strongly encouraged [Doc doc1_question1, Sen 2]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that the description holds under current company guidelines, building on the previous perspective-shifted version",
+            "result": "From the standpoint of an organizational policy reviewer, how is employee involvement in the retirement savings initiative described under current company guidelines?",
+            "answer": "Under current company guidelines, from the standpoint of an organizational policy reviewer, employee involvement in the retirement savings initiative is strongly encouraged [Doc doc1_question1, Sen 2]."
+          }
+        ]
+      },
+      "3-questions": {
+        "question": "What financial behavior does the savings program aim to promote among workers?",
+        "objective-facts": "2",
+        "reasoning": "The answer can be deduced from the fact that the savings program aims to promote long-term financial well-being through consistent savings [Clue 2].",
+        "answer": "The savings program aims to promote consistent savings among workers [Clue 2].",
+        "positive": "The savings program aims to promote consistent savings among workers [Doc doc1_question1, Sen 2].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question1, Sen 2] correctly identifies the sentence that directly answers the question, as it explicitly states that \"consistent savings contribute to long-term financial well-being,\" which aligns with the program's aim to promote consistent savings. No correction is needed.",
+            "answer": "The savings program aims to promote consistent savings among workers [Doc doc1_question1, Sen 2]."
+          },
+          "long-answer": {
+            "reason": "In addition to [Sen 2], which directly states the financial behavior being promoted, [Sen 1] is also relevant because it provides context about the purpose of the savings program—ensuring financial stability and security during emergencies. This contextual information aligns with the overall goal of promoting consistent savings, making both sentences pertinent to the question.",
+            "answer": "The savings program aims to promote consistent savings among workers [Doc doc1_question1, Sen 1,2]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"savings program\" with \"employee savings initiative\" and \"promote\" with \"encourage\"",
+            "result": "What financial behavior does the employee savings initiative aim to encourage among workers?",
+            "answer": "The employee savings initiative aims to encourage consistent savings among workers [Doc doc1_question1, Sen 2]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by using \"influence\" instead of \"encourage\" and rephrase to focus on behavioral outcome without specifying intent",
+            "result": "What financial behavior is influenced among workers by the employee savings initiative?",
+            "answer": "The employee savings initiative influences consistent savings among workers [Doc doc1_question1, Sen 2]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of an organizational policy evaluator assessing behavioral outcomes",
+            "result": "From the perspective of an organizational policy evaluator, what financial behavior is influenced among workers by the employee savings initiative?",
+            "answer": "From the perspective of an organizational policy evaluator, the employee savings initiative influences consistent savings among workers [Doc doc1_question1, Sen 2]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that the assessment is conducted in the context of long-term workforce financial stability programs",
+            "result": "From the perspective of an organizational policy evaluator, what financial behavior is influenced among workers by the employee savings initiative in the context of long-term workforce financial stability programs?",
+            "answer": "From the perspective of an organizational policy evaluator, in the context of long-term workforce financial stability programs, the employee savings initiative influences consistent savings among workers [Doc doc1_question1, Sen 2]."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "doc1_question2",
+    "question": "2) Are workers allowed to smoke in hostels?",
+    "origin_context": "2) Are workers allowed to smoke in hostels? Smoking policies in hostels are typically strict, with many accommodations prohibiting smoking indoors to ensure a safe and healthy environment. Workers are advised to follow hostel regulations and use designated smoking areas if available.",
+    "context": "Smoking policies in hostels are typically strict, with many accommodations prohibiting smoking indoors to ensure a safe and healthy environment [Sen 3]. Workers are advised to follow hostel regulations and use designated smoking areas if available [Sen 4].",
+    "objective-facts": [
+      "Many hostels have strict smoking policies that prohibit indoor smoking to maintain a safe and healthy environment.",
+      "Workers are advised to comply with hostel smoking regulations and use designated smoking areas when available."
+    ],
+    "sens": [
+      "3",
+      "4"
+    ],
+    "proposed-questions": {
+      "1-questions": {
+        "question": "What type of smoking policy do many hostels enforce indoors?",
+        "objective-facts": "1",
+        "reasoning": "The answer can be deduced from the fact that many hostels have strict smoking policies prohibiting indoor smoking to maintain a safe and healthy environment [Clue 1].",
+        "answer": "Many hostels prohibit indoor smoking [Clue 1].",
+        "positive": "Many hostels prohibit indoor smoking [Doc doc1_question2, Sen 3].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question2, Sen 3] correctly identifies the sentence that directly answers the question: \"Smoking policies in hostels are typically strict, with many accommodations prohibiting smoking indoors to ensure a safe and healthy environment.\" This sentence explicitly states that many hostels prohibit indoor smoking, which is the direct answer to the question. Therefore, the reference is accurate and no modification is needed.",
+            "answer": "Many hostels prohibit indoor smoking [Doc doc1_question2, Sen 3]."
+          },
+          "long-answer": {
+            "reason": "The reference [Doc doc1_question2, Sen 3] is the primary sentence that directly answers the question by stating that many hostels prohibit indoor smoking. Additionally, [Sen 4] provides contextually relevant information by mentioning that workers are advised to follow hostel regulations and use designated smoking areas if available, which aligns with the existence of strict indoor smoking policies. Including this enhances the completeness of the response in relation to the question about smoking policies. Thus, both [Sen 3] and [Sen 4] are relevant.",
+            "answer": "Many hostels prohibit indoor smoking [Doc doc1_question2, Sen 3,4]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"many hostels\" with \"a large number of lodging facilities that accommodate shared dormitory-style stays\"",
+            "result": "What type of smoking policy do a large number of lodging facilities that accommodate shared dormitory-style stays enforce indoors?",
+            "answer": "A large number of lodging facilities that accommodate shared dormitory-style stays prohibit indoor smoking [Doc doc1_question2, Sen 3]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by rephrasing \"prohibit indoor smoking\" to \"restrict the use of tobacco products within interior spaces\" without altering the core meaning",
+            "result": "What type of smoking policy do a large number of lodging facilities that accommodate shared dormitory-style stays enforce regarding the use of tobacco products within interior spaces?",
+            "answer": "A large number of lodging facilities that accommodate shared dormitory-style stays restrict the use of tobacco products within interior spaces [Doc doc1_question2, Sen 3]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of a budget traveler seeking accommodation guidelines",
+            "result": "From the perspective of a budget traveler seeking accommodation guidelines, what rules about tobacco use are commonly enforced in interior areas of a large number of lodging facilities that accommodate shared dormitory-style stays?",
+            "answer": "From the perspective of a budget traveler seeking accommodation guidelines, rules prohibiting tobacco use in interior areas are commonly enforced in a large number of lodging facilities that accommodate shared dormitory-style stays [Doc doc1_question2, Sen 3]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying compliance with local public health regulations while maintaining the budget traveler perspective",
+            "result": "From the perspective of a budget traveler seeking accommodation guidelines, what rules about tobacco use are commonly enforced in interior areas of a large number of lodging facilities that accommodate shared dormitory-style stays when complying with local public health regulations?",
+            "answer": "From the perspective of a budget traveler seeking accommodation guidelines, rules prohibiting tobacco use in interior areas are commonly enforced in a large number of lodging facilities that accommodate shared dormitory-style stays when complying with local public health regulations [Doc doc1_question2, Sen 3]."
+          }
+        ]
+      },
+      "2-questions": {
+        "question": "What are workers advised to do regarding smoking in hostels?",
+        "objective-facts": "2",
+        "reasoning": "The answer can be deduced from the fact that workers are advised to comply with hostel smoking regulations and use designated smoking areas when available [Clue 2].",
+        "answer": "Workers are advised to comply with hostel smoking regulations and use designated smoking areas when available [Clue 2].",
+        "positive": "Workers are advised to comply with hostel smoking regulations and use designated smoking areas when available [Doc doc1_question2, Sen 4].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question2, Sen 4] correctly points to the sentence that directly answers the question: \"Workers are advised to follow hostel regulations and use designated smoking areas if available.\" This sentence fully aligns with the content of the answer, which states that workers should comply with regulations and use designated areas. Therefore, the reference is accurate and no modification is needed for the short answer.",
+            "answer": "Workers are advised to comply with hostel smoking regulations and use designated smoking areas when available [Doc doc1_question2, Sen 4]."
+          },
+          "long-answer": {
+            "reason": "The reference [Doc doc1_question2, Sen 4] directly answers the question. Additionally, the context in [Sen 3]—\"Smoking policies in hostels are typically strict, with many accommodations prohibiting smoking indoors to ensure a safe and healthy environment\"—helps explain why such advice is given, as it reflects the rationale behind the regulations workers are advised to follow. Including this contextual sentence strengthens the alignment with the question by providing background on hostel smoking policies. Thus, both [Sen 3] and [Sen 4] are relevant for a comprehensive response.",
+            "answer": "Workers are advised to comply with hostel smoking regulations and use designated smoking areas when available [Doc doc1_question2, Sen 3,4]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"workers\" with \"employees\" and \"advised to do regarding smoking\" with \"instructed to follow concerning tobacco use\"",
+            "result": "What are employees instructed to follow concerning tobacco use in hostels?",
+            "answer": "Employees are instructed to comply with hostel smoking regulations and use designated smoking areas when available [Doc doc1_question2, Sen 4]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by rephrasing the directive into a general inquiry about behavior without explicitly using \"instructed\" or \"advised\"",
+            "result": "What is the expected behavior of employees concerning tobacco use in hostels?",
+            "answer": "The expected behavior of employees concerning tobacco use in hostels is compliance with smoking regulations and utilization of designated smoking areas when available [Doc doc1_question2, Sen 4]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the standpoint of a workplace safety inspector evaluating employee conduct",
+            "result": "From the standpoint of a workplace safety inspector, what constitutes appropriate conduct for employees concerning tobacco use in hostels?",
+            "answer": "From the standpoint of a workplace safety inspector, appropriate conduct for employees concerning tobacco use in hostels involves compliance with smoking regulations and use of designated smoking areas when available [Doc doc1_question2, Sen 4]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that hostel management has implemented formal smoking policies",
+            "result": "From the standpoint of a workplace safety inspector, what constitutes appropriate conduct for employees concerning tobacco use in hostels, given that hostel management has implemented formal smoking policies?",
+            "answer": "Given that hostel management has implemented formal smoking policies, from the standpoint of a workplace safety inspector, appropriate conduct for employees concerning tobacco use in hostels includes compliance with smoking regulations and use of designated smoking areas when available [Doc doc1_question2, Sen 4]."
+          }
+        ]
+      },
+      "3-questions": {
+        "question": "Why do many hostels prohibit indoor smoking?",
+        "objective-facts": "1",
+        "reasoning": "The answer can be deduced from the fact that the purpose of prohibiting indoor smoking is to maintain a safe and healthy environment [Clue 1].",
+        "answer": "To maintain a safe and healthy environment [Clue 1].",
+        "positive": "To maintain a safe and healthy environment [Doc doc1_question2, Sen 3].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question2, Sen 3] correctly identifies the sentence that directly answers the question: \"Smoking policies in hostels are typically strict, with many accommodations prohibiting smoking indoors to ensure a safe and healthy environment.\" This sentence explicitly states the reason for prohibiting indoor smoking, making it the most concise and accurate reference.",
+            "answer": "To maintain a safe and healthy environment [Doc doc1_question2, Sen 3]."
+          },
+          "long-answer": {
+            "reason": "In addition to the direct answer in [Sen 3], the subsequent sentence [Sen 4] (\"Workers are advised to follow hostel regulations and use designated smoking areas if available\") aligns with the broader context of enforcing smoking policies to uphold a safe and healthy environment. While it does not state the reason directly, it supports the implementation of the policy mentioned in the question. Therefore, including [Sen 4] provides contextual reinforcement of the smoking prohibition.",
+            "answer": "To maintain a safe and healthy environment [Doc doc1_question2, Sen 3][Doc doc1_question2, Sen 4]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"many hostels\" with \"a significant number of lodging facilities catering to budget travelers\" and \"prohibit indoor smoking\" with \"ban the act of smoking within enclosed spaces\"",
+            "result": "Why do a significant number of lodging facilities catering to budget travelers ban the act of smoking within enclosed spaces?",
+            "answer": "To maintain a safe and healthy environment [Doc doc1_question2, Sen 3]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by rephrasing the action as a general policy consideration without explicitly stating prohibition",
+            "result": "What is the rationale behind the consideration of restricting tobacco use inside accommodations operated by a significant number of lodging facilities catering to budget travelers?",
+            "answer": "The rationale is to maintain a safe and healthy environment [Doc doc1_question2, Sen 3]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the standpoint of a public health official evaluating accommodation policies",
+            "result": "From the standpoint of a public health official, what justifies the restriction of tobacco use within accommodations operated by a significant number of lodging facilities catering to budget travelers?",
+            "answer": "From the standpoint of a public health official, the justification is to maintain a safe and healthy environment [Doc doc1_question2, Sen 3]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying compliance with national fire safety regulations while maintaining the public health official perspective",
+            "result": "From the standpoint of a public health official, what justifies the restriction of tobacco use within accommodations operated by a significant number of lodging facilities catering to budget travelers when adherence to national fire safety regulations is required?",
+            "answer": "When adherence to national fire safety regulations is required, from the standpoint of a public health official, the justification remains to maintain a safe and healthy environment [Doc doc1_question2, Sen 3]."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "doc1_question3",
+    "question": "3) Will I return to the same job after my holiday?",
+    "origin_context": "3) Will I return to the same job after my holiday? Your reassignment depends on customer arrangements, as some may hire replacement workers during your absence. If the customer has arranged for a replacement, your previous position may no longer be available. In such cases, management will provide an alternative job placement based on availability and operational needs. Workers will be informed of their reassignment details in a timely manner. Factors such as the length of absence, customer demand, and operational requirements may influence reassignment decisions. Employees are encouraged to consult with management beforehand to understand their options.",
+    "context": "Your reassignment depends on customer arrangements, as some may hire replacement workers during your absence [Sen 5]. If the customer has arranged for a replacement, your previous position may no longer be available [Sen 6]. In such cases, management will provide an alternative job placement based on availability and operational needs [Sen 7]. Workers will be informed of their reassignment details in a timely manner [Sen 8]. Factors such as the length of absence, customer demand, and operational requirements may influence reassignment decisions [Sen 9]. Employees are encouraged to consult with management beforehand to understand their options [Sen 10].",
+    "objective-facts": [
+      "Reassignment of workers depends on customer arrangements, including whether replacement workers are hired during the employee's absence.",
+      "If a customer has arranged for a replacement worker, the employee’s previous position may no longer be available.",
+      "Management will provide an alternative job placement if the original position is unavailable, based on job availability and operational needs.",
+      "Workers will be informed of their reassignment details in a timely manner.",
+      "Factors influencing reassignment decisions include the length of the employee's absence, customer demand, and operational requirements.",
+      "Employees are encouraged to consult with management prior to reassignment to understand their available options."
+    ],
+    "sens": [
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "proposed-questions": {
+      "1-questions": {
+        "question": "What factors determine whether an employee’s previous position is available upon return?",
+        "objective-facts": "1,2,5",
+        "reasoning": "The answer can be deduced from the fact that reassignment depends on customer arrangements, including whether replacement workers are hired [Clue 1], and if a replacement has been hired, the original position may no longer be available [Clue 2]. Additionally, the length of absence and operational needs influence reassignment outcomes [Clue 5].",
+        "answer": "The availability of an employee’s previous position depends on customer arrangements regarding replacement workers, whether a replacement has been hired during the absence, the length of absence, and operational requirements [Clue 1, 2, 5].",
+        "positive": "The availability of an employee’s previous position depends on customer arrangements regarding replacement workers, whether a replacement has been hired during the absence, the length of absence, and operational requirements [Doc doc1_question3, Sen 5, 6, 9].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The references [Doc doc1_question3, Sen 5, 6, 9] are partially correct but not the most concise set of sentences that directly answer the question. Specifically, [Sen 5] introduces the dependency on customer arrangements, [Sen 6] directly states that the position may no longer be available if a replacement was hired, and [Sen 9] lists the influencing factors including length of absence and operational requirements. These three sentences together directly address the determining factors. No correction is needed in the content, and the references are indeed the most concise ones directly answering the question.",
+            "answer": "The availability of an employee’s previous position depends on customer arrangements regarding replacement workers, whether a replacement has been hired during the absence, the length of absence, and operational requirements [Doc doc1_question3, Sen 5, 6, 9]."
+          },
+          "long-answer": {
+            "reason": "In addition to the direct answer provided by [Sen 5, 6, 9], other sentences in the paragraph align with the context of reassignment and position availability. [Sen 7] discusses alternative placement based on operational needs, which supports understanding of how operational requirements influence outcomes. [Sen 10] encourages consultation with management about options, which relates to understanding reassignment possibilities upon return. However, these do not directly list determining factors for position availability. Thus, only [Sen 5, 6, 9] are closely aligned with both the direct answer and the broader meaning of the question. Therefore, the original reference set remains appropriate and comprehensive even for the long answer.",
+            "answer": "The availability of an employee’s previous position depends on customer arrangements regarding replacement workers, whether a replacement has been hired during the absence, the length of absence, and operational requirements [Doc doc1_question3, Sen 5, 6, 9]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"employee’s previous position\" with \"former role held by the worker\" and \"factors determine\" with \"elements influence\"",
+            "result": "What elements influence whether the former role held by the worker is available upon return?",
+            "answer": "The availability of the former role held by the worker depends on customer arrangements regarding replacement workers, whether a replacement has been hired during the absence, the length of absence, and operational requirements [Doc doc1_question3, Sen 5, 6, 9]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by replacing \"available upon return\" with \"restored when the worker returns\", which implies but does not explicitly state availability as a binary condition",
+            "result": "What elements influence whether the former role held by the worker is restored when the worker returns?",
+            "answer": "The restoration of the former role held by the worker depends on customer arrangements regarding replacement workers, whether a replacement has been hired during the absence, the length of absence, and operational requirements [Doc doc1_question3, Sen 5, 6, 9]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of a human resources officer evaluating reintegration policies",
+            "result": "As a human resources officer, what elements influence whether the former role held by the worker is restored when the worker returns?",
+            "answer": "As a human resources officer, the restoration of the former role held by the worker depends on customer arrangements regarding replacement workers, whether a replacement has been hired during the absence, the length of absence, and operational requirements [Doc doc1_question3, Sen 5, 6, 9]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that no permanent replacement was formally appointed, building on the human resources officer perspective",
+            "result": "As a human resources officer, what elements influence whether the former role held by the worker is restored when the worker returns, given that no permanent replacement was formally appointed?",
+            "answer": "As a human resources officer, even if no permanent replacement was formally appointed, the restoration of the former role held by the worker still depends on customer arrangements regarding replacement workers, whether a replacement has been hired during the absence, the length of absence, and operational requirements [Doc doc1_question3, Sen 5, 6, 9]."
+          }
+        ]
+      },
+      "2-questions": {
+        "question": "What action will management take if an employee's original position is not available after absence?",
+        "objective-facts": "3",
+        "reasoning": "The answer can be deduced from the fact that management will provide an alternative job placement when the original position is unavailable, subject to job availability and operational needs [Clue 3].",
+        "answer": "Management will provide an alternative job placement based on job availability and operational needs [Clue 3].",
+        "positive": "Management will provide an alternative job placement based on job availability and operational needs [Doc doc1_question3, Sen 7].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question3, Sen 7] correctly identifies the sentence that directly answers the question: \"In such cases, management will provide an alternative job placement based on availability and operational needs.\" This sentence explicitly states the action management will take if the original position is not available, making it the most concise and accurate reference.",
+            "answer": "Management will provide an alternative job placement based on job availability and operational needs [Doc doc1_question3, Sen 7]."
+          },
+          "long-answer": {
+            "reason": "In addition to [Doc doc1_question3, Sen 7], which directly answers the question, other relevant sentences include [Doc doc1_question3, Sen 6] (\"If the customer has arranged for a replacement, your previous position may no longer be available\") and [Doc doc1_question3, Sen 9] (\"Factors such as the length of absence, customer demand, and operational requirements may influence reassignment decisions\"), as they provide contextual alignment with the scenario described in the question. These sentences help explain *why* the original position might not be available and what broader factors affect reassignment, thus supporting the full understanding of management’s action.",
+            "answer": "Management will provide an alternative job placement based on job availability and operational needs [Doc doc1_question3, Sen 6,7,9]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"management\" with \"company leadership\" and \"original position\" with \"prior role\"",
+            "result": "What action will company leadership take if an employee's prior role is not available after absence?",
+            "answer": "Company leadership will provide an alternative job placement based on job availability and operational needs [Doc doc1_question3, Sen 7]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by rephrasing \"take\" to \"implement in response,\" making the required action less direct while preserving meaning",
+            "result": "What action will company leadership implement in response to an employee's prior role being unavailable upon return from absence?",
+            "answer": "Company leadership will implement an alternative job placement based on job availability and operational needs [Doc doc1_question3, Sen 7]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of a human resources officer responsible for reintegration policies",
+            "result": "As a human resources officer, what action is implemented when company leadership faces unavailability of an employee's prior role upon return from absence?",
+            "answer": "As a human resources officer, the implemented action is alternative job placement based on job availability and operational needs [Doc doc1_question3, Sen 7]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that the absence was due to approved medical leave, further contextualizing without altering outcome",
+            "result": "As a human resources officer, what action is implemented when company leadership faces unavailability of an employee's prior role upon return from approved medical leave?",
+            "answer": "As a human resources officer, the implemented action is alternative job placement based on job availability and operational needs [Doc doc1_question3, Sen 7]."
+          }
+        ]
+      },
+      "3-questions": {
+        "question": "When will workers receive information about their reassignment?",
+        "objective-facts": "4",
+        "reasoning": "The answer can be deduced from the fact that workers will be informed of reassignment details in a timely manner [Clue 4].",
+        "answer": "Workers will receive reassignment details in a timely manner [Clue 4].",
+        "positive": "Workers will receive reassignment details in a timely manner [Doc doc1_question3, Sen 8].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question3, Sen 8] correctly points to the sentence that directly answers the question: \"Workers will be informed of their reassignment details in a timely manner.\" This sentence is the most concise and direct answer to when workers will receive information about their reassignment. No modification is needed.",
+            "answer": "Workers will receive reassignment details in a timely manner [Doc doc1_question3, Sen 8]."
+          },
+          "long-answer": {
+            "reason": "In addition to the direct answer in [Sen 8], other sentences provide context relevant to reassignment timing and communication. [Sen 7] mentions that management provides an alternative placement based on availability, which precedes the communication of details. [Sen 9] discusses influencing factors such as absence length and operational needs, which may affect when reassignment information is ready. While not directly stating *when* information is given, these sentences align with the overall process described in the question. However, since the question specifically asks about *when* workers receive information, only [Sen 8] directly addresses it, and the supporting context does not add temporal specificity. Thus, including additional references would not enhance alignment with the question text.",
+            "answer": "Workers will receive reassignment details in a timely manner [Doc doc1_question3, Sen 8]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"workers\" with \"employees\" and \"receive information about their reassignment\" with \"be informed of their new work placement\"",
+            "result": "When will employees be informed of their new work placement?",
+            "answer": "Employees will be informed of their new work placement in a timely manner [Doc doc1_question3, Sen 8]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by using a more general phrase such as \"status update\" instead of directly referring to reassignment details, while preserving the core inquiry about timing",
+            "result": "When will employees receive a status update regarding their new work placement?",
+            "answer": "Employees will receive a status update regarding their new work placement in a timely manner [Doc doc1_question3, Sen 8]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of a human resources administrator responsible for internal communications",
+            "result": "From the perspective of a human resources administrator, when should employees expect a status update regarding their new work placement?",
+            "answer": "From the perspective of a human resources administrator, employees should expect a status update regarding their new work placement in a timely manner [Doc doc1_question3, Sen 8]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that organizational restructuring is finalized, building upon the human resources administrator perspective",
+            "result": "From the perspective of a human resources administrator, when should employees expect a status update regarding their new work placement if organizational restructuring is finalized?",
+            "answer": "From the perspective of a human resources administrator, if organizational restructuring is finalized, employees should expect a status update regarding their new work placement in a timely manner [Doc doc1_question3, Sen 8]."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "doc1_question4",
+    "question": "4) What should I do if my savings are deducted monthly but not reflected in my statement?",
+    "origin_context": "4) What should I do if my savings are deducted monthly but not reflected in my statement? Inform your immediate superior or designated interpreter as soon as possible to lodge a formal complaint. They will escalate the issue to the Payroll department to resolve the matter and ensure your statement is properly updated. Management will escalate the issue to the Payroll department for investigation and resolution. The Payroll department will review the records, correct any discrepancies, and ensure your statement is properly updated. Workers should monitor subsequent statements and confirm that the corrections have been made. If the issue persists, they should seek further clarification from the Payroll department.",
+    "context": "Inform your immediate superior or designated interpreter as soon as possible to lodge a formal complaint [Sen 11]. They will escalate the issue to the Payroll department to resolve the matter and ensure your statement is properly updated [Sen 12]. Management will escalate the issue to the Payroll department for investigation and resolution [Sen 13]. The Payroll department will review the records, correct any discrepancies, and ensure your statement is properly updated [Sen 14]. Workers should monitor subsequent statements and confirm that the corrections have been made [Sen 15]. If the issue persists, they should seek further clarification from the Payroll department [Sen 16].",
+    "objective-facts": [
+      "An employee should inform their immediate superior or designated interpreter as soon as possible to lodge a formal complaint.",
+      "The immediate superior or designated interpreter will escalate the complaint to the Payroll department for resolution and to ensure the employee's statement is properly updated.",
+      "Management is responsible for escalating the issue to the Payroll department for investigation and resolution.",
+      "The Payroll department will review the records, correct any discrepancies found, and ensure the employee's statement is properly updated.",
+      "Workers are expected to monitor their subsequent pay statements to confirm that the necessary corrections have been made.",
+      "If the issue persists after review, workers should seek further clarification directly from the Payroll department."
+    ],
+    "sens": [
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16"
+    ],
+    "proposed-questions": {
+      "1-questions": {
+        "question": "What action should an employee take to lodge a formal complaint regarding a payroll discrepancy?",
+        "objective-facts": "1",
+        "reasoning": "The answer can be deduced from the fact that an employee should inform their immediate superior or designated interpreter as soon as possible to lodge a formal complaint.",
+        "answer": "An employee should inform their immediate superior or designated interpreter as soon as possible [Clue 1].",
+        "positive": "An employee should inform their immediate superior or designated interpreter as soon as possible [Doc doc1_question4, Sen 11].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question4, Sen 11] correctly identifies the sentence that directly answers the question: \"Inform your immediate superior or designated interpreter as soon as possible to lodge a formal complaint.\" This is the most concise and direct action an employee should take to lodge a formal complaint regarding a payroll discrepancy. No correction is needed.",
+            "answer": "An employee should inform their immediate superior or designated interpreter as soon as possible [Doc doc1_question4, Sen 11]."
+          },
+          "long-answer": {
+            "reason": "In addition to the direct answer in [Sen 11], other sentences align with the process described in the question and provide context about the escalation and resolution of the complaint. These include [Sen 12], which explains that the superior will escalate to Payroll, and [Sen 13] and [Sen 14], which detail management and Payroll actions. While not part of the employee’s initial action, they support the overall procedure referenced in the question. However, since the question specifically asks about the employee's action, only [Sen 11] is strictly necessary; but for completeness in context, supporting references are included.",
+            "answer": "An employee should inform their immediate superior or designated interpreter as soon as possible [Doc doc1_question4, Sen 11,12,13,14]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"employee\" with \"staff member\" and \"immediate superior or designated interpreter\" with \"direct supervisor or assigned personnel responsible for communication\"",
+            "result": "What action should a staff member take to lodge a formal complaint regarding a payroll discrepancy?",
+            "answer": "A staff member should inform their direct supervisor or assigned personnel responsible for communication as soon as possible [Doc doc1_question4, Sen 11]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by rephrasing the verb \"inform\" to \"initiate communication with\", making the required action less directive while preserving meaning",
+            "result": "What action should a staff member take to lodge a formal complaint regarding a payroll discrepancy if they initiate communication with their direct supervisor or assigned personnel responsible for communication?",
+            "answer": "A staff member should initiate communication with their direct supervisor or assigned personnel responsible for communication as soon as possible [Doc doc1_question4, Sen 11]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of a human resources officer evaluating proper protocol",
+            "result": "From the perspective of a human resources officer, what is the correct procedure for a staff member to lodge a formal complaint regarding a payroll discrepancy when initiating communication with their direct supervisor or assigned personnel responsible for communication?",
+            "answer": "From the perspective of a human resources officer, the correct procedure is that a staff member must initiate communication with their direct supervisor or assigned personnel responsible for communication as soon as possible [Doc doc1_question4, Sen 11]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that the payroll discrepancy occurred during the most recent pay cycle, building on the human resources officer perspective",
+            "result": "From the perspective of a human resources officer, what is the correct procedure for a staff member to lodge a formal complaint regarding a payroll discrepancy that occurred during the most recent pay cycle when initiating communication with their direct supervisor or assigned personnel responsible for communication?",
+            "answer": "From the perspective of a human resources officer, the correct procedure is that a staff member must initiate communication with their direct supervisor or assigned personnel responsible for communication as soon as possible [Doc doc1_question4, Sen 11]."
+          }
+        ]
+      },
+      "2-questions": {
+        "question": "Which department is responsible for reviewing records and correcting discrepancies in employee pay statements?",
+        "objective-facts": "4",
+        "reasoning": "The answer can be deduced from the fact that the Payroll department will review the records, correct any discrepancies found, and ensure the employee's statement is properly updated.",
+        "answer": "The Payroll department is responsible for reviewing records and correcting discrepancies [Clue 4].",
+        "positive": "The Payroll department is responsible for reviewing records and correcting discrepancies [Doc doc1_question4, Sen 14].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question4, Sen 14] correctly identifies the sentence that directly answers the question: \"The Payroll department will review the records, correct any discrepancies, and ensure your statement is properly updated.\" This sentence explicitly states the responsibility of the Payroll department in reviewing records and correcting discrepancies, which is exactly what the question asks. Therefore, the reference is accurate and no modification is needed.",
+            "answer": "The Payroll department is responsible for reviewing records and correcting discrepancies [Doc doc1_question4, Sen 14]."
+          },
+          "long-answer": {
+            "reason": "In addition to the direct answer in [Sen 14], other sentences that align with the context of the question include [Sen 12] and [Sen 13], which mention escalating the issue to the Payroll department for resolution, and [Sen 15], which discusses verifying corrections in subsequent statements. These sentences support the overall process related to correcting pay statement discrepancies and highlight the role of the Payroll department. However, since the question specifically asks about reviewing and correcting records, the core responsibility remains in [Sen 14]. Thus, including related context enhances alignment with the full scope of the question.",
+            "answer": "The Payroll department is responsible for reviewing records and correcting discrepancies [Doc doc1_question4, Sen 12,13,14,15]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"department\" with \"division\" and \"correcting discrepancies in employee pay statements\" with \"resolving inaccuracies in staff compensation records\"",
+            "result": "Which division is responsible for reviewing records and resolving inaccuracies in staff compensation records?",
+            "answer": "The Payroll division is responsible for reviewing records and resolving inaccuracies in staff compensation records [Doc doc1_question4, Sen 14]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by replacing \"responsible for\" with \"handles the task of\" to obscure direct accountability while preserving meaning",
+            "result": "Which division handles the task of reviewing records and resolving inaccuracies in staff compensation records?",
+            "answer": "The Payroll division handles the task of reviewing records and resolving inaccuracies in staff compensation records [Doc doc1_question4, Sen 14]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of a human resources auditor conducting a compliance review",
+            "result": "During a compliance review, which division does a human resources auditor identify as handling the task of reviewing records and resolving inaccuracies in staff compensation records?",
+            "answer": "A human resources auditor identifies the Payroll division as handling the task of reviewing records and resolving inaccuracies in staff compensation records during a compliance review [Doc doc1_question4, Sen 14]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that the review occurs following an employee-reported error in payroll processing",
+            "result": "During a compliance review, which division does a human resources auditor identify as handling the task of reviewing records and resolving inaccuracies in staff compensation records when an employee-reported error occurs in payroll processing?",
+            "answer": "When an employee-reported error occurs in payroll processing, a human resources auditor identifies the Payroll division as handling the task of reviewing records and resolving inaccuracies in staff compensation records during a compliance review [Doc doc1_question4, Sen 14]."
+          }
+        ]
+      },
+      "3-questions": {
+        "question": "What step should workers take to verify that corrections to their pay statements have been implemented?",
+        "objective-facts": "5",
+        "reasoning": "The answer can be deduced from the fact that workers are expected to monitor their subsequent pay statements to confirm that the necessary corrections have been made.",
+        "answer": "Workers should monitor their subsequent pay statements to confirm corrections [Clue 5].",
+        "positive": "Workers should monitor their subsequent pay statements to confirm corrections [Doc doc1_question4, Sen 15].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question4, Sen 15] correctly identifies the sentence that directly answers the question: \"Workers should monitor subsequent statements and confirm that the corrections have been made.\" This is the most concise and direct response to the question about verifying corrections. No modification is needed.",
+            "answer": "Workers should monitor their subsequent pay statements to confirm corrections [Doc doc1_question4, Sen 15]."
+          },
+          "long-answer": {
+            "reason": "In addition to the direct answer in [Sen 15], other sentences in the paragraph align with the overall context of addressing pay statement corrections. Specifically, [Sen 14] mentions that the Payroll department will correct discrepancies and update statements, which provides background for why monitoring is necessary. [Sen 16] adds follow-up action if issues persist, further supporting the verification process. These sentences enhance the contextual understanding of the verification step.",
+            "answer": "Workers should monitor their subsequent pay statements to confirm corrections [Doc doc1_question4, Sen 14,15,16]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"workers\" with \"employees\" and \"verify\" with \"confirm\", and rephrase \"corrections to their pay statements have been implemented\" as \"adjustments on their payroll records are reflected\"",
+            "result": "What step should employees take to confirm that adjustments on their payroll records are reflected?",
+            "answer": "Employees should monitor their subsequent pay statements to confirm corrections [Doc doc1_question4, Sen 15]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by using a more general phrase such as \"changes\" instead of \"corrections\" and asking about the status of updates without specifying accuracy or implementation directly",
+            "result": "What step should employees take to assess whether changes on their payroll records have taken effect?",
+            "answer": "Employees should monitor their subsequent pay statements to confirm corrections [Doc doc1_question4, Sen 15]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of a human resources officer reviewing employee follow-up procedures regarding payroll accuracy",
+            "result": "From the perspective of a human resources officer, what action should employees perform to evaluate whether changes on their payroll records have taken effect?",
+            "answer": "From the perspective of a human resources officer, employees should monitor their subsequent pay statements to confirm corrections [Doc doc1_question4, Sen 15]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that the payroll system underwent a recent audit, requiring employees to validate updates post-audit",
+            "result": "From the perspective of a human resources officer, what action should employees perform to evaluate whether changes on their payroll records have taken effect after a recent payroll system audit?",
+            "answer": "Assuming a recent payroll system audit has occurred, from the perspective of a human resources officer, employees should monitor their subsequent pay statements to confirm corrections [Doc doc1_question4, Sen 15]."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "doc1_question5",
+    "question": "5) How do I handle an expired passport?",
+    "origin_context": "5) How do I handle an expired passport? Management continuously tracks passport expiration dates to ensure timely renewal. Workers should be aware that a passport must remain valid for at least 18 months before the work permit expires to comply with regulatory requirements. Workers will receive advance notice of their passport renewal date, along with appointment details at the respective embassy. They are advised to prepare any necessary documents beforehand to prevent delays. An interpreter will accompany the worker to the designated embassy, providing support with communication and ensuring a smooth renewal process. Passport renewal fees vary by nationality: Nepal – RM240; Bangladesh – RM305; Myanmar – RM430. Failure to renew the passport on time may result in work permit complications, fines, or penalties that could affect the worker’s employment status. Workers must adhere to renewal deadlines to prevent disruptions.",
+    "context": "Management continuously tracks passport expiration dates to ensure timely renewal [Sen 17]. Workers should be aware that a passport must remain valid for at least 18 months before the work permit expires to comply with regulatory requirements [Sen 18]. Workers will receive advance notice of their passport renewal date, along with appointment details at the respective embassy [Sen 19]. They are advised to prepare any necessary documents beforehand to prevent delays [Sen 20]. An interpreter will accompany the worker to the designated embassy, providing support with communication and ensuring a smooth renewal process [Sen 21]. Passport renewal fees vary by nationality: Nepal – RM240; Bangladesh – RM305; Myanmar – RM430 [Sen 22]. Failure to renew the passport on time may result in work permit complications, fines, or penalties that could affect the worker’s employment status [Sen 23]. Workers must adhere to renewal deadlines to prevent disruptions [Sen 24].",
+    "objective-facts": [
+      "Management continuously tracks passport expiration dates to ensure timely renewal.",
+      "Workers must ensure their passport remains valid for at least 18 months before the work permit expires to meet regulatory requirements.",
+      "Workers will receive advance notice of their passport renewal date and appointment details at the respective embassy.",
+      "Workers are advised to prepare necessary documents in advance to prevent delays in the passport renewal process.",
+      "An interpreter will accompany the worker to the designated embassy to provide communication support and assist in ensuring a smooth passport renewal process.",
+      "Passport renewal fees vary by nationality: RM240 for Nepali citizens, RM305 for Bangladeshi citizens, and RM430 for Myanmar citizens.",
+      "Failure to renew the passport on time may lead to work permit complications, fines, or penalties that could impact the worker’s employment status.",
+      "Workers must adhere to passport renewal deadlines to avoid disruptions to their employment."
+    ],
+    "sens": [
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24"
+    ],
+    "proposed-questions": {
+      "1-questions": {
+        "question": "What is the minimum validity period required for a worker's passport beyond the expiration of the work permit?",
+        "objective-facts": "2",
+        "reasoning": "The answer can be deduced from the fact that workers must ensure their passport remains valid for at least 18 months before the work permit expires to meet regulatory requirements.",
+        "answer": "18 months [Clue 2]",
+        "positive": "18 months [Doc doc1_question5, Sen 18]",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question5, Sen 18] correctly points to the sentence that directly answers the question: \"Workers should be aware that a passport must remain valid for at least 18 months before the work permit expires to comply with regulatory requirements.\" This sentence explicitly states the minimum validity period required beyond the work permit expiration. No correction is needed.",
+            "answer": "18 months [Doc doc1_question5, Sen 18]"
+          },
+          "long-answer": {
+            "reason": "The short answer reference [Doc doc1_question5, Sen 18] is correct and directly answers the question. Additional sentences that align with the context of passport validity and renewal include [Sen 17], which mentions management tracking expiration dates, and [Sen 19], which discusses advance notice of renewal—both relevant to the overall process of maintaining passport validity. However, only [Sen 18] contains the specific requirement. Since the question focuses on the minimum validity period, the core reference remains [Sen 18], but supporting context from the same topic can include [Sen 17] and [Sen 19].",
+            "answer": "18 months [Doc doc1_question5, Sen 18,17,19]"
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"worker's passport\" with \"passport held by an individual employed under a work permit\" and \"minimum validity period\" with \"shortest acceptable duration of validity\"",
+            "result": "What is the shortest acceptable duration of validity required for a passport held by an individual employed under a work permit beyond the expiration of the work permit?",
+            "answer": "The shortest acceptable duration of validity required for a passport held by an individual employed under a work permit beyond the expiration of the work permit is 18 months [Doc doc1_question5, Sen 18]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by rephrasing \"required\" to \"needed\" and using \"must extend beyond\" instead of explicitly stating a minimum, while preserving the core requirement",
+            "result": "How long must the validity of a passport held by an individual employed under a work permit extend beyond the expiration of the work permit?",
+            "answer": "The validity of a passport held by an individual employed under a work permit must extend beyond the expiration of the work permit by 18 months [Doc doc1_question5, Sen 18]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of an immigration compliance officer reviewing documentation for employment eligibility",
+            "result": "As an immigration compliance officer, what is the required extension of validity for a passport held by an individual employed under a work permit beyond the expiration date of the permit?",
+            "answer": "As an immigration compliance officer, the required extension of validity for a passport held by an individual employed under a work permit beyond the expiration date of the permit is 18 months [Doc doc1_question5, Sen 18]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that the work permit has not been renewed, requiring the same answer under an additional stipulation",
+            "result": "As an immigration compliance officer, what is the required extension of validity for a passport held by an individual employed under a work permit beyond the expiration date of the permit if the work permit has not been renewed?",
+            "answer": "As an immigration compliance officer, the required extension of validity for a passport held by an individual employed under a work permit beyond the expiration date of the permit, if the work permit has not been renewed, is 18 months [Doc doc1_question5, Sen 18]."
+          }
+        ]
+      },
+      "2-questions": {
+        "question": "What support is provided to workers during their visit to the embassy for passport renewal?",
+        "objective-facts": "5",
+        "reasoning": "The answer can be deduced from the fact that an interpreter will accompany the worker to the designated embassy to provide communication support and assist in ensuring a smooth passport renewal process.",
+        "answer": "An interpreter will accompany the worker to provide communication support and assist in ensuring a smooth passport renewal process [Clue 5].",
+        "positive": "An interpreter will accompany the worker to provide communication support and assist in ensuring a smooth passport renewal process [Doc doc1_question5, Sen 21].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question5, Sen 21] correctly identifies the sentence that directly answers the question: \"An interpreter will accompany the worker to the designated embassy, providing support with communication and ensuring a smooth renewal process.\" This sentence fully captures the support provided during the embassy visit. No modification is needed as this is the most concise and accurate reference.",
+            "answer": "An interpreter will accompany the worker to provide communication support and assist in ensuring a smooth passport renewal process [Doc doc1_question5, Sen 21]."
+          },
+          "long-answer": {
+            "reason": "In addition to the direct answer in [Sen 21], other related sentences that align with the context of embassy visits and passport renewal support include [Sen 19], which mentions workers receiving advance notice and appointment details for the embassy, and [Sen 20], which advises workers to prepare necessary documents beforehand—both contributing to the overall support framework. While not direct descriptions of on-site support, they are part of the coordinated assistance provided. Thus, including these enhances contextual alignment with the question about support during the embassy visit.",
+            "answer": "An interpreter will accompany the worker to provide communication support and assist in ensuring a smooth passport renewal process [Doc doc1_question5, Sen 19,20,21]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"workers\" with \"individuals employed in labor positions\" and \"support\" with \"assistance provided\"",
+            "result": "What assistance is provided to individuals employed in labor positions during their visit to the embassy for passport renewal?",
+            "answer": "An interpreter will accompany the individual employed in a labor position to provide communication assistance and assist in ensuring a smooth passport renewal process [Doc doc1_question5, Sen 21]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by using broader phrasing such as \"services rendered\" instead of specifying the type of assistance, while maintaining reference to the embassy visit",
+            "result": "What services are rendered to individuals employed in labor positions during their visit to the embassy for passport renewal?",
+            "answer": "An interpreter will accompany the individual employed in a labor position to provide communication assistance and assist in ensuring a smooth passport renewal process [Doc doc1_question5, Sen 21]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the standpoint of an embassy official responsible for processing applications",
+            "result": "From the standpoint of an embassy official responsible for processing applications, what services are rendered to individuals employed in labor positions during their visit for passport renewal?",
+            "answer": "From the standpoint of an embassy official responsible for processing applications, an interpreter will accompany the individual employed in a labor position to provide communication assistance and assist in ensuring a smooth passport renewal process [Doc doc1_question5, Sen 21]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that the individual has limited proficiency in the host country's language, which necessitates interpretive support",
+            "result": "From the standpoint of an embassy official responsible for processing applications, what services are rendered to individuals employed in labor positions during their visit for passport renewal if the individual has limited proficiency in the host country's language?",
+            "answer": "From the standpoint of an embassy official responsible for processing applications, if the individual has limited proficiency in the host country's language, an interpreter will accompany the individual employed in a labor position to provide communication assistance and assist in ensuring a smooth passport renewal process [Doc doc1_question5, Sen 21]."
+          }
+        ]
+      },
+      "3-questions": {
+        "question": "What are the passport renewal fees for citizens of Nepal, Bangladesh, and Myanmar respectively?",
+        "objective-facts": "6",
+        "reasoning": "The answer can be deduced from the fact that passport renewal fees vary by nationality: RM240 for Nepali citizens, RM305 for Bangladeshi citizens, and RM430 for Myanmar citizens.",
+        "answer": "RM240 for Nepali citizens, RM305 for Bangladeshi citizens, and RM430 for Myanmar citizens [Clue 6].",
+        "positive": "RM240 for Nepali citizens, RM305 for Bangladeshi citizens, and RM430 for Myanmar citizens [Doc doc1_question5, Sen 22].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question5, Sen 22] correctly points to the sentence that directly answers the question: \"Passport renewal fees vary by nationality: Nepal – RM240; Bangladesh – RM305; Myanmar – RM430 [Sen 22].\" This sentence explicitly provides the exact fees for citizens of Nepal, Bangladesh, and Myanmar. Therefore, the original reference is accurate and no modification is needed for the short answer.",
+            "answer": "RM240 for Nepali citizens, RM305 for Bangladeshi citizens, and RM430 for Myanmar citizens [Doc doc1_question5, Sen 22]."
+          },
+          "long-answer": {
+            "reason": "In addition to the direct answer in [Sen 22], other sentences provide contextual relevance to the passport renewal process, which aligns with the broader scope of the question. Specifically, [Sen 17] mentions management tracking expiration dates, [Sen 18] outlines validity requirements affecting renewal timing, [Sen 19] discusses advance notice and embassy appointments, and [Sen 20] highlights preparation of documents—all of which support the procedural context surrounding fee payment during renewal. However, since the question specifically asks only for the amounts and not the process, these are supplementary but related. Still, [Sen 22] remains the primary source. To maintain precision while including alignment with the renewal context mentioned in the question, only [Sen 22] is strictly necessary. Hence, even in the long answer, no additional references improve relevance beyond [Sen 22].",
+            "answer": "RM240 for Nepali citizens, RM305 for Bangladeshi citizens, and RM430 for Myanmar citizens [Doc doc1_question5, Sen 22]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"passport renewal fees\" with \"costs associated with extending the validity of a passport\"",
+            "result": "What are the costs associated with extending the validity of a passport for citizens of Nepal, Bangladesh, and Myanmar respectively?",
+            "answer": "The costs associated with extending the validity of a passport are RM240 for Nepali citizens, RM305 for Bangladeshi citizens, and RM430 for Myanmar citizens [Doc doc1_question5, Sen 22]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by replacing \"respectively\" with an implicit ordering, requiring inference of alignment between countries and amounts",
+            "result": "What are the costs associated with extending the validity of a passport for citizens of Nepal, Bangladesh, and Myanmar when the listed fees are RM240, RM305, and RM430?",
+            "answer": "The costs associated with extending the validity of a passport for citizens of Nepal, Bangladesh, and Myanmar are RM240, RM305, and RM430 in the given order [Doc doc1_question5, Sen 22]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of a consular officer processing visa applications",
+            "result": "As a consular officer, what are the fees required for extending the validity of a passport for applicants from Nepal, Bangladesh, and Myanmar when the corresponding amounts are RM240, RM305, and RM430?",
+            "answer": "As a consular officer, the fees required for extending the validity of a passport are RM240 for applicants from Nepal, RM305 for applicants from Bangladesh, and RM430 for applicants from Myanmar [Doc doc1_question5, Sen 22]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that fees are quoted in Malaysian Ringgit and apply only to standard processing cases",
+            "result": "As a consular officer, what are the fees required for extending the validity of a passport for applicants from Nepal, Bangladesh, and Myanmar when the fees are in Malaysian Ringgit and apply exclusively to standard processing cases, with amounts RM240, RM305, and RM430?",
+            "answer": "As a consular officer, under standard processing conditions and with fees denominated in Malaysian Ringgit, the required amounts for extending the validity of a passport are RM240 for applicants from Nepal, RM305 for applicants from Bangladesh, and RM430 for applicants from Myanmar [Doc doc1_question5, Sen 22]."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "doc1_question6",
+    "question": "6) What should I do if my new permit has not been issued by Immigration, despite my old permit expiring?",
+    "origin_context": "6) What should I do if my new permit has not been issued by Immigration, despite my old permit expiring? Delays in work permit issuance may occur due to various factors, such as pending FOMEMA medical results, a lost passport, or other administrative processing issues. Workers should check with management to identify the specific reason for the delay. If the new permit is delayed, a Special Pass (SP) can be issued as a temporary permit, valid for one month while awaiting the new permit. A RM100 fee is required for the Special Pass application, which should be paid as per immigration procedures. Workers should verify whether this fee is covered by the company or if they are responsible for payment. If the new permit continues to be delayed, the Special Pass will be renewed continuously until Immigration issues the new work permit. Workers should ensure they follow up regularly for status updates. The company’s administration will oversee the entire process, including permit applications and renewals. Workers are encouraged to stay informed and coordinate with management regarding their permit status.",
+    "context": "Delays in work permit issuance may occur due to various factors, such as pending FOMEMA medical results, a lost passport, or other administrative processing issues [Sen 25]. Workers should check with management to identify the specific reason for the delay [Sen 26]. If the new permit is delayed, a Special Pass (SP) can be issued as a temporary permit, valid for one month while awaiting the new permit [Sen 27]. A RM100 fee is required for the Special Pass application, which should be paid as per immigration procedures [Sen 28]. Workers should verify whether this fee is covered by the company or if they are responsible for payment [Sen 29]. If the new permit continues to be delayed, the Special Pass will be renewed continuously until Immigration issues the new work permit [Sen 30]. Workers should ensure they follow up regularly for status updates [Sen 31]. The company’s administration will oversee the entire process, including permit applications and renewals [Sen 32]. Workers are encouraged to stay informed and coordinate with management regarding their permit status [Sen 33].",
+    "objective-facts": [
+      "Delays in work permit issuance may occur due to factors such as pending FOMEMA medical results, a lost passport, or other administrative processing issues.",
+      "Workers are advised to check with management to determine the specific reason for a work permit delay.",
+      "A Special Pass (SP) can be issued as a temporary permit valid for one month if the new work permit is delayed.",
+      "A RM100 fee is required for the Special Pass application and must be paid according to immigration procedures.",
+      "Workers should verify whether the company covers the RM100 Special Pass fee or if they are responsible for paying it.",
+      "If the new work permit continues to be delayed, the Special Pass will be renewed continuously until the new permit is issued by Immigration.",
+      "Workers are advised to follow up regularly for updates on their permit status.",
+      "The company’s administration is responsible for overseeing the entire work permit process, including applications and renewals.",
+      "Workers are encouraged to stay informed and coordinate with management regarding their work permit status."
+    ],
+    "sens": [
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33"
+    ],
+    "proposed-questions": {
+      "1-questions": {
+        "question": "What are the possible reasons for delays in work permit issuance?",
+        "objective-facts": "1",
+        "reasoning": "The answer can be deduced from the fact that delays in work permit issuance may occur due to pending FOMEMA medical results, a lost passport, or other administrative processing issues.",
+        "answer": "Pending FOMEMA medical results, a lost passport, or other administrative processing issues [Clue 1].",
+        "positive": "Pending FOMEMA medical results, a lost passport, or other administrative processing issues [Doc doc1_question6, Sen 25].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question6, Sen 25] correctly identifies the sentence that lists the possible reasons for delays in work permit issuance: \"Delays in work permit issuance may occur due to various factors, such as pending FOMEMA medical results, a lost passport, or other administrative processing issues.\" This sentence directly and fully answers the question. No correction is needed.",
+            "answer": "Pending FOMEMA medical results, a lost passport, or other administrative processing issues [Doc doc1_question6, Sen 25]."
+          },
+          "long-answer": {
+            "reason": "The reference [Doc doc1_question6, Sen 25] is the primary source that directly answers the question by listing the reasons for delays. Additional sentences that support the context of dealing with delays—such as checking with management [Sen 26], issuing a Special Pass [Sen 27], fee payment considerations [Sen 28], follow-up actions [Sen 30, 31], company oversight [Sen 32], and coordination with management [Sen 33]—are relevant to the broader topic but do not provide additional reasons for the delays themselves. Since the question specifically asks for \"possible reasons,\" only [Sen 25] contains the direct answer. Therefore, no additional references are necessary beyond [Sen 25] even in the long answer format.",
+            "answer": "Pending FOMEMA medical results, a lost passport, or other administrative processing issues [Doc doc1_question6, Sen 25]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"work permit\" with \"employment authorization document\", a formally equivalent term in administrative contexts",
+            "result": "What are the possible reasons for delays in employment authorization document issuance?",
+            "answer": "Pending FOMEMA medical results, a lost passport, or other administrative processing issues [Doc doc1_question6, Sen 25]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by replacing \"possible reasons\" with \"factors that may contribute to\", which retains the inquiry’s scope without specifying causality or probability",
+            "result": "What factors may contribute to delays in employment authorization document issuance?",
+            "answer": "Pending FOMEMA medical results, a lost passport, or other administrative processing issues [Doc doc1_question6, Sen 25]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Reframe the question from the viewpoint of an immigration compliance officer responsible for processing applications",
+            "result": "From the perspective of an immigration compliance officer, what factors may contribute to delays in employment authorization document issuance?",
+            "answer": "From the perspective of an immigration compliance officer, pending FOMEMA medical results, a lost passport, or other administrative processing issues may contribute to delays in employment authorization document issuance [Doc doc1_question6, Sen 25]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add the condition that all required documents have been submitted, focusing on residual causes of delay beyond applicant responsibility",
+            "result": "From the perspective of an immigration compliance officer, what factors may contribute to delays in employment authorization document issuance if all required documents have been submitted?",
+            "answer": "From the perspective of an immigration compliance officer, even if all required documents have been submitted, pending FOMEMA medical results, a lost passport, or other administrative processing issues may contribute to delays in employment authorization document issuance [Doc doc1_question6, Sen 25]."
+          }
+        ]
+      },
+      "2-questions": {
+        "question": "What is the duration of validity for a Special Pass issued due to a delayed work permit?",
+        "objective-facts": "3",
+        "reasoning": "The answer can be deduced from the fact that a Special Pass can be issued as a temporary permit valid for one month if the new work permit is delayed.",
+        "answer": "One month [Clue 3].",
+        "positive": "One month [Doc doc1_question6, Sen 27].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question6, Sen 27] correctly identifies the sentence that directly answers the question: \"If the new permit is delayed, a Special Pass (SP) can be issued as a temporary permit, valid for one month while awaiting the new permit.\" This sentence explicitly states the duration of validity for a Special Pass, which is \"one month.\" Therefore, the reference is accurate and no modification is needed.",
+            "answer": "One month [Doc doc1_question6, Sen 27]."
+          },
+          "long-answer": {
+            "reason": "The primary sentence answering the question is [Sen 27], which clearly states the one-month validity of the Special Pass. Additional sentences that provide context related to the process of handling delays and the role of the Special Pass include [Sen 30], which mentions the renewal of the Special Pass if the delay continues, reinforcing its temporary nature, and [Sen 32], which notes company oversight of the process, indirectly supporting the administrative framework within which the Special Pass operates. These contextual references align with the broader scope of the question regarding the Special Pass in the context of a delayed work permit.",
+            "answer": "One month [Doc doc1_question6, Sen 27,30,32]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"Special Pass\" with \"temporary authorization document\" and \"delayed work permit\" with \"postponement in work permit processing\"",
+            "result": "What is the duration of validity for a temporary authorization document issued due to a postponement in work permit processing?",
+            "answer": "The duration of validity for a temporary authorization document issued due to a postponement in work permit processing is one month [Doc doc1_question6, Sen 27]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by rephrasing \"duration of validity\" as \"how long remains effective\" without altering the meaning",
+            "result": "How long remains effective a temporary authorization document issued due to a postponement in work permit processing?",
+            "answer": "A temporary authorization document issued due to a postponement in work permit processing remains effective for one month [Doc doc1_question6, Sen 27]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of an immigration officer reviewing documentation timelines",
+            "result": "As an immigration officer, what is the period of effectiveness for a temporary authorization document issued due to a postponement in work permit processing?",
+            "answer": "As an immigration officer, the period of effectiveness for a temporary authorization document issued due to a postponement in work permit processing is one month [Doc doc1_question6, Sen 27]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that the processing delay must be officially documented",
+            "result": "As an immigration officer, what is the period of effectiveness for a temporary authorization document issued due to a postponement in work permit processing when the delay is officially documented?",
+            "answer": "When the delay is officially documented, as an immigration officer, the period of effectiveness for a temporary authorization document issued due to a postponement in work permit processing is one month [Doc doc1_question6, Sen 27]."
+          }
+        ]
+      },
+      "3-questions": {
+        "question": "What happens if the new work permit remains delayed after the initial Special Pass expires?",
+        "objective-facts": "6",
+        "reasoning": "The answer can be deduced from the fact that if the new work permit continues to be delayed, the Special Pass will be renewed continuously until the new permit is issued by Immigration.",
+        "answer": "The Special Pass will be renewed continuously until the new work permit is issued by Immigration [Clue 6].",
+        "positive": "The Special Pass will be renewed continuously until the new work permit is issued by Immigration [Doc doc1_question6, Sen 30].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question6, Sen 30] correctly identifies the sentence that directly answers the question: \"If the new permit continues to be delayed, the Special Pass will be renewed continuously until Immigration issues the new work permit.\" This is the most concise and direct answer to the question about what happens if the delay persists beyond the initial Special Pass expiration.",
+            "answer": "The Special Pass will be renewed continuously until the new work permit is issued by Immigration [Doc doc1_question6, Sen 30]."
+          },
+          "long-answer": {
+            "reason": "In addition to [Sen 30], which directly states the renewal of the Special Pass, other sentences provide contextual alignment with the process described in the question. [Sen 27] introduces the Special Pass as a temporary measure while awaiting the new permit, establishing the baseline scenario. [Sen 31] emphasizes the importance of follow-up, which supports the ongoing nature of the process. [Sen 32] highlights the company’s role in overseeing renewals, adding organizational context. Together, these sentences support the full scope of the situation when a permit remains delayed.",
+            "answer": "The Special Pass will be renewed continuously until the new work permit is issued by Immigration [Doc doc1_question6, Sen 27,30,31,32]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"new work permit\" with \"replacement employment authorization\" and \"initial Special Pass\" with \"first issuance of the Special Pass\"",
+            "result": "What occurs if the replacement employment authorization remains delayed after the first issuance of the Special Pass expires?",
+            "answer": "The Special Pass will be renewed continuously until the replacement employment authorization is issued by Immigration [Doc doc1_question6, Sen 30]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by replacing \"What occurs\" with \"What is the outcome\", which does not specify immediacy or mechanism but retains the need to describe the procedural consequence",
+            "result": "What is the outcome if the replacement employment authorization remains delayed after the first issuance of the Special Pass expires?",
+            "answer": "The outcome is that the Special Pass will be renewed continuously until the replacement employment authorization is issued by Immigration [Doc doc1_question6, Sen 30]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of an immigration compliance officer responsible for documenting procedural outcomes",
+            "result": "From the standpoint of an immigration compliance officer, what is the procedural outcome when the replacement employment authorization remains unissued following the expiration of the first issuance of the Special Pass?",
+            "answer": "From the standpoint of an immigration compliance officer, the procedural outcome is that the Special Pass will be renewed continuously until the replacement employment authorization is issued by Immigration [Doc doc1_question6, Sen 30]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that no additional documentation has been submitted, while maintaining the perspective of the immigration compliance officer",
+            "result": "From the standpoint of an immigration compliance officer, what is the procedural outcome when the replacement employment authorization remains unissued following the expiration of the first issuance of the Special Pass, given that no additional documentation has been submitted?",
+            "answer": "Given that no additional documentation has been submitted, from the standpoint of an immigration compliance officer, the procedural outcome is that the Special Pass will be renewed continuously until the replacement employment authorization is issued by Immigration [Doc doc1_question6, Sen 30]."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "doc1_question7",
+    "question": "7) What should I do if my passport is lost?",
+    "origin_context": "7) What should I do if my passport is lost? Report the loss to your immediate superior or designated interpreter as soon as possible. It is advisable to do this promptly to avoid delays in the replacement process. Management will arrange for a police report, and the worker must accompany them to file it. Ensure all relevant details are provided accurately. After obtaining the police report, submit it along with any required supporting documents to the respective embassy to apply for a replacement passport. Workers should be aware of any applicable fees for the passport replacement process. Once the new passport is issued, proceed to the Immigration Department to apply for a valid work permit. Workers should also ensure that they securely store copies of their passport and permit.",
+    "context": "Report the loss to your immediate superior or designated interpreter as soon as possible [Sen 34]. It is advisable to do this promptly to avoid delays in the replacement process [Sen 35]. Management will arrange for a police report, and the worker must accompany them to file it [Sen 36]. Ensure all relevant details are provided accurately [Sen 37]. After obtaining the police report, submit it along with any required supporting documents to the respective embassy to apply for a replacement passport [Sen 38]. Workers should be aware of any applicable fees for the passport replacement process [Sen 39]. Once the new passport is issued, proceed to the Immigration Department to apply for a valid work permit [Sen 40]. Workers should also ensure that they securely store copies of their passport and permit [Sen 41].",
+    "objective-facts": [
+      "The worker must report the loss to their immediate superior or designated interpreter as soon as possible.",
+      "Prompt reporting of the loss is advised to avoid delays in the replacement process.",
+      "Management will arrange for a police report to be filed regarding the lost document.",
+      "The worker is required to accompany management when filing the police report.",
+      "All relevant details must be provided accurately when filing the police report.",
+      "After obtaining the police report, the worker must submit it along with any required supporting documents to the respective embassy to apply for a replacement passport.",
+      "Workers should be aware of any fees applicable to the passport replacement process.",
+      "Once the new passport is issued, the worker must proceed to the Immigration Department to apply for a valid work permit.",
+      "Workers are advised to securely store copies of their passport and work permit."
+    ],
+    "sens": [
+      "34",
+      "35",
+      "36",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "proposed-questions": {
+      "1-questions": {
+        "question": "What action must the worker take immediately upon experiencing a loss of documents?",
+        "objective-facts": "1",
+        "reasoning": "The answer can be deduced from the fact that the worker must report the loss to their immediate superior or designated interpreter as soon as possible.",
+        "answer": "The worker must report the loss to their immediate superior or designated interpreter as soon as possible [Clue 1].",
+        "positive": "The worker must report the loss to their immediate superior or designated interpreter as soon as possible [Doc doc1_question7, Sen 34].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question7, Sen 34] correctly identifies the sentence that directly answers the question: \"Report the loss to your immediate superior or designated interpreter as soon as possible.\" This is the most concise and direct response to what action must be taken immediately upon loss of documents. No modification is needed.",
+            "answer": "The worker must report the loss to their immediate superior or designated interpreter as soon as possible [Doc doc1_question7, Sen 34]."
+          },
+          "long-answer": {
+            "reason": "In addition to the direct answer in [Sen 34], other sentences that align with the context of the immediate actions following document loss include [Sen 35], which emphasizes prompt reporting to avoid delays, and [Sen 36], which outlines the next procedural step (accompanying management to file a police report). These provide relevant follow-up context tied to the initial action. However, since the question specifically asks for the *immediate* action, only those closely linked to the initial reporting are included. Thus, [Sen 34] and [Sen 35] support the urgency and correctness of the immediate action.",
+            "answer": "The worker must report the loss to their immediate superior or designated interpreter as soon as possible [Doc doc1_question7, Sen 34,35]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"worker\" with \"employee\" and \"loss of documents\" with \"unauthorized absence of official records\"",
+            "result": "What action must the employee take immediately upon encountering the unauthorized absence of official records?",
+            "answer": "The employee must report the unauthorized absence of official records to their immediate superior or designated interpreter as soon as possible [Doc doc1_question7, Sen 34]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by rephrasing \"must take immediately\" to \"is required to perform in response\", softening the temporal urgency without altering obligation",
+            "result": "What action is required to be performed in response by the employee upon encountering the unauthorized absence of official records?",
+            "answer": "The employee is required to perform reporting the unauthorized absence of official records to their immediate superior or designated interpreter as soon as possible [Doc doc1_question7, Sen 34]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the standpoint of a workplace safety compliance officer assessing procedural adherence",
+            "result": "From the standpoint of a workplace safety compliance officer, what procedural step must be followed by the employee upon encountering the unauthorized absence of official records?",
+            "answer": "From the standpoint of a workplace safety compliance officer, the procedural step that must be followed by the employee upon encountering the unauthorized absence of official records is to report it to their immediate superior or designated interpreter as soon as possible [Doc doc1_question7, Sen 34]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that the procedure applies only when physical documentation is confirmed missing, not merely misplaced temporarily",
+            "result": "From the standpoint of a workplace safety compliance officer, what procedural step must be followed by the employee upon encountering the unauthorized absence of official records when physical documentation is confirmed missing?",
+            "answer": "From the standpoint of a workplace safety compliance officer, the procedural step that must be followed by the employee upon encountering the unauthorized absence of official records when physical documentation is confirmed missing is to report it to their immediate superior or designated interpreter as soon as possible [Doc doc1_question7, Sen 34]."
+          }
+        ]
+      },
+      "2-questions": {
+        "question": "Who is responsible for arranging the filing of a police report regarding the lost document?",
+        "objective-facts": "3",
+        "reasoning": "The answer can be deduced from the fact that management will arrange for a police report to be filed regarding the lost document.",
+        "answer": "Management is responsible for arranging the filing of a police report regarding the lost document [Clue 3].",
+        "positive": "Management is responsible for arranging the filing of a police report regarding the lost document [Doc doc1_question7, Sen 36].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question7, Sen 36] correctly points to the sentence \"Management will arrange for a police report, and the worker must accompany them to file it,\" which directly answers the question about who is responsible for arranging the filing of the police report. No correction is needed, as this is the most concise and accurate reference.",
+            "answer": "Management is responsible for arranging the filing of a police report regarding the lost document [Doc doc1_question7, Sen 36]."
+          },
+          "long-answer": {
+            "reason": "In addition to [Doc doc1_question7, Sen 36], which directly states that management arranges the police report, other related sentences include [Sen 34], where the worker reports the loss (initiating the process), and [Sen 38], which mentions submitting the police report as part of the replacement process. These provide context aligning with the procedural responsibility described in the question. However, only [Sen 36] explicitly addresses management’s role in arranging the report. Still, for completeness in context, supporting steps are relevant.",
+            "answer": "Management is responsible for arranging the filing of a police report regarding the lost document [Doc doc1_question7, Sen 34,36,38]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"Management\" with \"the administrative leadership\" as an equivalent expression denoting the same responsible entity",
+            "result": "Who is responsible for arranging the filing of a police report regarding the lost document according to the administrative leadership?",
+            "answer": "The administrative leadership is responsible for arranging the filing of a police report regarding the lost document [Doc doc1_question7, Sen 36]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by reframing the question to inquire about responsibility without explicitly naming the responsible party, while preserving the required inference path",
+            "result": "What entity holds the responsibility for organizing the submission of a police report concerning the lost document under organizational protocols?",
+            "answer": "The administrative leadership holds the responsibility for organizing the submission of a police report concerning the lost document under organizational protocols [Doc doc1_question7, Sen 36]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Reframe the question from the viewpoint of an internal auditor assessing procedural compliance within the organization",
+            "result": "From the perspective of an internal auditor, which entity is designated to oversee the initiation of a police report filing in cases involving a lost document?",
+            "answer": "From the perspective of an internal auditor, the administrative leadership is designated to oversee the initiation of a police report filing in cases involving a lost document [Doc doc1_question7, Sen 36]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that standard operating procedures are followed, building upon the internal auditor’s perspective",
+            "result": "From the perspective of an internal auditor, which entity is designated to oversee the initiation of a police report filing in cases involving a lost document when standard operating procedures are strictly followed?",
+            "answer": "When standard operating procedures are strictly followed, from the perspective of an internal auditor, the administrative leadership is designated to oversee the initiation of a police report filing in cases involving a lost document [Doc doc1_question7, Sen 36]."
+          }
+        ]
+      },
+      "3-questions": {
+        "question": "What steps must the worker follow after receiving the police report?",
+        "objective-facts": "6",
+        "reasoning": "The answer can be deduced from the fact that after obtaining the police report, the worker must submit it along with any required supporting documents to the respective embassy to apply for a replacement passport.",
+        "answer": "After receiving the police report, the worker must submit it along with any required supporting documents to the respective embassy to apply for a replacement passport [Clue 6].",
+        "positive": "After receiving the police report, the worker must submit it along with any required supporting documents to the respective embassy to apply for a replacement passport [Doc doc1_question7, Sen 38].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question7, Sen 38] correctly identifies the sentence that directly answers the question: \"After obtaining the police report, submit it along with any required supporting documents to the respective embassy to apply for a replacement passport.\" This sentence explicitly states the step the worker must take immediately after receiving the police report, making it the most concise and accurate reference.",
+            "answer": "After receiving the police report, the worker must submit it along with any required supporting documents to the respective embassy to apply for a replacement passport [Doc doc1_question7, Sen 38]."
+          },
+          "long-answer": {
+            "reason": "In addition to the direct answer in [Sen 38], other sentences that align with the context of post-police report actions include [Sen 39] and [Sen 40], as they describe subsequent steps in the overall process—awareness of fees and applying for a work permit after the new passport is issued. However, since the question specifically asks about steps *after receiving the police report* and before obtaining the new passport, only [Sen 38] is directly relevant. Sentences [Sen 36] and [Sen 37] occur *before* receiving the police report and are not applicable. Thus, no additional references beyond [Sen 38] are necessary for accuracy.",
+            "answer": "After receiving the police report, the worker must submit it along with any required supporting documents to the respective embassy to apply for a replacement passport [Doc doc1_question7, Sen 38]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"worker\" with \"individual employed in the consular support role\" and \"steps must... follow\" with \"procedures are required to be completed\"",
+            "result": "What procedures are required to be completed by the individual employed in the consular support role after receiving the police report?",
+            "answer": "The individual employed in the consular support role must submit the police report along with any required supporting documents to the respective embassy to apply for a replacement passport [Doc doc1_question7, Sen 38]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by rephrasing \"must submit\" to \"is expected to handle\", which implies obligation without explicit directive force",
+            "result": "How is the individual employed in the consular support role expected to handle the police report upon receipt?",
+            "answer": "The individual employed in the consular support role is expected to submit the police report along with any required supporting documents to the respective embassy to apply for a replacement passport [Doc doc1_question7, Sen 38]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of a training officer responsible for onboarding new staff in consular operations",
+            "result": "From the standpoint of a training officer overseeing consular operations onboarding, how should the individual employed in the consular support role be instructed to handle the police report upon receipt?",
+            "answer": "From the standpoint of a training officer overseeing consular operations onboarding, the individual employed in the consular support role should be instructed to submit the police report along with any required supporting documents to the respective embassy to apply for a replacement passport [Doc doc1_question7, Sen 38]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that the police report was issued abroad, maintaining the training officer perspective",
+            "result": "From the standpoint of a training officer overseeing consular operations onboarding, how should the individual employed in the consular support role be instructed to handle the police report upon receipt if the report was issued abroad?",
+            "answer": "From the standpoint of a training officer overseeing consular operations onboarding, if the report was issued abroad, the individual employed in the consular support role should be instructed to submit the police report along with any required supporting documents to the respective embassy to apply for a replacement passport [Doc doc1_question7, Sen 38]."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "doc1_question8",
+    "question": "",
+    "origin_context": "8) Documents retained by workers while their passports are held by management. Workers will be provided with a laminated photocopy of their passport or permit and are encouraged to keep it secure, as they may need to present it for verification when inspected by authorities. If the laminated copy is lost or damaged, workers should promptly report it to the designated contact person for replacement. Workers are advised to carry the laminated copy whenever they go out to ensure smooth interactions with authorities and avoid unnecessary complications. If inspected by authorities, workers should present the laminated copy for verification, as digital copies may not always be accepted. Additionally, workers can access digital copies of their passport or permit through the MTS On The Go apps.",
+    "context": "8) Documents retained by workers while their passports are held by management [Sen 42]. Workers will be provided with a laminated photocopy of their passport or permit and are encouraged to keep it secure, as they may need to present it for verification when inspected by authorities [Sen 43]. If the laminated copy is lost or damaged, workers should promptly report it to the designated contact person for replacement [Sen 44]. Workers are advised to carry the laminated copy whenever they go out to ensure smooth interactions with authorities and avoid unnecessary complications [Sen 45]. If inspected by authorities, workers should present the laminated copy for verification, as digital copies may not always be accepted [Sen 46]. Additionally, workers can access digital copies of their passport or permit through the MTS On The Go apps [Sen 47].",
+    "objective-facts": [
+      "Workers' passports are held by management while they retain documents for identification purposes.",
+      "Workers are provided with a laminated photocopy of their passport or permit for personal use and verification purposes.",
+      "Workers are encouraged to keep the laminated photocopy of their passport or permit secure to present it when inspected by authorities.",
+      "If a laminated copy of the passport or permit is lost or damaged, workers must promptly report it to a designated contact person for replacement.",
+      "Workers are advised to carry the laminated photocopy of their passport or permit whenever they go out to ensure smooth interactions with authorities and avoid complications.",
+      "During inspections by authorities, workers should present the laminated photocopy of their passport or permit, as digital copies may not always be accepted.",
+      "Workers can access digital copies of their passport or permit through the MTS On The Go apps."
+    ],
+    "sens": [
+      "42",
+      "43",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47"
+    ],
+    "proposed-questions": {
+      "1-questions": {
+        "question": "What document is held by management for identification purposes?",
+        "objective-facts": "1",
+        "reasoning": "The answer can be deduced from the fact that workers' passports are held by management while they retain documents for identification purposes.",
+        "answer": "Passports [Clue 1]",
+        "positive": "Passports [Doc doc1_question8, Sen 42]",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The sentence [Sen 42] states \"Documents retained by workers while their passports are held by management,\" which directly indicates that passports are the documents held by management for identification purposes. This is the most concise and direct evidence supporting the answer. No other sentence more directly answers the question.",
+            "answer": "Passports [Doc doc1_question8, Sen 42]"
+          },
+          "long-answer": {
+            "reason": "In addition to [Sen 42], which explicitly states that passports are held by management, other sentences provide contextual support regarding the use and handling of these documents for identification: [Sen 43] mentions workers being given a laminated photocopy of their passport or permit for verification purposes, implying the original is not in their possession; [Sen 46] reinforces this by stating that workers should present the laminated copy when inspected—further indicating the original passport is not available to them and is likely held elsewhere (i.e., by management). These sentences align with the concept of passports being used as official identification documents under management control.",
+            "answer": "Passports [Doc doc1_question8, Sen 42,43,46]"
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"document\" with \"form of identification\" and \"held by management\" with \"possessed by managerial personnel\"",
+            "result": "What form of identification is possessed by managerial personnel for identification purposes?",
+            "answer": "Passports [Doc doc1_question8, Sen 42]"
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by using broader phrasing such as \"used in verifying identity\" instead of \"for identification purposes,\" without specifying direction or exclusivity",
+            "result": "What form of identification is possessed by managerial personnel used in verifying identity?",
+            "answer": "Passports [Doc doc1_question8, Sen 42]"
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of a compliance auditor reviewing internal protocols",
+            "result": "From the standpoint of a compliance auditor, what form of identification is possessed by managerial personnel used in verifying identity?",
+            "answer": "From the standpoint of a compliance auditor, the form of identification possessed by managerial personnel used in verifying identity is passports [Doc doc1_question8, Sen 42]"
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying adherence to standard regulatory requirements while maintaining the compliance auditor perspective",
+            "result": "From the standpoint of a compliance auditor, what form of identification is possessed by managerial personnel used in verifying identity when adhering to standard regulatory requirements?",
+            "answer": "From the standpoint of a compliance auditor, when adhering to standard regulatory requirements, the form of identification possessed by managerial personnel used in verifying identity is passports [Doc doc1_question8, Sen 42]"
+          }
+        ]
+      },
+      "2-questions": {
+        "question": "What should workers present during inspections by authorities according to the guidelines?",
+        "objective-facts": "6",
+        "reasoning": "The answer can be deduced from the fact that during inspections by authorities, workers should present the laminated photocopy of their passport or permit, as digital copies may not always be accepted.",
+        "answer": "The laminated photocopy of their passport or permit [Clue 6]",
+        "positive": "The laminated photocopy of their passport or permit [Doc doc1_question8, Sen 46]",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question8, Sen 46] correctly identifies the sentence that directly answers the question: \"If inspected by authorities, workers should present the laminated copy for verification, as digital copies may not always be accepted.\" This is the most concise and direct answer to what should be presented during inspections.",
+            "answer": "The laminated photocopy of their passport or permit [Doc doc1_question8, Sen 46]"
+          },
+          "long-answer": {
+            "reason": "In addition to the direct answer in [Sen 46], other sentences provide context that aligns with the guidelines about presenting documents during inspections. [Sen 43] mentions that workers are provided with a laminated photocopy and should keep it secure for verification purposes. [Sen 45] advises workers to carry the laminated copy whenever they go out to ensure smooth interactions with authorities. These sentences support the practice of presenting the laminated copy during inspections, making them relevant to the question.",
+            "answer": "The laminated photocopy of their passport or permit [Doc doc1_question8, Sen 43,45,46]"
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"workers\" with \"laborers\" and \"inspections by authorities\" with \"official examinations conducted by regulatory bodies\"",
+            "result": "What should laborers present during official examinations conducted by regulatory bodies according to the guidelines?",
+            "answer": "The laminated photocopy of their passport or permit [Doc doc1_question8, Sen 46]"
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by rephrasing \"present\" as \"provide\" and slightly altering the structure to obscure the exact nature of the requirement without changing its meaning",
+            "result": "What must laborers provide during official examinations conducted by regulatory bodies as required by the guidelines?",
+            "answer": "The laminated photocopy of their passport or permit [Doc doc1_question8, Sen 46]"
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the standpoint of a compliance officer responsible for verifying documentation",
+            "result": "From the perspective of a compliance officer, what documentation is required to be provided by laborers during official examinations conducted by regulatory bodies under the guidelines?",
+            "answer": "From the perspective of a compliance officer, the required documentation to be provided by laborers during official examinations conducted by regulatory bodies is the laminated photocopy of their passport or permit [Doc doc1_question8, Sen 46]"
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that the inspection occurs in a high-security zone, which does not alter the required document but adds contextual complexity",
+            "result": "From the perspective of a compliance officer, what documentation is required to be provided by laborers during official examinations conducted by regulatory bodies under the guidelines, if the inspection takes place in a high-security zone?",
+            "answer": "From the perspective of a compliance officer, even if the inspection takes place in a high-security zone, the required documentation to be provided by laborers during official examinations conducted by regulatory bodies remains the laminated photocopy of their passport or permit [Doc doc1_question8, Sen 46]"
+          }
+        ]
+      },
+      "3-questions": {
+        "question": "How can workers access digital copies of their passport or permit?",
+        "objective-facts": "7",
+        "reasoning": "The answer can be deduced from the fact that workers can access digital copies of their passport or permit through the MTS On The Go apps.",
+        "answer": "Through the MTS On The Go apps [Clue 7]",
+        "positive": "Through the MTS On The Go apps [Doc doc1_question8, Sen 47]",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question8, Sen 47] correctly identifies the sentence that directly answers the question: \"Additionally, workers can access digital copies of their passport or permit through the MTS On The Go apps.\" This sentence alone provides the most concise and direct answer to the question without requiring additional context.",
+            "answer": "Through the MTS On The Go apps [Doc doc1_question8, Sen 47]"
+          },
+          "long-answer": {
+            "reason": "The primary sentence answering the question is [Doc doc1_question8, Sen 47], which explicitly states how workers can access digital copies. However, other sentences provide relevant context about the use and importance of having accessible copies. Specifically, [Sen 43] mentions being provided with a laminated photocopy and keeping it secure, [Sen 45] advises carrying the copy when going out, and [Sen 46] discusses presenting the laminated copy during inspections—these highlight the importance of document accessibility, which aligns with the motivation behind accessing digital copies. Therefore, including these sentences adds contextual relevance to the full scope of the question about access methods.",
+            "answer": "Through the MTS On The Go apps [Doc doc1_question8, Sen 43,45,46,47]"
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"workers\" with \"employees\" and \"digital copies\" with \"electronic versions\"",
+            "result": "How can employees access electronic versions of their passport or permit?",
+            "answer": "Employees can access electronic versions of their passport or permit through the MTS On The Go apps [Doc doc1_question8, Sen 47]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by rephrasing \"access\" as \"obtain\" and omitting explicit reference to method, while preserving core meaning",
+            "result": "How can employees obtain electronic versions of their passport or permit?",
+            "answer": "Employees can obtain electronic versions of their passport or permit through the MTS On The Go apps [Doc doc1_question8, Sen 47]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of a human resources administrator responsible for onboarding",
+            "result": "As a human resources administrator responsible for onboarding, how can employees obtain electronic versions of their passport or permit?",
+            "answer": "As a human resources administrator responsible for onboarding, it is understood that employees can obtain electronic versions of their passport or permit through the MTS On The Go apps [Doc doc1_question8, Sen 47]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that physical documents are unavailable, requiring reliance on digital access",
+            "result": "As a human resources administrator responsible for onboarding, how can employees obtain electronic versions of their passport or permit if physical documents are unavailable?",
+            "answer": "As a human resources administrator responsible for onboarding, if physical documents are unavailable, employees can obtain electronic versions of their passport or permit through the MTS On The Go apps [Doc doc1_question8, Sen 47]."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "doc1_question9",
+    "question": "9) How to view my salary statement?",
+    "origin_context": "9) How to view my salary statement? You can view your salary statement by logging into the MTS On The Go apps. Once logged in, navigate to the \"Salary\" section and select the option to view your statement. Salary statements for previous months may also be available. If you encounter any issues, such as missing salary details or difficulties accessing the platform, promptly contact your immediate superior or the designated interpreter for assistance.",
+    "context": "You can view your salary statement by logging into the MTS On The Go apps [Sen 48]. Once logged in, navigate to the \"Salary\" section and select the option to view your statement [Sen 49]. Salary statements for previous months may also be available [Sen 50]. If you encounter any issues, such as missing salary details or difficulties accessing the platform, promptly contact your immediate superior or the designated interpreter for assistance [Sen 51].",
+    "objective-facts": [
+      "Users can view their salary statement by logging into the MTS On The Go apps.",
+      "After logging in, users must navigate to the \"Salary\" section and select the option to view their salary statement.",
+      "Salary statements for previous months may be available on the platform.",
+      "If users encounter issues such as missing salary details or difficulties accessing the platform, they should contact their immediate superior or the designated interpreter for assistance."
+    ],
+    "sens": [
+      "48",
+      "49",
+      "50",
+      "51"
+    ],
+    "proposed-questions": {
+      "1-questions": {
+        "question": "How can users access their salary statement on the MTS On The Go apps?",
+        "objective-facts": "1,2",
+        "reasoning": "The answer can be deduced from the fact that users must log into the MTS On The Go apps and navigate to the \"Salary\" section to select the option to view their salary statement [Clue 1,2].",
+        "answer": "Users can access their salary statement by logging into the MTS On The Go apps, navigating to the \"Salary\" section, and selecting the option to view their salary statement [Clue 1,2].",
+        "positive": "Users can access their salary statement by logging into the MTS On The Go apps, navigating to the \"Salary\" section, and selecting the option to view their salary statement [Doc doc1_question9, Sen 48, 49].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The references [Doc doc1_question9, Sen 48, 49] are correct for the short answer, as Sen 48 states \"You can view your salary statement by logging into the MTS On The Go apps\" and Sen 49 provides the subsequent steps: \"Once logged in, navigate to the 'Salary' section and select the option to view your statement.\" These two sentences together directly and concisely answer how users can access their salary statement.",
+            "answer": "Users can access their salary statement by logging into the MTS On The Go apps, navigating to the \"Salary\" section, and selecting the option to view their salary statement [Doc doc1_question9, Sen 48, 49]."
+          },
+          "long-answer": {
+            "reason": "In addition to the direct steps in Sen 48 and Sen 49, Sen 50 (\"Salary statements for previous months may also be available\") is contextually relevant as it expands on what users can expect when accessing their salary information. While not part of the core action flow, it aligns with the overall functionality described in the question about accessing salary statements. Therefore, including Sen 50 enriches the answer by providing additional pertinent information related to the feature.",
+            "answer": "Users can access their salary statement by logging into the MTS On The Go apps, navigating to the \"Salary\" section, and selecting the option to view their salary statement [Doc doc1_question9, Sen 48, 49, 50]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"MTS On The Go apps\" with \"the mobile application platform provided by MTS for remote access\"",
+            "result": "How can users access their salary statement on the mobile application platform provided by MTS for remote access?",
+            "answer": "Users can access their salary statement by logging into the mobile application platform provided by MTS for remote access, navigating to the \"Salary\" section, and selecting the option to view their salary statement [Doc doc1_question9, Sen 48, 49]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by replacing \"access their salary statement\" with \"retrieve payroll documentation\", which conveys a similar intent but with broader phrasing",
+            "result": "How can users retrieve payroll documentation on the mobile application platform provided by MTS for remote access?",
+            "answer": "Users can retrieve payroll documentation by logging into the mobile application platform provided by MTS for remote access, navigating to the \"Salary\" section, and selecting the option to view their salary statement [Doc doc1_question9, Sen 48, 49]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of a human resources administrator explaining system functionality to employees",
+            "result": "From the perspective of a human resources administrator, how is employee retrieval of payroll documentation supported through the mobile application platform provided by MTS for remote access?",
+            "answer": "From the perspective of a human resources administrator, employee retrieval of payroll documentation is supported by requiring login to the mobile application platform provided by MTS for remote access, navigation to the \"Salary\" section, and selection of the option to view their salary statement [Doc doc1_question9, Sen 48, 49]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that the user has completed authentication successfully, thereby introducing a prerequisite while preserving core meaning",
+            "result": "From the perspective of a human resources administrator, how is employee retrieval of payroll documentation supported through the mobile application platform provided by MTS for remote access, given that the employee has successfully completed authentication?",
+            "answer": "Given that the employee has successfully completed authentication, from the perspective of a human resources administrator, employee retrieval of payroll documentation is supported by accessing the mobile application platform provided by MTS for remote access, navigating to the \"Salary\" section, and selecting the option to view their salary statement [Doc doc1_question9, Sen 48, 49]."
+          }
+        ]
+      },
+      "2-questions": {
+        "question": "Are salary statements for previous months available on the platform?",
+        "objective-facts": "3",
+        "reasoning": "The answer can be deduced from the fact that salary statements for previous months may be available on the platform [Clue 3].",
+        "answer": "Salary statements for previous months may be available on the platform [Clue 3].",
+        "positive": "Salary statements for previous months may be available on the platform [Doc doc1_question9, Sen 50].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question9, Sen 50] correctly identifies the sentence that directly answers the question: \"Salary statements for previous months may also be available.\" This is the most concise and direct evidence supporting the answer.",
+            "answer": "Salary statements for previous months may be available on the platform [Doc doc1_question9, Sen 50]."
+          },
+          "long-answer": {
+            "reason": "In addition to the direct answer in [Sen 50], the surrounding context in [Sen 48], [Sen 49], and [Sen 51] supports the overall understanding of how and where salary statements are accessed and managed on the platform. Specifically, [Sen 48] establishes access via the MTS On The Go app, [Sen 49] describes navigation to the \"Salary\" section, and [Sen 51] provides guidance if issues arise—details that align with the broader context of accessing historical salary data.",
+            "answer": "Salary statements for previous months may be available on the platform [Doc doc1_question9, Sen 48,49,50,51]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"salary statements\" with \"payroll records\" and \"platform\" with \"digital system\"",
+            "result": "Are payroll records for previous months available on the digital system?",
+            "answer": "Payroll records for previous months may be available on the digital system [Doc doc1_question9, Sen 50]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by using a more general term \"accessibility\" instead of direct availability",
+            "result": "What is the accessibility status of payroll records for previous months on the digital system?",
+            "answer": "The accessibility status of payroll records for previous months on the digital system is such that they may be available [Doc doc1_question9, Sen 50]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of an employee reviewing compensation history",
+            "result": "An employee reviewing compensation history: what determines whether payroll records for prior months are accessible via the digital system?",
+            "answer": "For an employee reviewing compensation history, the determining factor is that payroll records for prior months may be accessible via the digital system [Doc doc1_question9, Sen 50]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying access after account authentication",
+            "result": "An employee reviewing compensation history: what determines whether payroll records for prior months are accessible via the digital system after successful account authentication?",
+            "answer": "After successful account authentication, for an employee reviewing compensation history, the determining factor remains that payroll records for prior months may be accessible via the digital system [Doc doc1_question9, Sen 50]."
+          }
+        ]
+      },
+      "3-questions": {
+        "question": "Who should users contact if they experience issues with missing salary details or accessing the platform?",
+        "objective-facts": "4",
+        "reasoning": "The answer can be deduced from the fact that users should contact their immediate superior or the designated interpreter for assistance if they encounter issues such as missing salary details or difficulties accessing the platform [Clue 4].",
+        "answer": "Users should contact their immediate superior or the designated interpreter for assistance [Clue 4].",
+        "positive": "Users should contact their immediate superior or the designated interpreter for assistance [Doc doc1_question9, Sen 51].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question9, Sen 51] correctly points to the sentence that directly answers the question: \"If you encounter any issues, such as missing salary details or difficulties accessing the platform, promptly contact your immediate superior or the designated interpreter for assistance.\" This sentence explicitly states who users should contact when experiencing the mentioned issues, making it the most concise and accurate reference.",
+            "answer": "Users should contact their immediate superior or the designated interpreter for assistance [Doc doc1_question9, Sen 51]."
+          },
+          "long-answer": {
+            "reason": "The primary reference [Doc doc1_question9, Sen 51] is essential as it contains the direct answer. Additionally, sentences [Sen 48], [Sen 49], and [Sen 50] provide contextual background about accessing the salary statement through the MTS On The Go app, which aligns with the overall process described in the question. Although they do not directly state whom to contact, they support the context of using the platform where the issues (missing details or access problems) might occur. Therefore, including them in the long answer provides a more complete picture aligned with the user's experience described in the question.",
+            "answer": "Users should contact their immediate superior or the designated interpreter for assistance [Doc doc1_question9, Sen 48,49,50,51]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"immediate superior\" with \"direct supervisor\" and \"designated interpreter\" with \"assigned personnel responsible for interpretation support\", maintaining equivalent roles",
+            "result": "Who should users contact if they encounter problems with missing salary information or platform access?",
+            "answer": "Users should contact their direct supervisor or the assigned personnel responsible for interpretation support for assistance [Doc doc1_question9, Sen 51]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by using more general phrasing such as \"individuals responsible for oversight or support functions\" instead of specifying roles, while preserving the referents",
+            "result": "Which personnel should users reach out to when facing difficulties related to absent salary data or inability to enter the system?",
+            "answer": "Users should contact individuals responsible for oversight or support functions, including the direct supervisor or the assigned personnel responsible for interpretation support, for assistance [Doc doc1_question9, Sen 51]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the standpoint of a human resources administrator who must guide employees on proper escalation paths",
+            "result": "As a human resources administrator, which parties should be identified to users encountering missing salary records or login barriers?",
+            "answer": "As a human resources administrator, the parties to be identified to users are the direct supervisor or the assigned personnel responsible for interpretation support [Doc doc1_question9, Sen 51]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add the condition that standard troubleshooting steps have already been attempted, building upon the human resources administrator perspective",
+            "result": "As a human resources administrator, which parties should be directed to users experiencing missing salary records or login barriers after completing initial troubleshooting procedures?",
+            "answer": "After completing initial troubleshooting procedures, as a human resources administrator, the parties to be directed to users are the direct supervisor or the assigned personnel responsible for interpretation support [Doc doc1_question9, Sen 51]."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "doc1_question10",
+    "question": "10) What is refund process after returning from holiday?",
+    "origin_context": "10) What is refund process after returning from holiday? Upon returning from holiday, the deposit and other related amounts, including one-way airfare, will be processed for release within one week. However, funds are disbursed every Wednesday, meaning the actual release date depends on the closest Wednesday following the worker’s return. Workers should ensure they complete any necessary administrative steps to facilitate the refund process. If there are delays, workers should promptly consult the designated department for clarification and resolution.",
+    "context": "Upon returning from holiday, the deposit and other related amounts, including one-way airfare, will be processed for release within one week [Sen 52]. However, funds are disbursed every Wednesday, meaning the actual release date depends on the closest Wednesday following the worker’s return [Sen 53]. Workers should ensure they complete any necessary administrative steps to facilitate the refund process [Sen 54]. If there are delays, workers should promptly consult the designated department for clarification and resolution [Sen 55].",
+    "objective-facts": [
+      "The deposit and other related amounts, including one-way airfare, will be processed for release within one week after the worker returns from holiday.",
+      "Funds are disbursed every Wednesday, so the actual release date of the deposit and related amounts depends on the closest Wednesday following the worker’s return from holiday.",
+      "Workers are required to complete any necessary administrative steps to facilitate the refund process upon returning from holiday.",
+      "If there are delays in the refund process, workers should promptly consult the designated department for clarification and resolution."
+    ],
+    "sens": [
+      "52",
+      "53",
+      "54",
+      "55"
+    ],
+    "proposed-questions": {
+      "1-questions": {
+        "question": "How long after a worker returns from holiday will the deposit and other related amounts be processed for release?",
+        "objective-facts": "1",
+        "reasoning": "The answer can be deduced from the fact that the deposit and other related amounts, including one-way airfare, will be processed for release within one week after the worker returns from holiday.",
+        "answer": "Within one week after the worker returns from holiday [Clue 1].",
+        "positive": "Within one week after the worker returns from holiday [Doc doc1_question10, Sen 52].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question10, Sen 52] correctly identifies the sentence that directly answers the question: \"Upon returning from holiday, the deposit and other related amounts, including one-way airfare, will be processed for release within one week.\" This sentence explicitly states the processing timeframe, making it the most concise and accurate reference.",
+            "answer": "Within one week after the worker returns from holiday [Doc doc1_question10, Sen 52]."
+          },
+          "long-answer": {
+            "reason": "In addition to the direct answer in [Sen 52], the related sentence [Sen 53] provides contextual alignment with the question by explaining that while processing begins within one week, the actual release depends on the weekly disbursement schedule (every Wednesday). This adds relevant detail about timing that supports the overall understanding of the release process mentioned in the question. Therefore, including [Sen 53] enhances the completeness of the response without deviating from the question's focus on timing.",
+            "answer": "Within one week after the worker returns from holiday [Doc doc1_question10, Sen 52][Doc doc1_question10, Sen 53]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"worker\" with \"employee\" and \"processed for release\" with \"made available\"",
+            "result": "How long after an employee returns from holiday will the deposit and other related amounts be made available?",
+            "answer": "Within one week after the employee returns from holiday, the deposit and other related amounts will be made available [Doc doc1_question10, Sen 52]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by rephrasing \"how long after\" to \"what is the timeframe for\", which retains the temporal inquiry without explicitly indicating sequence",
+            "result": "What is the timeframe for the deposit and other related amounts to be made available following an employee's return from holiday?",
+            "answer": "The timeframe for the deposit and other related amounts to be made available following an employee's return from holiday is within one week [Doc doc1_question10, Sen 52]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of a payroll administrator responsible for disbursement procedures",
+            "result": "From the standpoint of a payroll administrator, what is the timeframe for the deposit and other related amounts to be made available following an employee's return from holiday?",
+            "answer": "From the standpoint of a payroll administrator, the deposit and other related amounts are made available within one week following an employee's return from holiday [Doc doc1_question10, Sen 52]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that standard administrative protocols are followed without delay",
+            "result": "From the standpoint of a payroll administrator, what is the timeframe for the deposit and other related amounts to be made available following an employee's return from holiday, assuming standard administrative protocols are followed without delay?",
+            "answer": "Assuming standard administrative protocols are followed without delay, from the standpoint of a payroll administrator, the deposit and other related amounts are made available within one week following an employee's return from holiday [Doc doc1_question10, Sen 52]."
+          }
+        ]
+      },
+      "2-questions": {
+        "question": "On which day of the week are funds disbursed for the release of deposits and related amounts?",
+        "objective-facts": "2",
+        "reasoning": "The answer can be deduced from the fact that funds are disbursed every Wednesday, indicating the specific weekday designated for disbursement.",
+        "answer": "Every Wednesday [Clue 2].",
+        "positive": "Every Wednesday [Doc doc1_question10, Sen 53].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question10, Sen 53] correctly points to the sentence that directly answers the question: \"funds are disbursed every Wednesday.\" This is the most concise and direct answer to the question about the day of the week when funds are disbursed. No correction is needed.",
+            "answer": "Every Wednesday [Doc doc1_question10, Sen 53]."
+          },
+          "long-answer": {
+            "reason": "In addition to the direct answer in [Sen 53], the surrounding context in [Sen 52] and [Sen 54] supports the overall process being described: [Sen 52] introduces the timeline for processing deposits upon return, and [Sen 54] emphasizes administrative steps that may affect disbursement. While not directly stating the disbursement day, they align with the procedural context of the fund release mentioned in the question. However, since the question specifically asks for the day of the week funds are disbursed, only [Sen 53] contains the explicit information. Therefore, the long answer should still primarily include [Sen 53], but can also incorporate related procedural sentences for contextual alignment.",
+            "answer": "Every Wednesday [Doc doc1_question10, Sen 52,53,54]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"funds disbursed\" with \"monetary allocations released\" and \"release of deposits and related amounts\" with \"distribution of held funds and associated sums\"",
+            "result": "On which day of the week are monetary allocations released for the distribution of held funds and associated sums?",
+            "answer": "Every Wednesday [Doc doc1_question10, Sen 53]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by replacing \"on which day of the week\" with \"what is the weekly timing\" to make the temporal reference less direct while preserving meaning",
+            "result": "What is the weekly timing for the release of monetary allocations for the distribution of held funds and associated sums?",
+            "answer": "Every Wednesday [Doc doc1_question10, Sen 53]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Shift perspective to that of a banking operations officer responsible for processing fund distributions",
+            "result": "As a banking operations officer, what is the weekly timing for the release of monetary allocations for the distribution of held funds and associated sums?",
+            "answer": "Every Wednesday [Doc doc1_question10, Sen 53]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add condition specifying adherence to standard operating procedures without system disruptions",
+            "result": "As a banking operations officer, what is the weekly timing for the release of monetary allocations for the distribution of held funds and associated sums under standard operating procedures and in the absence of technical disruptions?",
+            "answer": "Every Wednesday [Doc doc1_question10, Sen 53]."
+          }
+        ]
+      },
+      "3-questions": {
+        "question": "What action is required by workers upon returning from holiday to facilitate the refund process?",
+        "objective-facts": "3",
+        "reasoning": "The answer can be deduced from the fact that workers are required to complete any necessary administrative steps to facilitate the refund process upon returning from holiday.",
+        "answer": "Workers must complete any necessary administrative steps [Clue 3].",
+        "positive": "Workers must complete any necessary administrative steps [Doc doc1_question10, Sen 54].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question10, Sen 54] correctly identifies the sentence that directly answers the question: \"Workers should ensure they complete any necessary administrative steps to facilitate the refund process.\" This sentence explicitly states the action required by workers, making it the most concise and accurate reference.",
+            "answer": "Workers must complete any necessary administrative steps [Doc doc1_question10, Sen 54]."
+          },
+          "long-answer": {
+            "reason": "In addition to the direct answer in [Sen 54], other sentences provide contextual relevance to the refund process upon return from holiday. [Sen 52] mentions the timeline for processing the deposit and related amounts, which sets the stage for when the refund process begins. [Sen 53] clarifies the weekly disbursement schedule, adding context about timing dependencies. [Sen 55] advises workers to consult the designated department if delays occur, which complements the required actions by indicating follow-up steps. Together, these sentences align with the overall process described in the question and support the full scope of actions related to the refund.",
+            "answer": "Workers must complete any necessary administrative steps [Doc doc1_question10, Sen 52,53,54,55]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"workers\" with \"employees\" and \"holiday\" with \"vacation period\", and rephrase \"facilitate the refund process\" as \"support the reimbursement procedure\"",
+            "result": "What action is required by employees upon returning from the vacation period to support the reimbursement procedure?",
+            "answer": "Employees must complete any necessary administrative steps [Doc doc1_question10, Sen 54]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by replacing \"required\" with \"needed\" and rephrasing the action as an inquiry into general procedures without specifying obligation",
+            "result": "What action is needed by employees upon returning from the vacation period regarding the reimbursement procedure?",
+            "answer": "Employees must complete any necessary administrative steps [Doc doc1_question10, Sen 54]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the standpoint of a payroll administrator responsible for processing reimbursements",
+            "result": "As a payroll administrator, what action must employees take after returning from the vacation period to enable processing of the reimbursement?",
+            "answer": "As a payroll administrator, it is observed that employees must complete any necessary administrative steps [Doc doc1_question10, Sen 54]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that the reimbursement is only processed if all documentation is submitted correctly",
+            "result": "As a payroll administrator, what action must employees take after returning from the vacation period to enable processing of the reimbursement, provided that all documentation must be submitted correctly?",
+            "answer": "As a payroll administrator, it is observed that employees must complete any necessary administrative steps, provided that all documentation must be submitted correctly [Doc doc1_question10, Sen 54]."
+          }
+        ]
+      }
+    }
+  }
+]
