@@ -114,28 +114,62 @@ class Preprocessor:
         return chunk_contents
 
     def run(self):
-        if self.verbose:
-            print("Loading and cleaning PDF......")
-        data_cleaning_prompt = read_text_file(self.PREPROCESSOR_PROMPT_PATH)
-        # Extract text from pdf, call llm to clean up the extracted text
-        pdf_text = extract_text_from_pdf(self.PREPROCESSOR_PDF_PATH)
-        cleaned_pdf_text,prompt_tokens,completion_tokens,_ = call_api_qwen(data_cleaning_prompt + pdf_text)
-        save_json(cleaned_pdf_text, self.PREPROCESSOR_CLEANED_PDF_PATH)
+        total_prompt_tokens = 0
+        total_completion_tokens = 0
+        success_num = 0
+        all_num = 3  # Total steps: clean PDF, split, chunk
 
-        # Split by question 1) 2)
-        if self.verbose:
-            print("Splitting Questions......")
-        question_set = split_by_questions(cleaned_pdf_text)
-        save_json(question_set, self.PREPROCESSOR_CLEANED_OUTPUT_PATH)
+        try:
+            # Step 1: Loading and cleaning PDF
+            if self.verbose:
+                print("Loading and cleaning PDF......")
+            data_cleaning_prompt = read_text_file(self.PREPROCESSOR_PROMPT_PATH)
+            pdf_text = extract_text_from_pdf(self.PREPROCESSOR_PDF_PATH)
+            cleaned_pdf_text, prompt_tokens, completion_tokens, _ = call_api_qwen(data_cleaning_prompt + pdf_text)
+            save_json(cleaned_pdf_text, self.PREPROCESSOR_CLEANED_PDF_PATH)
 
-        # chunking questions
-        cleaned_questions = load_json(self.PREPROCESSOR_CLEANED_OUTPUT_PATH)
-        if self.verbose:
-            print("Chunking questions......")
-        chunk_contents = self.process_questions(cleaned_questions)
-        save_json(chunk_contents, self.PREPROCESSOR_CHUNKED_OUTPUT_PATH)
+            total_prompt_tokens += prompt_tokens
+            total_completion_tokens += completion_tokens
+            success_num += 1
+            print(f"Step 1/3: PDF cleaned successfully. Tokens: {prompt_tokens} + {completion_tokens}")
 
-        return prompt_tokens, completion_tokens
+        except Exception as e:
+            print(f"Error cleaning PDF: {e}")
+            return total_prompt_tokens, total_completion_tokens, success_num, all_num
+
+        try:
+            # Step 2: Split by question 1) 2)
+            if self.verbose:
+                print("Splitting Questions......")
+            question_set = split_by_questions(cleaned_pdf_text)
+            save_json(question_set, self.PREPROCESSOR_CLEANED_OUTPUT_PATH)
+            success_num += 1
+            print(f"Step 2/3: Questions split successfully. Found {len(question_set)} questions.")
+
+        except Exception as e:
+            print(f"Error splitting questions: {e}")
+            return total_prompt_tokens, total_completion_tokens, success_num, all_num
+
+        try:
+            # Step 3: Chunking questions
+            cleaned_questions = load_json(self.PREPROCESSOR_CLEANED_OUTPUT_PATH)
+            if self.verbose:
+                print("Chunking questions......")
+            chunk_contents = self.process_questions(cleaned_questions)
+            save_json(chunk_contents, self.PREPROCESSOR_CHUNKED_OUTPUT_PATH)
+            success_num += 1
+            print(f"Step 3/3: Questions chunked successfully. Created {len(chunk_contents)} chunks.")
+
+        except Exception as e:
+            print(f"Error chunking questions: {e}")
+            return total_prompt_tokens, total_completion_tokens, success_num, all_num
+
+        # Print summary
+        print(f"\nTotal prompt tokens: {total_prompt_tokens}")
+        print(f"Total completion tokens: {total_completion_tokens}")
+        print(f"Success rate: {success_num}/{all_num} = {success_num/all_num*100:.2f}%")
+
+        return total_prompt_tokens, total_completion_tokens, success_num, all_num
 
 
 if __name__ == "__main__":

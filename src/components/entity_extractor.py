@@ -67,7 +67,7 @@ def extract_entity_from_output(input_text):
 class EntityExtractor:
     def __init__(self, verbose=True):
         self.verbose = verbose
-        self.ENTITY_EXTRACTOR_LLM_TEMPERATURE = None
+        self.TEMPERATURE = None
         self.ENTITY_EXTRACTOR_NUM_WORKERS = None
         self.ENTITY_EXTRACTOR_PROMPT_PATH = None
         self.ENTITY_EXTRACTOR_INPUT_PATH = None
@@ -75,7 +75,7 @@ class EntityExtractor:
         self.ENTITY_EXTRACTOR_SAVE_INTERVAL = None
 
         if os.getenv("ENTITY_EXTRACTOR_PROMPT_PATH", None) != None:
-            self.ENTITY_EXTRACTOR_LLM_TEMPERATURE = float(os.getenv("ENTITY_EXTRACTOR_LLM_TEMPERATURE", "0.6"))
+            self.TEMPERATURE = float(os.getenv("TEMPERATURE", "0.6"))
             self.ENTITY_EXTRACTOR_NUM_WORKERS = int(os.getenv("ENTITY_EXTRACTOR_NUM_WORKERS", "4"))
             self.ENTITY_EXTRACTOR_SAVE_INTERVAL = int(os.getenv("ENTITY_EXTRACTOR_SAVE_INTERVAL", "20"))
             self.ENTITY_EXTRACTOR_PROMPT_PATH = os.getenv("ENTITY_EXTRACTOR_PROMPT_PATH")
@@ -95,7 +95,7 @@ class EntityExtractor:
             cur_entity_extractor_prompt = entity_extractor_prompt.replace('[[CONTEXT]]', context)
             entity_extractor_response, prompt_tokens, completion_tokens, _ = call_api_qwen(
                 cur_entity_extractor_prompt,
-                temperature=self.ENTITY_EXTRACTOR_LLM_TEMPERATURE
+                temperature=self.TEMPERATURE
             )
             extract_entity = extract_entity_from_output(entity_extractor_response)
             entities, relationships, is_complete = (
@@ -189,7 +189,12 @@ class EntityExtractor:
         if self.verbose:
             print(f"Completed: {success_num}/{all_num} inputs processed successfully")
 
-        return total_prompt_tokens, total_completion_tokens, success_num/all_num if all_num > 0 else 0
+        # Print summary
+        print(f"\nTotal prompt tokens: {total_prompt_tokens}")
+        print(f"Total completion tokens: {total_completion_tokens}")
+        print(f"Success rate: {success_num}/{all_num} = {success_num/all_num*100:.2f}%" if all_num > 0 else "Success rate: N/A")
+
+        return total_prompt_tokens, total_completion_tokens, success_num, all_num
 
 
 if __name__ == "__main__":

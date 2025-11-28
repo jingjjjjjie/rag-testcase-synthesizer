@@ -19,8 +19,8 @@
     "origin_context": "2) Are workers allowed to smoke in hostels? Smoking policies in hostels are typically strict, with many accommodations prohibiting smoking indoors to ensure a safe and healthy environment. Workers are advised to follow hostel regulations and use designated smoking areas if available.",
     "context": "Smoking policies in hostels are typically strict, with many accommodations prohibiting smoking indoors to ensure a safe and healthy environment [Sen 3]. Workers are advised to follow hostel regulations and use designated smoking areas if available [Sen 4].",
     "objective-facts": [
-      "Many hostels have strict smoking policies that prohibit indoor smoking to maintain a safe and healthy environment.",
-      "Workers are advised to comply with hostel smoking regulations and use designated smoking areas when available."
+      "Many hostels prohibit smoking indoors as part of strict smoking policies to maintain a safe and healthy environment.",
+      "Workers are advised to follow hostel smoking regulations and use designated smoking areas when available."
     ],
     "sens": [
       "3",
@@ -33,16 +33,14 @@
     "origin_context": "3) Will I return to the same job after my holiday? Your reassignment depends on customer arrangements, as some may hire replacement workers during your absence. If the customer has arranged for a replacement, your previous position may no longer be available. In such cases, management will provide an alternative job placement based on availability and operational needs. Workers will be informed of their reassignment details in a timely manner. Factors such as the length of absence, customer demand, and operational requirements may influence reassignment decisions. Employees are encouraged to consult with management beforehand to understand their options.",
     "context": "Your reassignment depends on customer arrangements, as some may hire replacement workers during your absence [Sen 5]. If the customer has arranged for a replacement, your previous position may no longer be available [Sen 6]. In such cases, management will provide an alternative job placement based on availability and operational needs [Sen 7]. Workers will be informed of their reassignment details in a timely manner [Sen 8]. Factors such as the length of absence, customer demand, and operational requirements may influence reassignment decisions [Sen 9]. Employees are encouraged to consult with management beforehand to understand their options [Sen 10].",
     "objective-facts": [
-      "Reassignment of workers depends on customer arrangements, including whether replacement workers have been hired during the employee's absence.",
-      "Some customers may hire replacement workers during an employee’s absence.",
-      "If a customer has arranged for a replacement worker, the employee’s previous position may no longer be available.",
-      "Management will provide an alternative job placement if the previous position is unavailable, based on job availability and operational needs.",
+      "Reassignment of workers depends on customer arrangements regarding the hiring of replacement workers during an employee's absence.",
+      "If a customer has arranged for a replacement worker, the employee’s previous position may no longer be available upon return.",
+      "Management will provide an alternative job placement based on job availability and operational needs when a previous position is not available.",
       "Workers will be informed of their reassignment details in a timely manner.",
-      "The length of absence, customer demand, and operational requirements are factors that may influence reassignment decisions.",
+      "Factors influencing reassignment decisions include the length of the employee’s absence, customer demand, and operational requirements.",
       "Employees are encouraged to consult with management prior to reassignment to understand their available options."
     ],
     "sens": [
-      "5",
       "5",
       "6",
       "7",
@@ -58,11 +56,11 @@
     "context": "Inform your immediate superior or designated interpreter as soon as possible to lodge a formal complaint [Sen 11]. They will escalate the issue to the Payroll department to resolve the matter and ensure your statement is properly updated [Sen 12]. Management will escalate the issue to the Payroll department for investigation and resolution [Sen 13]. The Payroll department will review the records, correct any discrepancies, and ensure your statement is properly updated [Sen 14]. Workers should monitor subsequent statements and confirm that the corrections have been made [Sen 15]. If the issue persists, they should seek further clarification from the Payroll department [Sen 16].",
     "objective-facts": [
       "An employee should inform their immediate superior or designated interpreter as soon as possible to lodge a formal complaint.",
-      "The immediate superior or designated interpreter will escalate the complaint to the Payroll department for resolution.",
+      "The immediate superior or designated interpreter will escalate the complaint to the Payroll department for resolution and to ensure the employee's statement is properly updated.",
       "Management is responsible for escalating the issue to the Payroll department for investigation and resolution.",
-      "The Payroll department will review records, correct any discrepancies found, and ensure the employee's statement is properly updated.",
-      "Workers are expected to monitor subsequent statements to confirm that corrections have been made.",
-      "If the issue persists after review, workers should seek further clarification from the Payroll department."
+      "The Payroll department will review payroll records, correct any discrepancies found, and ensure the employee's statement is properly updated.",
+      "Workers are expected to monitor their subsequent payroll statements to confirm that the necessary corrections have been made.",
+      "If the payroll issue persists after review, workers should seek further clarification directly from the Payroll department."
     ],
     "sens": [
       "11",
@@ -80,13 +78,13 @@
     "context": "Management continuously tracks passport expiration dates to ensure timely renewal [Sen 17]. Workers should be aware that a passport must remain valid for at least 18 months before the work permit expires to comply with regulatory requirements [Sen 18]. Workers will receive advance notice of their passport renewal date, along with appointment details at the respective embassy [Sen 19]. They are advised to prepare any necessary documents beforehand to prevent delays [Sen 20]. An interpreter will accompany the worker to the designated embassy, providing support with communication and ensuring a smooth renewal process [Sen 21]. Passport renewal fees vary by nationality: Nepal – RM240; Bangladesh – RM305; Myanmar – RM430 [Sen 22]. Failure to renew the passport on time may result in work permit complications, fines, or penalties that could affect the worker’s employment status [Sen 23]. Workers must adhere to renewal deadlines to prevent disruptions [Sen 24].",
     "objective-facts": [
       "Management continuously tracks passport expiration dates to ensure timely renewal.",
-      "A passport must remain valid for at least 18 months before the work permit expires, as required by regulatory standards.",
+      "Workers must ensure their passport remains valid for at least 18 months before the work permit expires to meet regulatory requirements.",
       "Workers will receive advance notice of their passport renewal date and appointment details at the respective embassy.",
-      "Workers are advised to prepare any necessary documents beforehand to prevent delays in the passport renewal process.",
-      "An interpreter will accompany the worker to the designated embassy to provide communication support and ensure a smooth renewal process.",
-      "Passport renewal fees vary by nationality: RM240 for Nepal, RM305 for Bangladesh, and RM430 for Myanmar.",
-      "Failure to renew the passport on time may result in work permit complications, fines, or penalties that could affect the worker’s employment status.",
-      "Workers must adhere to passport renewal deadlines to prevent disruptions to their employment."
+      "Workers are advised to prepare necessary documents in advance to prevent delays in the passport renewal process.",
+      "An interpreter will accompany the worker to the designated embassy to provide communication support and ensure a smooth passport renewal process.",
+      "Passport renewal fees vary by nationality: RM240 for Nepali citizens, RM305 for Bangladeshi citizens, and RM430 for Myanmar citizens.",
+      "Failure to renew the passport on time may lead to work permit complications, fines, or penalties that could affect the worker’s employment status.",
+      "Workers must adhere to passport renewal deadlines to avoid disruptions to their employment."
     ],
     "sens": [
       "17",
@@ -105,14 +103,14 @@
     "origin_context": "6) What should I do if my new permit has not been issued by Immigration, despite my old permit expiring? Delays in work permit issuance may occur due to various factors, such as pending FOMEMA medical results, a lost passport, or other administrative processing issues. Workers should check with management to identify the specific reason for the delay. If the new permit is delayed, a Special Pass (SP) can be issued as a temporary permit, valid for one month while awaiting the new permit. A RM100 fee is required for the Special Pass application, which should be paid as per immigration procedures. Workers should verify whether this fee is covered by the company or if they are responsible for payment. If the new permit continues to be delayed, the Special Pass will be renewed continuously until Immigration issues the new work permit. Workers should ensure they follow up regularly for status updates. The company’s administration will oversee the entire process, including permit applications and renewals. Workers are encouraged to stay informed and coordinate with management regarding their permit status.",
     "context": "Delays in work permit issuance may occur due to various factors, such as pending FOMEMA medical results, a lost passport, or other administrative processing issues [Sen 25]. Workers should check with management to identify the specific reason for the delay [Sen 26]. If the new permit is delayed, a Special Pass (SP) can be issued as a temporary permit, valid for one month while awaiting the new permit [Sen 27]. A RM100 fee is required for the Special Pass application, which should be paid as per immigration procedures [Sen 28]. Workers should verify whether this fee is covered by the company or if they are responsible for payment [Sen 29]. If the new permit continues to be delayed, the Special Pass will be renewed continuously until Immigration issues the new work permit [Sen 30]. Workers should ensure they follow up regularly for status updates [Sen 31]. The company’s administration will oversee the entire process, including permit applications and renewals [Sen 32]. Workers are encouraged to stay informed and coordinate with management regarding their permit status [Sen 33].",
     "objective-facts": [
-      "Delays in work permit issuance may occur due to pending FOMEMA medical results, a lost passport, or other administrative processing issues.",
+      "Delays in work permit issuance may occur due to factors such as pending FOMEMA medical results, a lost passport, or other administrative processing issues.",
       "Workers should check with management to identify the specific reason for the delay in work permit issuance.",
       "A Special Pass (SP) can be issued as a temporary permit valid for one month if the new work permit is delayed.",
       "A RM100 fee is required for the Special Pass application and must be paid according to immigration procedures.",
-      "Workers should verify whether the company covers the RM100 Special Pass fee or if they are responsible for paying it.",
+      "Workers should verify whether the company covers the RM100 Special Pass fee or if they are responsible for payment.",
       "If the new work permit continues to be delayed, the Special Pass will be renewed continuously until Immigration issues the new permit.",
-      "Workers should ensure they follow up regularly for updates on their permit status.",
-      "The company’s administration will oversee the entire process of work permit applications and renewals.",
+      "Workers should ensure they follow up regularly for updates on their work permit status.",
+      "The company’s administration is responsible for overseeing the entire work permit process, including applications and renewals.",
       "Workers are encouraged to stay informed and coordinate with management regarding their work permit status."
     ],
     "sens": [
@@ -133,10 +131,10 @@
     "origin_context": "7) What should I do if my passport is lost? Report the loss to your immediate superior or designated interpreter as soon as possible. It is advisable to do this promptly to avoid delays in the replacement process. Management will arrange for a police report, and the worker must accompany them to file it. Ensure all relevant details are provided accurately. After obtaining the police report, submit it along with any required supporting documents to the respective embassy to apply for a replacement passport. Workers should be aware of any applicable fees for the passport replacement process. Once the new passport is issued, proceed to the Immigration Department to apply for a valid work permit. Workers should also ensure that they securely store copies of their passport and permit.",
     "context": "Report the loss to your immediate superior or designated interpreter as soon as possible [Sen 34]. It is advisable to do this promptly to avoid delays in the replacement process [Sen 35]. Management will arrange for a police report, and the worker must accompany them to file it [Sen 36]. Ensure all relevant details are provided accurately [Sen 37]. After obtaining the police report, submit it along with any required supporting documents to the respective embassy to apply for a replacement passport [Sen 38]. Workers should be aware of any applicable fees for the passport replacement process [Sen 39]. Once the new passport is issued, proceed to the Immigration Department to apply for a valid work permit [Sen 40]. Workers should also ensure that they securely store copies of their passport and permit [Sen 41].",
     "objective-facts": [
-      "Workers must report the loss to their immediate superior or designated interpreter as soon as possible.",
+      "Workers must report the loss of their passport to their immediate superior or designated interpreter as soon as possible.",
       "Reporting the loss promptly is advised to avoid delays in the replacement process.",
-      "Management will arrange for a police report, and the worker is required to accompany them to file it.",
-      "The worker must ensure that all relevant details are provided accurately when filing the police report.",
+      "Management will arrange for a police report to be filed, and the worker is required to accompany them during this process.",
+      "The worker must provide all relevant details accurately when filing the police report.",
       "After obtaining the police report, the worker must submit it along with any required supporting documents to the respective embassy to apply for a replacement passport.",
       "Workers should be aware of any applicable fees associated with the passport replacement process.",
       "Once the new passport is issued, the worker must proceed to the Immigration Department to apply for a valid work permit.",
@@ -155,64 +153,56 @@
   },
   {
     "id": "doc1_question8",
-    "question": "8) Documents retained by workers while their passports are held by management.",
-    "origin_context": "8) Documents retained by workers while their passports are held by management. Workers will be provided with a laminated photocopy of their passport or permit and are encouraged to keep it secure, as they may need to present it for verification when inspected by authorities. If the laminated copy is lost or damaged, workers should promptly report it to the designated contact person for replacement. Workers are advised to carry the laminated copy whenever they go out to ensure smooth interactions with authorities and avoid unnecessary complications. If inspected by authorities, workers should present the laminated copy for verification, as digital copies may not always be accepted. Additionally, workers can access digital copies of their passport or permit through the MTS On The Go apps.",
-    "context": "Workers will be provided with a laminated photocopy of their passport or permit and are encouraged to keep it secure, as they may need to present it for verification when inspected by authorities [Sen 42]. If the laminated copy is lost or damaged, workers should promptly report it to the designated contact person for replacement [Sen 43]. Workers are advised to carry the laminated copy whenever they go out to ensure smooth interactions with authorities and avoid unnecessary complications [Sen 44]. If inspected by authorities, workers should present the laminated copy for verification, as digital copies may not always be accepted [Sen 45]. Additionally, workers can access digital copies of their passport or permit through the MTS On The Go apps [Sen 46].",
+    "question": "8) Documents retained by workers while their passports are held by management: Workers will be provided with a laminated photocopy of their passport or permit and are encouraged to keep it secure, as they may need to present it for verification when inspected by authorities.",
+    "origin_context": "8) Documents retained by workers while their passports are held by management: Workers will be provided with a laminated photocopy of their passport or permit and are encouraged to keep it secure, as they may need to present it for verification when inspected by authorities. If the laminated copy is lost or damaged, workers should promptly report it to the designated contact person for replacement. Workers are advised to carry the laminated copy whenever they go out to ensure smooth interactions with authorities and avoid unnecessary complications. If inspected by authorities, workers should present the laminated copy for verification, as digital copies may not always be accepted. Additionally, workers can access digital copies of their passport or permit through the MTS On The Go apps.",
+    "context": "If the laminated copy is lost or damaged, workers should promptly report it to the designated contact person for replacement [Sen 42]. Workers are advised to carry the laminated copy whenever they go out to ensure smooth interactions with authorities and avoid unnecessary complications [Sen 43]. If inspected by authorities, workers should present the laminated copy for verification, as digital copies may not always be accepted [Sen 44]. Additionally, workers can access digital copies of their passport or permit through the MTS On The Go apps [Sen 45].",
     "objective-facts": [
-      "Workers will be provided with a laminated photocopy of their passport or permit.",
-      "Workers are encouraged to keep the laminated photocopy of their passport or permit secure.",
-      "Workers may need to present the laminated photocopy for verification when inspected by authorities.",
-      "If the laminated copy is lost or damaged, workers should promptly report it to the designated contact person for replacement.",
-      "Workers are advised to carry the laminated photocopy whenever they go out.",
-      "Carrying the laminated photocopy is intended to ensure smooth interactions with authorities and avoid unnecessary complications.",
+      "Workers should promptly report the loss or damage of the laminated copy to the designated contact person for replacement.",
+      "Workers are advised to carry the laminated copy whenever they go out to ensure smooth interactions with authorities and avoid unnecessary complications.",
       "Workers should present the laminated copy for verification if inspected by authorities, as digital copies may not always be accepted.",
       "Workers can access digital copies of their passport or permit through the MTS On The Go apps."
     ],
     "sens": [
       "42",
-      "42",
-      "42",
       "43",
       "44",
-      "44",
-      "45",
-      "46"
+      "45"
     ]
   },
   {
     "id": "doc1_question9",
     "question": "9) How to view my salary statement?",
     "origin_context": "9) How to view my salary statement? You can view your salary statement by logging into the MTS On The Go apps. Once logged in, navigate to the \"Salary\" section and select the option to view your statement. Salary statements for previous months may also be available. If you encounter any issues, such as missing salary details or difficulties accessing the platform, promptly contact your immediate superior or the designated interpreter for assistance.",
-    "context": "You can view your salary statement by logging into the MTS On The Go apps [Sen 47]. Once logged in, navigate to the \"Salary\" section and select the option to view your statement [Sen 48]. Salary statements for previous months may also be available [Sen 49]. If you encounter any issues, such as missing salary details or difficulties accessing the platform, promptly contact your immediate superior or the designated interpreter for assistance [Sen 50].",
+    "context": "You can view your salary statement by logging into the MTS On The Go apps [Sen 46]. Once logged in, navigate to the \"Salary\" section and select the option to view your statement [Sen 47]. Salary statements for previous months may also be available [Sen 48]. If you encounter any issues, such as missing salary details or difficulties accessing the platform, promptly contact your immediate superior or the designated interpreter for assistance [Sen 49].",
     "objective-facts": [
       "Users can view their salary statement by logging into the MTS On The Go apps.",
-      "After logging in, users must navigate to the \"Salary\" section and select the option to view their salary statement.",
+      "After logging in, users must navigate to the \"Salary\" section and select the option to view their statement.",
       "Salary statements for previous months may be accessible through the app.",
-      "If users face issues such as missing salary details or platform access difficulties, they should contact their immediate superior or the designated interpreter for help."
+      "If users face issues such as missing salary details or problems accessing the platform, they should contact their immediate superior or the designated interpreter for help."
     ],
     "sens": [
+      "46",
       "47",
       "48",
-      "49",
-      "50"
+      "49"
     ]
   },
   {
     "id": "doc1_question10",
     "question": "10) What is refund process after returning from holiday?",
     "origin_context": "10) What is refund process after returning from holiday? Upon returning from holiday, the deposit and other related amounts, including one-way airfare, will be processed for release within one week. However, funds are disbursed every Wednesday, meaning the actual release date depends on the closest Wednesday following the worker’s return. Workers should ensure they complete any necessary administrative steps to facilitate the refund process. If there are delays, workers should promptly consult the designated department for clarification and resolution.",
-    "context": "Upon returning from holiday, the deposit and other related amounts, including one-way airfare, will be processed for release within one week [Sen 51]. However, funds are disbursed every Wednesday, meaning the actual release date depends on the closest Wednesday following the worker’s return [Sen 52]. Workers should ensure they complete any necessary administrative steps to facilitate the refund process [Sen 53]. If there are delays, workers should promptly consult the designated department for clarification and resolution [Sen 54].",
+    "context": "Upon returning from holiday, the deposit and other related amounts, including one-way airfare, will be processed for release within one week [Sen 50]. However, funds are disbursed every Wednesday, meaning the actual release date depends on the closest Wednesday following the worker’s return [Sen 51]. Workers should ensure they complete any necessary administrative steps to facilitate the refund process [Sen 52]. If there are delays, workers should promptly consult the designated department for clarification and resolution [Sen 53].",
     "objective-facts": [
       "The deposit and other related amounts, including one-way airfare, will be processed for release within one week after the worker returns from holiday.",
       "Funds are disbursed every Wednesday, so the actual release date depends on the closest Wednesday following the worker’s return.",
       "Workers are required to complete any necessary administrative steps to facilitate the refund process.",
-      "If there are delays in the refund process, workers should promptly consult the designated department for clarification and resolution."
+      "If there are delays in the refund, workers should promptly consult the designated department for clarification and resolution."
     ],
     "sens": [
+      "50",
       "51",
       "52",
-      "53",
-      "54"
+      "53"
     ]
   }
 ]

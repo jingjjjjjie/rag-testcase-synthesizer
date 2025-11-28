@@ -7,3 +7,4 @@ numpy
 transformers
 tqdm
 PyPDF2
+scikit-learn
