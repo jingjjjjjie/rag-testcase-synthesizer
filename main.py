@@ -11,9 +11,10 @@ from src.components.add_entity_id import AddEntityId
 from src.components.entity_eliminator import EntityEliminator
 from src.components.propose_generator import ProposeGenerator
 from src.components.final_answer_generator import FinalAnswerGenerator
+from src.components.rephrase_generator import RephraseGenerator
 
 parser = argparse.ArgumentParser(description='RAG Test Case Synthesizer')
-parser.add_argument('--env', type=str, default='multi_hop.env', help='Path to environment file (default: single_hop.env)')
+parser.add_argument('--env', type=str, default='single_hop.env', help='Path to environment file (default: single_hop.env)')
                     
 args = parser.parse_args()
 
@@ -85,16 +86,49 @@ load_dotenv(args.env)
 #     print(f"Propose Generator Complete: {success_num}/{all_num} items | Tokens: {prompt_tokens + completion_tokens:,}")
 #     print("=" * 80 + "\n")
 
-if os.getenv("FINAL_ANSWER_GENERATOR_CONTENT_INPUT_PATH", None) != None or os.getenv("FINAL_ANSWER_GENERATOR_ENTITYGRAPH_INPUT_PATH", None) != None:
+# if os.getenv("FINAL_ANSWER_GENERATOR_CONTENT_INPUT_PATH", None) != None or os.getenv("FINAL_ANSWER_GENERATOR_ENTITYGRAPH_INPUT_PATH", None) != None:
+#     print("=" * 80)
+#     print("RUNNING FINAL ANSWER GENERATOR".center(80))
+#     print("=" * 80)
+#     FINAL_ANSWER_GENERATOR_SAVE_INTERVAL = int(os.getenv("FINAL_ANSWER_GENERATOR_SAVE_INTERVAL", None))
+#     final_answer_generator = FinalAnswerGenerator(save_interval=FINAL_ANSWER_GENERATOR_SAVE_INTERVAL)
+#     prompt_tokens, completion_tokens, success_num, all_num = final_answer_generator.run()
+#     print("\n" + "=" * 80)
+#     print(f"Final Answer Generator Complete: {success_num}/{all_num} items | Tokens: {prompt_tokens + completion_tokens:,}")
+#     print("=" * 80 + "\n")
+
+if os.getenv("REPHRASE_GENERATOR_CONTENT_INPUT_PATH", None) != None or os.getenv("REPHRASE_GENERATOR_ENTITYGRAPH_INPUT_PATH", None) != None:
     print("=" * 80)
-    print("RUNNING FINAL ANSWER GENERATOR".center(80))
+    print("RUNNING REPHRASE GENERATOR".center(80))
     print("=" * 80)
-    FINAL_ANSWER_GENERATOR_SAVE_INTERVAL = int(os.getenv("FINAL_ANSWER_GENERATOR_SAVE_INTERVAL", None))
-    final_answer_generator = FinalAnswerGenerator(save_interval=FINAL_ANSWER_GENERATOR_SAVE_INTERVAL)
-    prompt_tokens, completion_tokens, success_num, all_num = final_answer_generator.run()
+    REPHRASE_GENERATOR_SAVE_INTERVAL = int(os.getenv("REPHRASE_GENERATOR_SAVE_INTERVAL", None))
+    rephrase_generator = RephraseGenerator(save_interval=REPHRASE_GENERATOR_SAVE_INTERVAL)
+    prompt_tokens, completion_tokens, success_num, all_num = rephrase_generator.run()
     print("\n" + "=" * 80)
-    print(f"Final Answer Generator Complete: {success_num}/{all_num} items | Tokens: {prompt_tokens + completion_tokens:,}")
+    print(f"Rephrase Generator Complete: {success_num}/{all_num} items | Tokens: {prompt_tokens + completion_tokens:,}")
     print("=" * 80 + "\n")
+
+# if os.getenv("REPHRASE_GENERATOR_PART_CONTENT_INPUT_PATH", None) != None or os.getenv("REPHRASE_GENERATOR_PART_ENTITYGRAPH_INPUT_PATH", None) != None:
+#     print("=" * 80)
+#     print("RUNNING REPHRASE GENERATOR PART".center(80))
+#     print("=" * 80)
+#     REPHRASE_GENERATOR_SAVE_INTERVAL = int(os.getenv("REPHRASE_GENERATOR_SAVE_INTERVAL", None))
+#     rephrase_generator_part = RephraseGeneratorPart(save_interval=REPHRASE_GENERATOR_SAVE_INTERVAL)
+#     prompt_tokens, completion_tokens, success_num, all_num = rephrase_generator_part.run()
+#     print("\n" + "=" * 80)
+#     print(f"Rephrase Generator Part Complete: {success_num}/{all_num} items | Tokens: {prompt_tokens + completion_tokens:,}")
+#     print("=" * 80 + "\n")
+
+# if os.getenv("REPHRASE_GENERATOR_HYBRID_CONTENT_INPUT_PATH", None) != None or os.getenv("REPHRASE_GENERATOR_HYBRID_ENTITYGRAPH_INPUT_PATH", None) != None:
+#     print("=" * 80)
+#     print("RUNNING REPHRASE GENERATOR HYBRID".center(80))
+#     print("=" * 80)
+#     REPHRASE_GENERATOR_SAVE_INTERVAL = int(os.getenv("REPHRASE_GENERATOR_SAVE_INTERVAL", None))
+#     rephrase_generator_hybrid = RephraseGeneratorHybrid(save_interval=REPHRASE_GENERATOR_SAVE_INTERVAL)
+#     prompt_tokens, completion_tokens, success_num, all_num = rephrase_generator_hybrid.run()
+#     print("\n" + "=" * 80)
+#     print(f"Rephrase Generator Hybrid Complete: {success_num}/{all_num} items | Tokens: {prompt_tokens + completion_tokens:,}")
+#     print("=" * 80 + "\n")
 
 
 
