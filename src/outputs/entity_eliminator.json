@@ -1,0 +1,1055 @@
+[
+  {
+    "id": "doc1_question1",
+    "question": "1) Can workers opt out of the savings program?",
+    "origin_context": "1) Can workers opt out of the savings program? The savings program is a structured initiative designed to provide financial support during emergencies, ensuring workers maintain financial stability and security. Participation is strongly encouraged, as consistent savings contribute to long-term financial well-being.",
+    "context": "The savings program is a structured initiative designed to provide financial support during emergencies, ensuring workers maintain financial stability and security [Sen 1]. Participation is strongly encouraged, as consistent savings contribute to long-term financial well-being [Sen 2].",
+    "entity": [
+      {
+        "entity_name": "Savings Program",
+        "entity_description": "The savings program is a structured initiative aimed at providing financial support during emergencies to ensure workers maintain financial stability and security",
+        "entity_id": 0
+      },
+      {
+        "entity_name": "Workers",
+        "entity_description": "Workers are individuals who participate in the savings program, benefiting from financial support and improved financial stability during emergencies",
+        "entity_id": 1
+      }
+    ],
+    "relationship": [
+      {
+        "source_entity_name": "Savings Program",
+        "target_entity_name": "Workers",
+        "relationship_description": "The savings program provides financial support to workers during emergencies, helping them maintain financial stability",
+        "sentences_used": "1",
+        "source_entity_id": 0,
+        "target_entity_id": 1
+      },
+      {
+        "source_entity_name": "Workers",
+        "target_entity_name": "Savings Program",
+        "relationship_description": "Workers are encouraged to participate in the savings program, as their consistent contributions support long-term financial well-being",
+        "sentences_used": "2",
+        "source_entity_id": 1,
+        "target_entity_id": 0
+      }
+    ]
+  },
+  {
+    "id": "doc1_question2",
+    "question": "2) Are workers allowed to smoke in hostels?",
+    "origin_context": "2) Are workers allowed to smoke in hostels? Smoking policies in hostels are typically strict, with many accommodations prohibiting smoking indoors to ensure a safe and healthy environment. Workers are advised to follow hostel regulations and use designated smoking areas if available.",
+    "context": "Smoking policies in hostels are typically strict, with many accommodations prohibiting smoking indoors to ensure a safe and healthy environment [Sen 3]. Workers are advised to follow hostel regulations and use designated smoking areas if available [Sen 4].",
+    "entity": [
+      {
+        "entity_name": "Smoking Policies",
+        "entity_description": "Smoking Policies refer to the rules and regulations set by hostels regarding tobacco use, which are typically strict and often prohibit indoor smoking to maintain a safe and healthy environment for guests",
+        "entity_id": 2
+      },
+      {
+        "entity_name": "Hostels",
+        "entity_description": "Hostels are accommodations that commonly enforce strict smoking policies, prohibiting smoking indoors and sometimes providing designated outdoor areas for smokers",
+        "entity_id": 3
+      },
+      {
+        "entity_name": "Workers",
+        "entity_description": "Workers are individuals staying in or employed by hostels who are advised to comply with hostel smoking regulations and use designated smoking areas when available",
+        "entity_id": 4
+      }
+    ],
+    "relationship": [
+      {
+        "source_entity_name": "Smoking Policies",
+        "target_entity_name": "Hostels",
+        "relationship_description": "Smoking Policies are implemented by Hostels to regulate tobacco use and ensure a safe and healthy environment for guests",
+        "sentences_used": "3",
+        "source_entity_id": 2,
+        "target_entity_id": 3
+      },
+      {
+        "source_entity_name": "Workers",
+        "target_entity_name": "Hostels",
+        "relationship_description": "Workers are expected to follow the smoking regulations established by Hostels, including using designated smoking areas",
+        "sentences_used": "4",
+        "source_entity_id": 4,
+        "target_entity_id": 3
+      }
+    ]
+  },
+  {
+    "id": "doc1_question3",
+    "question": "3) Will I return to the same job after my holiday?",
+    "origin_context": "3) Will I return to the same job after my holiday? Your reassignment depends on customer arrangements, as some may hire replacement workers during your absence. If the customer has arranged for a replacement, your previous position may no longer be available. In such cases, management will provide an alternative job placement based on availability and operational needs. Workers will be informed of their reassignment details in a timely manner. Factors such as the length of absence, customer demand, and operational requirements may influence reassignment decisions. Employees are encouraged to consult with management beforehand to understand their options.",
+    "context": "Your reassignment depends on customer arrangements, as some may hire replacement workers during your absence [Sen 5]. If the customer has arranged for a replacement, your previous position may no longer be available [Sen 6]. In such cases, management will provide an alternative job placement based on availability and operational needs [Sen 7]. Workers will be informed of their reassignment details in a timely manner [Sen 8]. Factors such as the length of absence, customer demand, and operational requirements may influence reassignment decisions [Sen 9]. Employees are encouraged to consult with management beforehand to understand their options [Sen 10].",
+    "entity": [
+      {
+        "entity_name": "Customer Arrangements",
+        "entity_description": "Customer Arrangements refer to the agreements or plans made by customers regarding staffing, which may include hiring replacement workers during an employee's absence",
+        "entity_id": 5
+      },
+      {
+        "entity_name": "Replacement Workers",
+        "entity_description": "Replacement Workers are individuals hired by customers to fill positions temporarily while regular employees are absent",
+        "entity_id": 6
+      },
+      {
+        "entity_name": "Previous Position",
+        "entity_description": "Previous Position refers to the job role an employee held before their absence, which may no longer be available if a replacement has been hired",
+        "entity_id": 7
+      },
+      {
+        "entity_name": "Management",
+        "entity_description": "Management is responsible for making reassignment decisions and providing alternative job placements based on availability and operational needs",
+        "entity_id": 8
+      },
+      {
+        "entity_name": "Alternative Job Placement",
+        "entity_description": "Alternative Job Placement is a new position offered to employees when their original role is unavailable, determined by management according to current operational demands",
+        "entity_id": 9
+      },
+      {
+        "entity_name": "Reassignment Details",
+        "entity_description": "Reassignment Details include information about a worker’s new position, communicated in a timely manner following a reassignment decision",
+        "entity_id": 10
+      },
+      {
+        "entity_name": "Length Of Absence",
+        "entity_description": "Length Of Absence refers to the duration an employee was away from work, which can influence reassignment outcomes",
+        "entity_id": 11
+      },
+      {
+        "entity_name": "Customer Demand",
+        "entity_description": "Customer Demand reflects the level of need for labor or services from the customer side, impacting staffing and reassignment decisions",
+        "entity_id": 12
+      },
+      {
+        "entity_name": "Operational Requirements",
+        "entity_description": "Operational Requirements are internal business needs that affect workforce allocation and determine the feasibility of job placements",
+        "entity_id": 13
+      },
+      {
+        "entity_name": "Employees",
+        "entity_description": "Employees are workers who may be reassigned based on customer arrangements, length of absence, and organizational needs, and who are encouraged to consult with management about their options",
+        "entity_id": 14
+      }
+    ],
+    "relationship": [
+      {
+        "source_entity_name": "Customer Arrangements",
+        "target_entity_name": "Replacement Workers",
+        "relationship_description": "Customer Arrangements may involve hiring Replacement Workers during an employee's absence",
+        "sentences_used": "5",
+        "source_entity_id": 5,
+        "target_entity_id": 6
+      },
+      {
+        "source_entity_name": "Customer Arrangements",
+        "target_entity_name": "Previous Position",
+        "relationship_description": "Due to Customer Arrangements such as hiring replacements, an employee's Previous Position may no longer be available",
+        "sentences_used": "6",
+        "source_entity_id": 5,
+        "target_entity_id": 7
+      },
+      {
+        "source_entity_name": "Management",
+        "target_entity_name": "Alternative Job Placement",
+        "relationship_description": "Management provides Alternative Job Placement when the original position is unavailable, based on current needs",
+        "sentences_used": "7",
+        "source_entity_id": 8,
+        "target_entity_id": 9
+      },
+      {
+        "source_entity_name": "Management",
+        "target_entity_name": "Reassignment Details",
+        "relationship_description": "Management is responsible for communicating Reassignment Details to workers in a timely manner",
+        "sentences_used": "8",
+        "source_entity_id": 8,
+        "target_entity_id": 10
+      },
+      {
+        "source_entity_name": "Employees",
+        "target_entity_name": "Management",
+        "relationship_description": "Employees are encouraged to consult with Management to understand their reassignment options prior to decisions being made",
+        "sentences_used": "10",
+        "source_entity_id": 14,
+        "target_entity_id": 8
+      },
+      {
+        "source_entity_name": "Employees",
+        "target_entity_name": "Reassignment Details",
+        "relationship_description": "Employees will be informed of their Reassignment Details following management decisions",
+        "sentences_used": "8",
+        "source_entity_id": 14,
+        "target_entity_id": 10
+      }
+    ]
+  },
+  {
+    "id": "doc1_question4",
+    "question": "4) What should I do if my savings are deducted monthly but not reflected in my statement?",
+    "origin_context": "4) What should I do if my savings are deducted monthly but not reflected in my statement? Inform your immediate superior or designated interpreter as soon as possible to lodge a formal complaint. They will escalate the issue to the Payroll department to resolve the matter and ensure your statement is properly updated. Management will escalate the issue to the Payroll department for investigation and resolution. The Payroll department will review the records, correct any discrepancies, and ensure your statement is properly updated. Workers should monitor subsequent statements and confirm that the corrections have been made. If the issue persists, they should seek further clarification from the Payroll department.",
+    "context": "Inform your immediate superior or designated interpreter as soon as possible to lodge a formal complaint [Sen 11]. They will escalate the issue to the Payroll department to resolve the matter and ensure your statement is properly updated [Sen 12]. Management will escalate the issue to the Payroll department for investigation and resolution [Sen 13]. The Payroll department will review the records, correct any discrepancies, and ensure your statement is properly updated [Sen 14]. Workers should monitor subsequent statements and confirm that the corrections have been made [Sen 15]. If the issue persists, they should seek further clarification from the Payroll department [Sen 16].",
+    "entity": [
+      {
+        "entity_name": "Immediate Superior",
+        "entity_description": "An immediate superior is a supervisor or manager to whom an employee reports and who can assist in lodging a formal complaint regarding payroll issues}",
+        "entity_id": 15
+      },
+      {
+        "entity_name": "Designated Interpreter",
+        "entity_description": "A designated interpreter is an individual authorized to facilitate communication and assist employees in submitting formal complaints, particularly in multilingual or accessibility contexts}",
+        "entity_id": 16
+      },
+      {
+        "entity_name": "Payroll Department",
+        "entity_description": "The Payroll Department is responsible for managing employee compensation records, investigating discrepancies, correcting errors, and ensuring accurate updates to employee statements}",
+        "entity_id": 17
+      },
+      {
+        "entity_name": "Management",
+        "entity_description": "Management refers to the group of officials or administrators who oversee operations and are responsible for escalating payroll-related issues to the appropriate department for resolution}",
+        "entity_id": 18
+      },
+      {
+        "entity_name": "Workers",
+        "entity_description": "Workers are employees who receive pay statements, monitor them for accuracy, report discrepancies, and confirm that corrections have been implemented}",
+        "entity_id": 19
+      }
+    ],
+    "relationship": [
+      {
+        "source_entity_name": "Immediate Superior",
+        "target_entity_name": "Payroll Department",
+        "relationship_description": "The immediate superior receives the initial complaint from the worker and helps escalate it to the Payroll Department for resolution",
+        "sentences_used": "11,12",
+        "source_entity_id": 15,
+        "target_entity_id": 17
+      },
+      {
+        "source_entity_name": "Designated Interpreter",
+        "target_entity_name": "Payroll Department",
+        "relationship_description": "The designated interpreter assists the worker in filing a complaint and ensures the issue is escalated to the Payroll Department",
+        "sentences_used": "11,12",
+        "source_entity_id": 16,
+        "target_entity_id": 17
+      },
+      {
+        "source_entity_name": "Management",
+        "target_entity_name": "Payroll Department",
+        "relationship_description": "Management is responsible for forwarding payroll issues to the Payroll Department for investigation and corrective action",
+        "sentences_used": "13",
+        "source_entity_id": 18,
+        "target_entity_id": 17
+      },
+      {
+        "source_entity_name": "Payroll Department",
+        "target_entity_name": "Workers",
+        "relationship_description": "The Payroll Department corrects discrepancies in workers' statements and ensures their records are properly updated",
+        "sentences_used": "14,15",
+        "source_entity_id": 17,
+        "target_entity_id": 19
+      },
+      {
+        "source_entity_name": "Workers",
+        "target_entity_name": "Payroll Department",
+        "relationship_description": "Workers are required to follow up with the Payroll Department if discrepancies persist after initial corrections",
+        "sentences_used": "15,16",
+        "source_entity_id": 19,
+        "target_entity_id": 17
+      }
+    ]
+  },
+  {
+    "id": "doc1_question5",
+    "question": "5) How do I handle an expired passport?",
+    "origin_context": "5) How do I handle an expired passport? Management continuously tracks passport expiration dates to ensure timely renewal. Workers should be aware that a passport must remain valid for at least 18 months before the work permit expires to comply with regulatory requirements. Workers will receive advance notice of their passport renewal date, along with appointment details at the respective embassy. They are advised to prepare any necessary documents beforehand to prevent delays. An interpreter will accompany the worker to the designated embassy, providing support with communication and ensuring a smooth renewal process. Passport renewal fees vary by nationality: Nepal – RM240; Bangladesh – RM305; Myanmar – RM430. Failure to renew the passport on time may result in work permit complications, fines, or penalties that could affect the worker’s employment status. Workers must adhere to renewal deadlines to prevent disruptions.",
+    "context": "Management continuously tracks passport expiration dates to ensure timely renewal [Sen 17]. Workers should be aware that a passport must remain valid for at least 18 months before the work permit expires to comply with regulatory requirements [Sen 18]. Workers will receive advance notice of their passport renewal date, along with appointment details at the respective embassy [Sen 19]. They are advised to prepare any necessary documents beforehand to prevent delays [Sen 20]. An interpreter will accompany the worker to the designated embassy, providing support with communication and ensuring a smooth renewal process [Sen 21]. Passport renewal fees vary by nationality: Nepal – RM240; Bangladesh – RM305; Myanmar – RM430 [Sen 22]. Failure to renew the passport on time may result in work permit complications, fines, or penalties that could affect the worker’s employment status [Sen 23]. Workers must adhere to renewal deadlines to prevent disruptions [Sen 24].",
+    "entity": [
+      {
+        "entity_name": "Management",
+        "entity_description": "Management is responsible for continuously tracking passport expiration dates to ensure timely renewal and compliance with regulatory requirements",
+        "entity_id": 20
+      },
+      {
+        "entity_name": "Passport Expiration Date",
+        "entity_description": "Passport Expiration Date refers to the date when a worker's passport is no longer valid, which Management monitors to initiate renewal procedures",
+        "entity_id": 21
+      },
+      {
+        "entity_name": "Timely Renewal",
+        "entity_description": "Timely Renewal is the process of renewing a passport in advance to avoid work permit issues, fines, or employment disruptions",
+        "entity_id": 22
+      },
+      {
+        "entity_name": "Worker",
+        "entity_description": "A Worker is an individual employed under a work permit who must maintain a valid passport for at least 18 months beyond the permit’s expiry for compliance",
+        "entity_id": 23
+      },
+      {
+        "entity_name": "Work Permit",
+        "entity_description": "Work Permit is an official authorization allowing foreign workers to be employed; its validity is linked to the passport’s validity period",
+        "entity_id": 24
+      },
+      {
+        "entity_name": "Regulatory Requirements",
+        "entity_description": "Regulatory Requirements include rules mandating that a passport remain valid for at least 18 months beyond the work permit expiry date",
+        "entity_id": 25
+      },
+      {
+        "entity_name": "Advance Notice",
+        "entity_description": "Advance Notice is a notification provided to workers regarding their upcoming passport renewal date and embassy appointment details",
+        "entity_id": 26
+      },
+      {
+        "entity_name": "Embassy",
+        "entity_description": "Embassy refers to the designated diplomatic mission where workers must go to renew their passports, with support such as interpreters available",
+        "entity_id": 27
+      },
+      {
+        "entity_name": "Interpreter",
+        "entity_description": "An Interpreter accompanies workers to the embassy to assist with communication and facilitate a smooth passport renewal process",
+        "entity_id": 28
+      },
+      {
+        "entity_name": "Passport Renewal Fees",
+        "entity_description": "Passport Renewal Fees are costs associated with renewing a passport, varying by nationality: Nepal – RM240; Bangladesh – RM305; Myanmar – RM430",
+        "entity_id": 29
+      },
+      {
+        "entity_name": "Nepal",
+        "entity_description": "Nepal is a country whose nationals pay RM240 for passport renewal in this context",
+        "entity_id": 30
+      },
+      {
+        "entity_name": "Bangladesh",
+        "entity_description": "Bangladesh is a country whose nationals pay RM305 for passport renewal in this context",
+        "entity_id": 31
+      },
+      {
+        "entity_name": "Myanmar",
+        "entity_description": "Myanmar is a country whose nationals pay RM430 for passport renewal in this context",
+        "entity_id": 32
+      },
+      {
+        "entity_name": "Work Permit Complications",
+        "entity_description": "Work Permit Complications are potential consequences of failing to renew a passport on time, including delays, fines, or negative impacts on employment status",
+        "entity_id": 33
+      },
+      {
+        "entity_name": "Fines",
+        "entity_description": "Fines are financial penalties imposed due to late passport renewal, potentially affecting a worker’s legal employment status",
+        "entity_id": 34
+      },
+      {
+        "entity_name": "Penalties",
+        "entity_description": "Penalties refer to punitive measures, including fines or restrictions, resulting from failure to meet passport renewal deadlines",
+        "entity_id": 35
+      },
+      {
+        "entity_name": "Renewal Deadlines",
+        "entity_description": "Renewal Deadlines are specific dates by which workers must complete passport renewal to remain compliant and prevent disruptions to their work status",
+        "entity_id": 36
+      },
+      {
+        "entity_name": "Employment Status",
+        "entity_description": "Employment Status refers to the legal standing of a worker, which may be negatively affected by failure to renew a passport on time",
+        "entity_id": 37
+      },
+      {
+        "entity_name": "Appointment Details",
+        "entity_description": "Appointment Details are logistical information about when and where a worker must appear at the embassy for passport renewal, communicated in advance",
+        "entity_id": 38
+      },
+      {
+        "entity_name": "Necessary Documents",
+        "entity_description": "Necessary Documents are required paperwork that workers must prepare before their embassy appointment to prevent delays in passport renewal",
+        "entity_id": 39
+      }
+    ],
+    "relationship": [
+      {
+        "source_entity_name": "Management",
+        "target_entity_name": "Passport Expiration Date",
+        "relationship_description": "Management actively tracks passport expiration dates to initiate timely renewals",
+        "sentences_used": "17",
+        "source_entity_id": 20,
+        "target_entity_id": 21
+      },
+      {
+        "source_entity_name": "Worker",
+        "target_entity_name": "Work Permit",
+        "relationship_description": "A worker's eligibility to work depends on holding a valid work permit, which is contingent on passport validity",
+        "sentences_used": "18",
+        "source_entity_id": 23,
+        "target_entity_id": 24
+      },
+      {
+        "source_entity_name": "Passport Expiration Date",
+        "target_entity_name": "Timely Renewal",
+        "relationship_description": "Monitoring the passport expiration date ensures that renewal occurs in time to comply with regulations",
+        "sentences_used": "17,19",
+        "source_entity_id": 21,
+        "target_entity_id": 22
+      },
+      {
+        "source_entity_name": "Worker",
+        "target_entity_name": "Regulatory Requirements",
+        "relationship_description": "Workers must meet regulatory requirements, such as maintaining 18 months of passport validity beyond work permit expiry",
+        "sentences_used": "18",
+        "source_entity_id": 23,
+        "target_entity_id": 25
+      },
+      {
+        "source_entity_name": "Management",
+        "target_entity_name": "Advance Notice",
+        "relationship_description": "Management sends advance notice to workers about their renewal date and embassy appointment",
+        "sentences_used": "19",
+        "source_entity_id": 20,
+        "target_entity_id": 26
+      },
+      {
+        "source_entity_name": "Advance Notice",
+        "target_entity_name": "Appointment Details",
+        "relationship_description": "Advance notice includes appointment details at the respective embassy for passport renewal",
+        "sentences_used": "19",
+        "source_entity_id": 26,
+        "target_entity_id": 38
+      },
+      {
+        "source_entity_name": "Worker",
+        "target_entity_name": "Appointment Details",
+        "relationship_description": "Workers receive appointment details to attend the embassy for renewal",
+        "sentences_used": "19",
+        "source_entity_id": 23,
+        "target_entity_id": 38
+      },
+      {
+        "source_entity_name": "Worker",
+        "target_entity_name": "Necessary Documents",
+        "relationship_description": "Workers are advised to prepare necessary documents before the embassy visit to avoid delays",
+        "sentences_used": "20",
+        "source_entity_id": 23,
+        "target_entity_id": 39
+      },
+      {
+        "source_entity_name": "Interpreter",
+        "target_entity_name": "Embassy",
+        "relationship_description": "An interpreter supports the worker during the embassy visit for communication purposes",
+        "sentences_used": "21",
+        "source_entity_id": 28,
+        "target_entity_id": 27
+      },
+      {
+        "source_entity_name": "Interpreter",
+        "target_entity_name": "Worker",
+        "relationship_description": "The interpreter accompanies the worker to assist with language and procedural support at the embassy",
+        "sentences_used": "21",
+        "source_entity_id": 28,
+        "target_entity_id": 23
+      },
+      {
+        "source_entity_name": "Passport Renewal Fees",
+        "target_entity_name": "Nepal",
+        "relationship_description": "Nationals from Nepal pay RM240 for passport renewal",
+        "sentences_used": "22",
+        "source_entity_id": 29,
+        "target_entity_id": 30
+      },
+      {
+        "source_entity_name": "Passport Renewal Fees",
+        "target_entity_name": "Bangladesh",
+        "relationship_description": "Nationals from Bangladesh pay RM305 for passport renewal",
+        "sentences_used": "22",
+        "source_entity_id": 29,
+        "target_entity_id": 31
+      },
+      {
+        "source_entity_name": "Passport Renewal Fees",
+        "target_entity_name": "Myanmar",
+        "relationship_description": "Nationals from Myanmar pay RM430 for passport renewal",
+        "sentences_used": "22",
+        "source_entity_id": 29,
+        "target_entity_id": 32
+      },
+      {
+        "source_entity_name": "Work Permit Complications",
+        "target_entity_name": "Employment Status",
+        "relationship_description": "Work permit complications due to expired passports can negatively impact a worker’s employment status",
+        "sentences_used": "23",
+        "source_entity_id": 33,
+        "target_entity_id": 37
+      },
+      {
+        "source_entity_name": "Worker",
+        "target_entity_name": "Renewal Deadlines",
+        "relationship_description": "Workers must adhere to renewal deadlines to prevent disruptions in their work and legal status",
+        "sentences_used": "24",
+        "source_entity_id": 23,
+        "target_entity_id": 36
+      },
+      {
+        "source_entity_name": "Timely Renewal",
+        "target_entity_name": "Work Permit",
+        "relationship_description": "Ensuring timely passport renewal helps maintain uninterrupted validity of the work permit",
+        "sentences_used": "18,23",
+        "source_entity_id": 22,
+        "target_entity_id": 24
+      }
+    ]
+  },
+  {
+    "id": "doc1_question6",
+    "question": "6) What should I do if my new permit has not been issued by Immigration, despite my old permit expiring?",
+    "origin_context": "6) What should I do if my new permit has not been issued by Immigration, despite my old permit expiring? Delays in work permit issuance may occur due to various factors, such as pending FOMEMA medical results, a lost passport, or other administrative processing issues. Workers should check with management to identify the specific reason for the delay. If the new permit is delayed, a Special Pass (SP) can be issued as a temporary permit, valid for one month while awaiting the new permit. A RM100 fee is required for the Special Pass application, which should be paid as per immigration procedures. Workers should verify whether this fee is covered by the company or if they are responsible for payment. If the new permit continues to be delayed, the Special Pass will be renewed continuously until Immigration issues the new work permit. Workers should ensure they follow up regularly for status updates. The company’s administration will oversee the entire process, including permit applications and renewals. Workers are encouraged to stay informed and coordinate with management regarding their permit status.",
+    "context": "Delays in work permit issuance may occur due to various factors, such as pending FOMEMA medical results, a lost passport, or other administrative processing issues [Sen 25]. Workers should check with management to identify the specific reason for the delay [Sen 26]. If the new permit is delayed, a Special Pass (SP) can be issued as a temporary permit, valid for one month while awaiting the new permit [Sen 27]. A RM100 fee is required for the Special Pass application, which should be paid as per immigration procedures [Sen 28]. Workers should verify whether this fee is covered by the company or if they are responsible for payment [Sen 29]. If the new permit continues to be delayed, the Special Pass will be renewed continuously until Immigration issues the new work permit [Sen 30]. Workers should ensure they follow up regularly for status updates [Sen 31]. The company’s administration will oversee the entire process, including permit applications and renewals [Sen 32]. Workers are encouraged to stay informed and coordinate with management regarding their permit status [Sen 33].",
+    "entity": [
+      {
+        "entity_name": "Work Permit Issuance",
+        "entity_description": "Work Permit Issuance refers to the process of granting official authorization for foreign workers to work in Malaysia, which may experience delays due to medical, administrative, or documentation issues",
+        "entity_id": 40
+      },
+      {
+        "entity_name": "FOMEMA Medical Results",
+        "entity_description": "FOMEMA Medical Results are mandatory health screening outcomes required for foreign workers applying for work permits in Malaysia; delays in receiving these results can postpone permit issuance",
+        "entity_id": 41
+      },
+      {
+        "entity_name": "Lost Passport",
+        "entity_description": "A Lost Passport is a missing travel document that can hinder the processing of a new work permit until replacement procedures are completed",
+        "entity_id": 42
+      },
+      {
+        "entity_name": "Administrative Processing Issues",
+        "entity_description": "Administrative Processing Issues refer to bureaucratic or procedural delays within government systems that may affect the timely issuance of work permits",
+        "entity_id": 43
+      },
+      {
+        "entity_name": "Special Pass",
+        "entity_description": "A Special Pass (SP",
+        "entity_id": 44
+      },
+      {
+        "entity_name": "Immigration",
+        "entity_description": "Immigration refers to the Malaysian immigration authorities responsible for issuing work permits and managing the status of foreign workers, including the approval of Special Passes",
+        "entity_id": 45
+      },
+      {
+        "entity_name": "RM100 Fee",
+        "entity_description": "The RM100 Fee is a mandatory charge required for the application of a Special Pass, to be paid according to immigration regulations",
+        "entity_id": 46
+      },
+      {
+        "entity_name": "Company Administration",
+        "entity_description": "Company Administration refers to the internal management team responsible for overseeing work permit applications, renewals, and coordination with immigration authorities on behalf of workers",
+        "entity_id": 47
+      },
+      {
+        "entity_name": "Workers",
+        "entity_description": "Workers are foreign laborers whose work permit status may be affected by delays, requiring them to coordinate with management and follow up on permit processing",
+        "entity_id": 48
+      },
+      {
+        "entity_name": "Management",
+        "entity_description": "Management refers to the group of officials or administrators who oversee operations and are responsible for escalating payroll-related issues to the appropriate department for resolution}",
+        "entity_id": 18
+      }
+    ],
+    "relationship": [
+      {
+        "source_entity_name": "Work Permit Issuance",
+        "target_entity_name": "FOMEMA Medical Results",
+        "relationship_description": "Pending FOMEMA medical results are one of the factors that can cause delays in work permit issuance",
+        "sentences_used": "25",
+        "source_entity_id": 40,
+        "target_entity_id": 41
+      },
+      {
+        "source_entity_name": "Work Permit Issuance",
+        "target_entity_name": "Lost Passport",
+        "relationship_description": "A lost passport can lead to delays in the processing of a new work permit",
+        "sentences_used": "25",
+        "source_entity_id": 40,
+        "target_entity_id": 42
+      },
+      {
+        "source_entity_name": "Work Permit Issuance",
+        "target_entity_name": "Administrative Processing Issues",
+        "relationship_description": "Administrative processing issues are cited as potential causes for delays in work permit issuance",
+        "sentences_used": "25",
+        "source_entity_id": 40,
+        "target_entity_id": 43
+      },
+      {
+        "source_entity_name": "Workers",
+        "target_entity_name": "Management",
+        "relationship_description": "Workers are advised to consult management to determine the specific reason for their work permit delay",
+        "sentences_used": "26",
+        "source_entity_id": 48,
+        "target_entity_id": 18
+      },
+      {
+        "source_entity_name": "Special Pass",
+        "target_entity_name": "Work Permit Issuance",
+        "relationship_description": "A Special Pass is issued temporarily when the new work permit is delayed, allowing legal stay during processing",
+        "sentences_used": "27",
+        "source_entity_id": 44,
+        "target_entity_id": 40
+      },
+      {
+        "source_entity_name": "Special Pass",
+        "target_entity_name": "RM100 Fee",
+        "relationship_description": "A RM100 fee is required to apply for a Special Pass, as per immigration rules",
+        "sentences_used": "28",
+        "source_entity_id": 44,
+        "target_entity_id": 46
+      },
+      {
+        "source_entity_name": "RM100 Fee",
+        "target_entity_name": "Company Administration",
+        "relationship_description": "Workers should confirm whether the company covers the RM100 Special Pass fee or if they must pay it themselves",
+        "sentences_used": "29",
+        "source_entity_id": 46,
+        "target_entity_id": 47
+      },
+      {
+        "source_entity_name": "Special Pass",
+        "target_entity_name": "Immigration",
+        "relationship_description": "The Special Pass is issued and renewed by Immigration while workers await their new work permit",
+        "sentences_used": "30",
+        "source_entity_id": 44,
+        "target_entity_id": 45
+      },
+      {
+        "source_entity_name": "Special Pass",
+        "target_entity_name": "Workers",
+        "relationship_description": "Workers receive the Special Pass as a temporary solution and must ensure its renewal if the permit is still delayed",
+        "sentences_used": "27,30",
+        "source_entity_id": 44,
+        "target_entity_id": 48
+      },
+      {
+        "source_entity_name": "Workers",
+        "target_entity_name": "Company Administration",
+        "relationship_description": "Company Administration oversees the entire permit application and renewal process, requiring workers to follow up regularly",
+        "sentences_used": "31,32",
+        "source_entity_id": 48,
+        "target_entity_id": 47
+      },
+      {
+        "source_entity_name": "Workers",
+        "target_entity_name": "Management",
+        "relationship_description": "Workers are encouraged to stay informed and coordinate with management regarding their permit status",
+        "sentences_used": "33",
+        "source_entity_id": 48,
+        "target_entity_id": 18
+      },
+      {
+        "source_entity_name": "Company Administration",
+        "target_entity_name": "Immigration",
+        "relationship_description": "Company Administration handles communications and submissions related to permit processing with Immigration authorities",
+        "sentences_used": "32",
+        "source_entity_id": 47,
+        "target_entity_id": 45
+      }
+    ]
+  },
+  {
+    "id": "doc1_question7",
+    "question": "7) What should I do if my passport is lost?",
+    "origin_context": "7) What should I do if my passport is lost? Report the loss to your immediate superior or designated interpreter as soon as possible. It is advisable to do this promptly to avoid delays in the replacement process. Management will arrange for a police report, and the worker must accompany them to file it. Ensure all relevant details are provided accurately. After obtaining the police report, submit it along with any required supporting documents to the respective embassy to apply for a replacement passport. Workers should be aware of any applicable fees for the passport replacement process. Once the new passport is issued, proceed to the Immigration Department to apply for a valid work permit. Workers should also ensure that they securely store copies of their passport and permit.",
+    "context": "Report the loss to your immediate superior or designated interpreter as soon as possible [Sen 34]. It is advisable to do this promptly to avoid delays in the replacement process [Sen 35]. Management will arrange for a police report, and the worker must accompany them to file it [Sen 36]. Ensure all relevant details are provided accurately [Sen 37]. After obtaining the police report, submit it along with any required supporting documents to the respective embassy to apply for a replacement passport [Sen 38]. Workers should be aware of any applicable fees for the passport replacement process [Sen 39]. Once the new passport is issued, proceed to the Immigration Department to apply for a valid work permit [Sen 40]. Workers should also ensure that they securely store copies of their passport and permit [Sen 41].",
+    "entity": [
+      {
+        "entity_name": "Immediate Superior",
+        "entity_description": "An individual to whom a worker reports directly and who must be informed promptly about the loss of a passport",
+        "entity_id": 50
+      },
+      {
+        "entity_name": "Designated Interpreter",
+        "entity_description": "A person assigned to assist communication, likely in a foreign language context, and who may receive reports of lost documents such as passports",
+        "entity_id": 51
+      },
+      {
+        "entity_name": "Management",
+        "entity_description": "The supervisory authority responsible for organizing the filing of a police report following notification of a lost passport",
+        "entity_id": 52
+      },
+      {
+        "entity_name": "Worker",
+        "entity_description": "An individual employed abroad who has lost their passport and must follow a formal process to obtain a replacement and maintain legal work status",
+        "entity_id": 53
+      },
+      {
+        "entity_name": "Police Report",
+        "entity_description": "An official document filed with law enforcement regarding the loss of a passport, required for further administrative procedures",
+        "entity_id": 54
+      },
+      {
+        "entity_name": "Embassy",
+        "entity_description": "Embassy refers to the designated diplomatic mission where workers must go to renew their passports, with support such as interpreters available",
+        "entity_id": 27
+      },
+      {
+        "entity_name": "Replacement Passport",
+        "entity_description": "A new passport issued by the embassy to replace the lost one, necessary for continued international travel and identification",
+        "entity_id": 56
+      },
+      {
+        "entity_name": "Supporting Documents",
+        "entity_description": "Additional paperwork required by the embassy alongside the police report to process the application for a replacement passport",
+        "entity_id": 57
+      },
+      {
+        "entity_name": "Passport Replacement Fees",
+        "entity_description": "Charges that workers may need to pay when applying for a new passport through the embassy",
+        "entity_id": 58
+      },
+      {
+        "entity_name": "Immigration Department",
+        "entity_description": "A government agency responsible for regulating immigration and work permits; the worker must apply here for a valid work permit after receiving the new passport",
+        "entity_id": 59
+      },
+      {
+        "entity_name": "Work Permit",
+        "entity_description": "Work Permit is an official authorization allowing foreign workers to be employed; its validity is linked to the passport’s validity period",
+        "entity_id": 24
+      },
+      {
+        "entity_name": "Document Copies",
+        "entity_description": "Photocopies or digital backups of important personal documents like the passport and work permit, recommended for secure storage to prevent future complications",
+        "entity_id": 61
+      }
+    ],
+    "relationship": [
+      {
+        "source_entity_name": "Worker",
+        "target_entity_name": "Immediate Superior",
+        "relationship_description": "The worker is required to report the loss of their passport to their immediate superior as the first step in the replacement process",
+        "sentences_used": "34",
+        "source_entity_id": 53,
+        "target_entity_id": 50
+      },
+      {
+        "source_entity_name": "Worker",
+        "target_entity_name": "Designated Interpreter",
+        "relationship_description": "The worker may report the passport loss to the designated interpreter if direct communication with the superior is not feasible",
+        "sentences_used": "34",
+        "source_entity_id": 53,
+        "target_entity_id": 51
+      },
+      {
+        "source_entity_name": "Worker",
+        "target_entity_name": "Management",
+        "relationship_description": "After reporting the loss, management takes action, and the worker must accompany them to file a police report",
+        "sentences_used": "36",
+        "source_entity_id": 53,
+        "target_entity_id": 52
+      },
+      {
+        "source_entity_name": "Management",
+        "target_entity_name": "Police Report",
+        "relationship_description": "Management is responsible for arranging the filing of the police report regarding the lost passport",
+        "sentences_used": "36",
+        "source_entity_id": 52,
+        "target_entity_id": 54
+      },
+      {
+        "source_entity_name": "Worker",
+        "target_entity_name": "Police Report",
+        "relationship_description": "The worker must accompany management when filing the police report and ensure all details are accurate",
+        "sentences_used": "36,37",
+        "source_entity_id": 53,
+        "target_entity_id": 54
+      },
+      {
+        "source_entity_name": "Police Report",
+        "target_entity_name": "Embassy",
+        "relationship_description": "The police report must be submitted to the embassy as part of the application for a replacement passport",
+        "sentences_used": "38",
+        "source_entity_id": 54,
+        "target_entity_id": 27
+      },
+      {
+        "source_entity_name": "Supporting Documents",
+        "target_entity_name": "Embassy",
+        "relationship_description": "Along with the police report, supporting documents must be provided to the embassy to complete the passport replacement application",
+        "sentences_used": "38",
+        "source_entity_id": 57,
+        "target_entity_id": 27
+      },
+      {
+        "source_entity_name": "Embassy",
+        "target_entity_name": "Replacement Passport",
+        "relationship_description": "The embassy issues the replacement passport after reviewing the submitted police report and supporting documents",
+        "sentences_used": "38",
+        "source_entity_id": 27,
+        "target_entity_id": 56
+      },
+      {
+        "source_entity_name": "Worker",
+        "target_entity_name": "Passport Replacement Fees",
+        "relationship_description": "Workers should be aware of potential fees associated with obtaining a replacement passport from the embassy",
+        "sentences_used": "39",
+        "source_entity_id": 53,
+        "target_entity_id": 58
+      },
+      {
+        "source_entity_name": "Replacement Passport",
+        "target_entity_name": "Immigration Department",
+        "relationship_description": "Once the new passport is issued, the worker must go to the Immigration Department to apply for a valid work permit",
+        "sentences_used": "40",
+        "source_entity_id": 56,
+        "target_entity_id": 59
+      },
+      {
+        "source_entity_name": "Replacement Passport",
+        "target_entity_name": "Work Permit",
+        "relationship_description": "Possession of a valid passport is a prerequisite for applying for or renewing a work permit",
+        "sentences_used": "40",
+        "source_entity_id": 56,
+        "target_entity_id": 24
+      },
+      {
+        "source_entity_name": "Worker",
+        "target_entity_name": "Document Copies",
+        "relationship_description": "Workers are advised to securely store copies of their passport and work permit to avoid difficulties in case of future loss",
+        "sentences_used": "41",
+        "source_entity_id": 53,
+        "target_entity_id": 61
+      }
+    ]
+  },
+  {
+    "id": "doc1_question8",
+    "question": "8) Documents retained by workers while their passports are held by management: Workers will be provided with a laminated photocopy of their passport or permit and are encouraged to keep it secure, as they may need to present it for verification when inspected by authorities.",
+    "origin_context": "8) Documents retained by workers while their passports are held by management: Workers will be provided with a laminated photocopy of their passport or permit and are encouraged to keep it secure, as they may need to present it for verification when inspected by authorities. If the laminated copy is lost or damaged, workers should promptly report it to the designated contact person for replacement. Workers are advised to carry the laminated copy whenever they go out to ensure smooth interactions with authorities and avoid unnecessary complications. If inspected by authorities, workers should present the laminated copy for verification, as digital copies may not always be accepted. Additionally, workers can access digital copies of their passport or permit through the MTS On The Go apps.",
+    "context": "If the laminated copy is lost or damaged, workers should promptly report it to the designated contact person for replacement [Sen 42]. Workers are advised to carry the laminated copy whenever they go out to ensure smooth interactions with authorities and avoid unnecessary complications [Sen 43]. If inspected by authorities, workers should present the laminated copy for verification, as digital copies may not always be accepted [Sen 44]. Additionally, workers can access digital copies of their passport or permit through the MTS On The Go apps [Sen 45].",
+    "entity": [
+      {
+        "entity_name": "Workers",
+        "entity_description": "Workers are foreign laborers whose work permit status may be affected by delays, requiring them to coordinate with management and follow up on permit processing",
+        "entity_id": 48
+      },
+      {
+        "entity_name": "Laminated Copy",
+        "entity_description": "Laminated Copy refers to a physical, durable version of a worker's passport or permit that must be carried when going out and presented during inspections by authorities",
+        "entity_id": 63
+      },
+      {
+        "entity_name": "Designated Contact Person",
+        "entity_description": "Designated Contact Person is the individual responsible for handling reports and facilitating the replacement of lost or damaged laminated copies",
+        "entity_id": 64
+      },
+      {
+        "entity_name": "Authorities",
+        "entity_description": "Authorities are official personnel who may inspect workers and require presentation of the laminated copy for verification",
+        "entity_id": 65
+      },
+      {
+        "entity_name": "MTS On The Go Apps",
+        "entity_description": "MTS On The Go apps are digital platforms through which workers can access digital copies of their passport or permit",
+        "entity_id": 66
+      }
+    ],
+    "relationship": [
+      {
+        "source_entity_name": "Workers",
+        "target_entity_name": "Laminated Copy",
+        "relationship_description": "Workers are required to carry the laminated copy when going out and present it if inspected",
+        "sentences_used": "43,44",
+        "source_entity_id": 48,
+        "target_entity_id": 63
+      },
+      {
+        "source_entity_name": "Laminated Copy",
+        "target_entity_name": "Authorities",
+        "relationship_description": "The laminated copy must be presented to authorities during inspections for verification, as digital versions may not be accepted",
+        "sentences_used": "44",
+        "source_entity_id": 63,
+        "target_entity_id": 65
+      },
+      {
+        "source_entity_name": "Workers",
+        "target_entity_name": "Designated Contact Person",
+        "relationship_description": "Workers must report to the designated contact person if the laminated copy is lost or damaged to obtain a replacement",
+        "sentences_used": "42",
+        "source_entity_id": 48,
+        "target_entity_id": 64
+      },
+      {
+        "source_entity_name": "Workers",
+        "target_entity_name": "MTS On The Go Apps",
+        "relationship_description": "Workers can use the MTS On The Go apps to access digital copies of their passport or permit",
+        "sentences_used": "45",
+        "source_entity_id": 48,
+        "target_entity_id": 66
+      },
+      {
+        "source_entity_name": "MTS On The Go Apps",
+        "target_entity_name": "Laminated Copy",
+        "relationship_description": "While the MTS On The Go apps provide digital copies, the laminated copy remains necessary because digital versions may not always be accepted during inspections",
+        "sentences_used": "44,45",
+        "source_entity_id": 66,
+        "target_entity_id": 63
+      }
+    ]
+  },
+  {
+    "id": "doc1_question9",
+    "question": "9) How to view my salary statement?",
+    "origin_context": "9) How to view my salary statement? You can view your salary statement by logging into the MTS On The Go apps. Once logged in, navigate to the \"Salary\" section and select the option to view your statement. Salary statements for previous months may also be available. If you encounter any issues, such as missing salary details or difficulties accessing the platform, promptly contact your immediate superior or the designated interpreter for assistance.",
+    "context": "You can view your salary statement by logging into the MTS On The Go apps [Sen 46]. Once logged in, navigate to the \"Salary\" section and select the option to view your statement [Sen 47]. Salary statements for previous months may also be available [Sen 48]. If you encounter any issues, such as missing salary details or difficulties accessing the platform, promptly contact your immediate superior or the designated interpreter for assistance [Sen 49].",
+    "entity": [
+      {
+        "entity_name": "MTS On The Go Apps",
+        "entity_description": "MTS On The Go Apps is a digital platform that allows users to access personal information, including salary statements, by logging into their account",
+        "entity_id": 67
+      },
+      {
+        "entity_name": "Salary Statement",
+        "entity_description": "A Salary Statement is a document detailing an individual's earnings and related financial information for a given period, accessible through the MTS On The Go apps",
+        "entity_id": 68
+      },
+      {
+        "entity_name": "Immediate Superior",
+        "entity_description": "An immediate superior is a supervisor or manager to whom an employee reports and who can assist in lodging a formal complaint regarding payroll issues}",
+        "entity_id": 15
+      },
+      {
+        "entity_name": "Designated Interpreter",
+        "entity_description": "A Designated Interpreter is an authorized individual who provides assistance to users experiencing difficulties with the MTS On The Go apps or understanding their salary details",
+        "entity_id": 70
+      }
+    ],
+    "relationship": [
+      {
+        "source_entity_name": "MTS On The Go Apps",
+        "target_entity_name": "Salary Statement",
+        "relationship_description": "The MTS On The Go apps provide access to users' salary statements upon login and navigation to the appropriate section",
+        "sentences_used": "46,47",
+        "source_entity_id": 67,
+        "target_entity_id": 68
+      },
+      {
+        "source_entity_name": "Salary Statement",
+        "target_entity_name": "Immediate Superior",
+        "relationship_description": "If there are issues with missing salary details, users are advised to contact their immediate superior for help",
+        "sentences_used": "49",
+        "source_entity_id": 68,
+        "target_entity_id": 15
+      },
+      {
+        "source_entity_name": "Salary Statement",
+        "target_entity_name": "Designated Interpreter",
+        "relationship_description": "Users encountering difficulties accessing or understanding their salary statement can contact the designated interpreter for support",
+        "sentences_used": "49",
+        "source_entity_id": 68,
+        "target_entity_id": 70
+      },
+      {
+        "source_entity_name": "MTS On The Go Apps",
+        "target_entity_name": "Immediate Superior",
+        "relationship_description": "When users face issues accessing the MTS On The Go apps, they are instructed to contact their immediate superior as a point of escalation",
+        "sentences_used": "49",
+        "source_entity_id": 67,
+        "target_entity_id": 15
+      },
+      {
+        "source_entity_name": "MTS On The Go Apps",
+        "target_entity_name": "Designated Interpreter",
+        "relationship_description": "The designated interpreter serves as a support contact for resolving access or comprehension problems related to the MTS On The Go apps",
+        "sentences_used": "49",
+        "source_entity_id": 67,
+        "target_entity_id": 70
+      }
+    ]
+  },
+  {
+    "id": "doc1_question10",
+    "question": "10) What is refund process after returning from holiday?",
+    "origin_context": "10) What is refund process after returning from holiday? Upon returning from holiday, the deposit and other related amounts, including one-way airfare, will be processed for release within one week. However, funds are disbursed every Wednesday, meaning the actual release date depends on the closest Wednesday following the worker’s return. Workers should ensure they complete any necessary administrative steps to facilitate the refund process. If there are delays, workers should promptly consult the designated department for clarification and resolution.",
+    "context": "Upon returning from holiday, the deposit and other related amounts, including one-way airfare, will be processed for release within one week [Sen 50]. However, funds are disbursed every Wednesday, meaning the actual release date depends on the closest Wednesday following the worker’s return [Sen 51]. Workers should ensure they complete any necessary administrative steps to facilitate the refund process [Sen 52]. If there are delays, workers should promptly consult the designated department for clarification and resolution [Sen 53].",
+    "entity": [
+      {
+        "entity_name": "Deposit",
+        "entity_description": "The deposit refers to a sum of money held during a worker's holiday that is processed for release within one week after the worker returns}",
+        "entity_id": 71
+      },
+      {
+        "entity_name": "One-Way Airfare",
+        "entity_description": "One-Way Airfare is a travel expense covered or reimbursed upon the worker's return from holiday, included in the refund process along with the deposit}",
+        "entity_id": 72
+      },
+      {
+        "entity_name": "Refund Process",
+        "entity_description": "The Refund Process involves the release of the deposit and other related amounts such as airfare after a worker returns from holiday, contingent on completing administrative steps}",
+        "entity_id": 73
+      },
+      {
+        "entity_name": "Worker",
+        "entity_description": "A Worker is an individual returning from holiday who is eligible to receive a refund of deposit and airfare, subject to procedural compliance and disbursement schedule}",
+        "entity_id": 74
+      },
+      {
+        "entity_name": "Designated Department",
+        "entity_description": "The Designated Department is responsible for addressing delays or issues in the refund process and providing clarification to workers}",
+        "entity_id": 75
+      },
+      {
+        "entity_name": "Disbursement Schedule",
+        "entity_description": "The Disbursement Schedule specifies that funds are released every Wednesday, determining the actual date when refunds are issued based on the worker's return timing}",
+        "entity_id": 76
+      }
+    ],
+    "relationship": [
+      {
+        "source_entity_name": "Deposit",
+        "target_entity_name": "Refund Process",
+        "relationship_description": "The deposit is a component of the refund process and is released along with other amounts after the worker returns from holiday",
+        "sentences_used": "50",
+        "source_entity_id": 71,
+        "target_entity_id": 73
+      },
+      {
+        "source_entity_name": "One-Way Airfare",
+        "target_entity_name": "Refund Process",
+        "relationship_description": "One-way airfare is included in the refund process and is disbursed together with the deposit upon return",
+        "sentences_used": "50",
+        "source_entity_id": 72,
+        "target_entity_id": 73
+      },
+      {
+        "source_entity_name": "Refund Process",
+        "target_entity_name": "Worker",
+        "relationship_description": "The refund process applies to workers returning from holiday, who must complete required steps to receive their funds",
+        "sentences_used": "50,52",
+        "source_entity_id": 73,
+        "target_entity_id": 74
+      },
+      {
+        "source_entity_name": "Worker",
+        "target_entity_name": "Disbursement Schedule",
+        "relationship_description": "The worker’s refund release date depends on the disbursement schedule, which issues funds every Wednesday following their return",
+        "sentences_used": "51",
+        "source_entity_id": 74,
+        "target_entity_id": 76
+      },
+      {
+        "source_entity_name": "Worker",
+        "target_entity_name": "Designated Department",
+        "relationship_description": "Workers should contact the designated department if they encounter delays in receiving their refund",
+        "sentences_used": "53",
+        "source_entity_id": 74,
+        "target_entity_id": 75
+      },
+      {
+        "source_entity_name": "Refund Process",
+        "target_entity_name": "Disbursement Schedule",
+        "relationship_description": "The timing of the refund process is governed by the disbursement schedule, with releases occurring every Wednesday",
+        "sentences_used": "51",
+        "source_entity_id": 73,
+        "target_entity_id": 76
+      }
+    ]
+  }
+]

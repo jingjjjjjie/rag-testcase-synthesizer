@@ -14,14 +14,10 @@ from sklearn.metrics.pairwise import cosine_similarity
 from .. import PROJECT_ROOT
 from ..tools.api import call_api_qwen, get_qwen_embeddings
 
-
-
 TEMPERATURE = float(os.getenv("TEMPERATURE", 0.6))
-
 
 class EntityEliminator:
     def __init__(self):
-
         self.ENTITY_ELIMINATOR_INPUT_PATH, self.ENTITY_ELIMINATOR_OUTPUT_PATH, self.ENTITY_ELIMINATOR_OUTPUT_MAP_PATH = None, None, None
         if os.getenv("ENTITY_ELIMINATOR_INPUT_PATH") != None:
             self.ENTITY_ELIMINATOR_INPUT_PATH = os.getenv("ENTITY_ELIMINATOR_INPUT_PATH")
@@ -35,6 +31,9 @@ class EntityEliminator:
         self.ENTITY_ELIMINATOR_OUTPUT_PATH = os.path.join(PROJECT_ROOT, self.ENTITY_ELIMINATOR_OUTPUT_PATH)
         self.ENTITY_ELIMINATOR_OUTPUT_MAP_PATH = os.path.join(PROJECT_ROOT, self.ENTITY_ELIMINATOR_OUTPUT_MAP_PATH)
         self.ENTITY_ELIMINATOR_SIMILARITY_THRESHOLD = float(self.ENTITY_ELIMINATOR_SIMILARITY_THRESHOLD)
+
+        self.ENTITY_ELIMINATOR_MAX_NEW_TOKENS = os.getenv("self.ENTITY_ELIMINATOR_MAX_NEW_TOKENS", None)
+        self.ENTITY_ELIMINATOR_STOP_WORDS = os.getenv("ENTITY_ELIMINATOR_STOP_WORDS", None)
         self.ENTITY_ELIMINATOR_NUM_WORKERS = int(os.getenv("ENTITY_ELIMINATOR_NUM_WORKERS", 4))
 
     def extract_largest_json(self, response):

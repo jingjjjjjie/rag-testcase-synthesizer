@@ -1,0 +1,362 @@
+[
+  {
+    "entity_id": 43,
+    "entity_name": "Administrative Processing Issues",
+    "entity_description": "Administrative Processing Issues refer to bureaucratic or procedural delays within government systems that may affect the timely issuance of work permits"
+  },
+  {
+    "entity_id": 26,
+    "entity_name": "Advance Notice",
+    "entity_description": "Advance Notice is a notification provided to workers regarding their upcoming passport renewal date and embassy appointment details"
+  },
+  {
+    "entity_id": 9,
+    "entity_name": "Alternative Job Placement",
+    "entity_description": "Alternative Job Placement is a new position offered to employees when their original role is unavailable, determined by management according to current operational demands"
+  },
+  {
+    "entity_id": 38,
+    "entity_name": "Appointment Details",
+    "entity_description": "Appointment Details are logistical information about when and where a worker must appear at the embassy for passport renewal, communicated in advance"
+  },
+  {
+    "entity_id": 65,
+    "entity_name": "Authorities",
+    "entity_description": "Authorities are official personnel who may inspect workers and require presentation of the laminated copy for verification"
+  },
+  {
+    "entity_id": 31,
+    "entity_name": "Bangladesh",
+    "entity_description": "Bangladesh is a country whose nationals pay RM305 for passport renewal in this context"
+  },
+  {
+    "entity_id": 47,
+    "entity_name": "Company Administration",
+    "entity_description": "Company Administration refers to the internal management team responsible for overseeing work permit applications, renewals, and coordination with immigration authorities on behalf of workers"
+  },
+  {
+    "entity_id": 5,
+    "entity_name": "Customer Arrangements",
+    "entity_description": "Customer Arrangements refer to the agreements or plans made by customers regarding staffing, which may include hiring replacement workers during an employee's absence"
+  },
+  {
+    "entity_id": 12,
+    "entity_name": "Customer Demand",
+    "entity_description": "Customer Demand reflects the level of need for labor or services from the customer side, impacting staffing and reassignment decisions"
+  },
+  {
+    "entity_id": 71,
+    "entity_name": "Deposit",
+    "entity_description": "The deposit refers to a sum of money held during a worker's holiday that is processed for release within one week after the worker returns}"
+  },
+  {
+    "entity_id": 64,
+    "entity_name": "Designated Contact Person",
+    "entity_description": "Designated Contact Person is the individual responsible for handling reports and facilitating the replacement of lost or damaged laminated copies"
+  },
+  {
+    "entity_id": 75,
+    "entity_name": "Designated Department",
+    "entity_description": "The Designated Department is responsible for addressing delays or issues in the refund process and providing clarification to workers}"
+  },
+  {
+    "entity_id": 76,
+    "entity_name": "Disbursement Schedule",
+    "entity_description": "The Disbursement Schedule specifies that funds are released every Wednesday, determining the actual date when refunds are issued based on the worker's return timing}"
+  },
+  {
+    "entity_id": 61,
+    "entity_name": "Document Copies",
+    "entity_description": "Photocopies or digital backups of important personal documents like the passport and work permit, recommended for secure storage to prevent future complications"
+  },
+  {
+    "entity_id": 14,
+    "entity_name": "Employees",
+    "entity_description": "Employees are workers who may be reassigned based on customer arrangements, length of absence, and organizational needs, and who are encouraged to consult with management about their options"
+  },
+  {
+    "entity_id": 37,
+    "entity_name": "Employment Status",
+    "entity_description": "Employment Status refers to the legal standing of a worker, which may be negatively affected by failure to renew a passport on time"
+  },
+  {
+    "entity_id": 41,
+    "entity_name": "FOMEMA Medical Results",
+    "entity_description": "FOMEMA Medical Results are mandatory health screening outcomes required for foreign workers applying for work permits in Malaysia; delays in receiving these results can postpone permit issuance"
+  },
+  {
+    "entity_id": 34,
+    "entity_name": "Fines",
+    "entity_description": "Fines are financial penalties imposed due to late passport renewal, potentially affecting a worker’s legal employment status"
+  },
+  {
+    "entity_id": 3,
+    "entity_name": "Hostels",
+    "entity_description": "Hostels are accommodations that commonly enforce strict smoking policies, prohibiting smoking indoors and sometimes providing designated outdoor areas for smokers"
+  },
+  {
+    "entity_id": 45,
+    "entity_name": "Immigration",
+    "entity_description": "Immigration refers to the Malaysian immigration authorities responsible for issuing work permits and managing the status of foreign workers, including the approval of Special Passes"
+  },
+  {
+    "entity_id": 59,
+    "entity_name": "Immigration Department",
+    "entity_description": "A government agency responsible for regulating immigration and work permits; the worker must apply here for a valid work permit after receiving the new passport"
+  },
+  {
+    "entity_id": 28,
+    "entity_name": "Interpreter",
+    "entity_description": "An Interpreter accompanies workers to the embassy to assist with communication and facilitate a smooth passport renewal process"
+  },
+  {
+    "entity_id": 63,
+    "entity_name": "Laminated Copy",
+    "entity_description": "Laminated Copy refers to a physical, durable version of a worker's passport or permit that must be carried when going out and presented during inspections by authorities"
+  },
+  {
+    "entity_id": 11,
+    "entity_name": "Length Of Absence",
+    "entity_description": "Length Of Absence refers to the duration an employee was away from work, which can influence reassignment outcomes"
+  },
+  {
+    "entity_id": 42,
+    "entity_name": "Lost Passport",
+    "entity_description": "A Lost Passport is a missing travel document that can hinder the processing of a new work permit until replacement procedures are completed"
+  },
+  {
+    "entity_id": 32,
+    "entity_name": "Myanmar",
+    "entity_description": "Myanmar is a country whose nationals pay RM430 for passport renewal in this context"
+  },
+  {
+    "entity_id": 39,
+    "entity_name": "Necessary Documents",
+    "entity_description": "Necessary Documents are required paperwork that workers must prepare before their embassy appointment to prevent delays in passport renewal"
+  },
+  {
+    "entity_id": 30,
+    "entity_name": "Nepal",
+    "entity_description": "Nepal is a country whose nationals pay RM240 for passport renewal in this context"
+  },
+  {
+    "entity_id": 72,
+    "entity_name": "One-Way Airfare",
+    "entity_description": "One-Way Airfare is a travel expense covered or reimbursed upon the worker's return from holiday, included in the refund process along with the deposit}"
+  },
+  {
+    "entity_id": 13,
+    "entity_name": "Operational Requirements",
+    "entity_description": "Operational Requirements are internal business needs that affect workforce allocation and determine the feasibility of job placements"
+  },
+  {
+    "entity_id": 21,
+    "entity_name": "Passport Expiration Date",
+    "entity_description": "Passport Expiration Date refers to the date when a worker's passport is no longer valid, which Management monitors to initiate renewal procedures"
+  },
+  {
+    "entity_id": 29,
+    "entity_name": "Passport Renewal Fees",
+    "entity_description": "Passport Renewal Fees are costs associated with renewing a passport, varying by nationality: Nepal – RM240; Bangladesh – RM305; Myanmar – RM430"
+  },
+  {
+    "entity_id": 58,
+    "entity_name": "Passport Replacement Fees",
+    "entity_description": "Charges that workers may need to pay when applying for a new passport through the embassy"
+  },
+  {
+    "entity_id": 17,
+    "entity_name": "Payroll Department",
+    "entity_description": "The Payroll Department is responsible for managing employee compensation records, investigating discrepancies, correcting errors, and ensuring accurate updates to employee statements}"
+  },
+  {
+    "entity_id": 35,
+    "entity_name": "Penalties",
+    "entity_description": "Penalties refer to punitive measures, including fines or restrictions, resulting from failure to meet passport renewal deadlines"
+  },
+  {
+    "entity_id": 54,
+    "entity_name": "Police Report",
+    "entity_description": "An official document filed with law enforcement regarding the loss of a passport, required for further administrative procedures"
+  },
+  {
+    "entity_id": 7,
+    "entity_name": "Previous Position",
+    "entity_description": "Previous Position refers to the job role an employee held before their absence, which may no longer be available if a replacement has been hired"
+  },
+  {
+    "entity_id": 46,
+    "entity_name": "RM100 Fee",
+    "entity_description": "The RM100 Fee is a mandatory charge required for the application of a Special Pass, to be paid according to immigration regulations"
+  },
+  {
+    "entity_id": 10,
+    "entity_name": "Reassignment Details",
+    "entity_description": "Reassignment Details include information about a worker’s new position, communicated in a timely manner following a reassignment decision"
+  },
+  {
+    "entity_id": 73,
+    "entity_name": "Refund Process",
+    "entity_description": "The Refund Process involves the release of the deposit and other related amounts such as airfare after a worker returns from holiday, contingent on completing administrative steps}"
+  },
+  {
+    "entity_id": 25,
+    "entity_name": "Regulatory Requirements",
+    "entity_description": "Regulatory Requirements include rules mandating that a passport remain valid for at least 18 months beyond the work permit expiry date"
+  },
+  {
+    "entity_id": 36,
+    "entity_name": "Renewal Deadlines",
+    "entity_description": "Renewal Deadlines are specific dates by which workers must complete passport renewal to remain compliant and prevent disruptions to their work status"
+  },
+  {
+    "entity_id": 56,
+    "entity_name": "Replacement Passport",
+    "entity_description": "A new passport issued by the embassy to replace the lost one, necessary for continued international travel and identification"
+  },
+  {
+    "entity_id": 6,
+    "entity_name": "Replacement Workers",
+    "entity_description": "Replacement Workers are individuals hired by customers to fill positions temporarily while regular employees are absent"
+  },
+  {
+    "entity_id": 68,
+    "entity_name": "Salary Statement",
+    "entity_description": "A Salary Statement is a document detailing an individual's earnings and related financial information for a given period, accessible through the MTS On The Go apps"
+  },
+  {
+    "entity_id": 0,
+    "entity_name": "Savings Program",
+    "entity_description": "The savings program is a structured initiative aimed at providing financial support during emergencies to ensure workers maintain financial stability and security"
+  },
+  {
+    "entity_id": 2,
+    "entity_name": "Smoking Policies",
+    "entity_description": "Smoking Policies refer to the rules and regulations set by hostels regarding tobacco use, which are typically strict and often prohibit indoor smoking to maintain a safe and healthy environment for guests"
+  },
+  {
+    "entity_id": 44,
+    "entity_name": "Special Pass",
+    "entity_description": "A Special Pass (SP"
+  },
+  {
+    "entity_id": 57,
+    "entity_name": "Supporting Documents",
+    "entity_description": "Additional paperwork required by the embassy alongside the police report to process the application for a replacement passport"
+  },
+  {
+    "entity_id": 22,
+    "entity_name": "Timely Renewal",
+    "entity_description": "Timely Renewal is the process of renewing a passport in advance to avoid work permit issues, fines, or employment disruptions"
+  },
+  {
+    "entity_id": 33,
+    "entity_name": "Work Permit Complications",
+    "entity_description": "Work Permit Complications are potential consequences of failing to renew a passport on time, including delays, fines, or negative impacts on employment status"
+  },
+  {
+    "entity_id": 40,
+    "entity_name": "Work Permit Issuance",
+    "entity_description": "Work Permit Issuance refers to the process of granting official authorization for foreign workers to work in Malaysia, which may experience delays due to medical, administrative, or documentation issues"
+  },
+  {
+    "entity_id": 67,
+    "entity_name": "MTS On The Go Apps - Salary and Personal Information Access",
+    "entity_description": "MTS On The Go Apps is a digital platform that allows users to access personal information, including salary statements, by logging into their account."
+  },
+  {
+    "entity_id": 66,
+    "entity_name": "MTS On The Go Apps - Passport and Permit Access",
+    "entity_description": "MTS On The Go Apps is a digital platform that enables workers to access digital copies of their passport or permit through a secure login."
+  },
+  {
+    "entity_id": 27,
+    "entity_name": "Diplomatic Embassy",
+    "entity_description": "A diplomatic mission representing the worker's home country, where individuals can renew or obtain a replacement passport by submitting required documents such as a police report, with support services like interpreters available."
+  },
+  {
+    "entity_id": 16,
+    "entity_name": "Complaint Filing Interpreter",
+    "entity_description": "A designated interpreter is an individual authorized to facilitate communication and assist employees in submitting formal complaints, particularly in multilingual or accessibility contexts."
+  },
+  {
+    "entity_id": 70,
+    "entity_name": "MTS App and Salary Support Interpreter",
+    "entity_description": "A Designated Interpreter is an authorized individual who provides assistance to users experiencing difficulties with the MTS On The Go apps or understanding their salary details."
+  },
+  {
+    "entity_id": 51,
+    "entity_name": "Language Interpreter for Document Assistance",
+    "entity_description": "A person assigned to assist communication in a foreign language context and who may receive reports of lost documents such as passports."
+  },
+  {
+    "entity_id": 50,
+    "entity_name": "Immediate Superior - Passport Loss Reporting Authority",
+    "entity_description": "An individual to whom a worker reports directly and who must be informed promptly in the event of a lost passport, serving as the designated reporting authority for such incidents."
+  },
+  {
+    "entity_id": 15,
+    "entity_name": "Immediate Superior - General Workplace Supervisor",
+    "entity_description": "A supervisor or manager to whom an employee reports and who can assist with general workplace issues such as payroll complaints, salary inquiries, or platform access problems."
+  },
+  {
+    "entity_id": 24,
+    "entity_name": "Work Permit",
+    "entity_description": "An official authorization allowing a foreign national to legally work in a country, with validity typically linked to the passport's validity period; requires renewal or re-application upon obtaining a new passport."
+  },
+  {
+    "entity_id": 74,
+    "entity_name": "Refund-Eligible Returning Worker",
+    "entity_description": "A Worker is an individual returning from holiday who is eligible to receive a refund of deposit and airfare, subject to procedural compliance and disbursement schedule."
+  },
+  {
+    "entity_id": 53,
+    "entity_name": "Overseas Worker with Lost Passport",
+    "entity_description": "An individual employed abroad who has lost their passport and must follow a formal process to obtain a replacement and maintain legal work status."
+  },
+  {
+    "entity_id": 23,
+    "entity_name": "Work Permit-Holding Worker Requiring Long-Term Passport Validity",
+    "entity_description": "A Worker is an individual employed under a work permit who must maintain a valid passport for at least 18 months beyond the permit’s expiry for regulatory compliance."
+  },
+  {
+    "entity_id": 18,
+    "entity_name": "Management - Operational and Administrative Coordination",
+    "entity_description": "Oversees daily operations, communicates with workers regarding permit delays, verifies reasons for delays, coordinates with immigration and administration teams, and escalates payroll-related issues to the appropriate departments for resolution."
+  },
+  {
+    "entity_id": 20,
+    "entity_name": "Management - Passport Expiration Monitoring",
+    "entity_description": "Responsible for continuously tracking passport expiration dates to ensure timely renewals and compliance with regulatory requirements."
+  },
+  {
+    "entity_id": 8,
+    "entity_name": "Management - Workforce Reassignment Decision Authority",
+    "entity_description": "Responsible for making decisions regarding employee reassignments and providing alternative job placements based on availability and operational requirements."
+  },
+  {
+    "entity_id": 52,
+    "entity_name": "Management - Incident Reporting Oversight for Lost Passports",
+    "entity_description": "The supervisory authority responsible for organizing the filing of a police report upon notification of a lost passport."
+  },
+  {
+    "entity_id": 19,
+    "entity_name": "Workers Receiving Pay Statements",
+    "entity_description": "Workers are employees who receive pay statements, monitor them for accuracy, report discrepancies, and confirm that corrections have been implemented."
+  },
+  {
+    "entity_id": 1,
+    "entity_name": "Workers Participating in Savings Program",
+    "entity_description": "Workers are individuals who participate in the savings program, benefiting from financial support and improved financial stability during emergencies."
+  },
+  {
+    "entity_id": 48,
+    "entity_name": "Foreign Workers with Permit Requirements",
+    "entity_description": "Workers are foreign laborers who are required to carry a laminated copy of their passport or permit for verification purposes, may access digital copies via the MTS On The Go apps, and whose work permit status may be affected by delays, requiring them to coordinate with management and follow up on permit processing."
+  },
+  {
+    "entity_id": 4,
+    "entity_name": "Hostel-Employed or Resident Workers",
+    "entity_description": "Workers are individuals staying in or employed by hostels who are advised to comply with hostel smoking regulations and use designated smoking areas when available."
+  }
+]

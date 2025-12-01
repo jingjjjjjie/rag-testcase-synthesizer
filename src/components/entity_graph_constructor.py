@@ -1,7 +1,7 @@
 import json
 from collections import deque
 
-from .. import convert_set_to_list
+from src.tools.string_utils import convert_set_to_list
 
 class EntityRelationshipGraph:
     def __init__(self, data):

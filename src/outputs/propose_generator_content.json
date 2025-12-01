@@ -1,0 +1,408 @@
+[
+  {
+    "id": "doc1_question1",
+    "question": "1) Can workers opt out of the savings program?",
+    "origin_context": "1) Can workers opt out of the savings program? The savings program is a structured initiative designed to provide financial support during emergencies, ensuring workers maintain financial stability and security. Participation is strongly encouraged, as consistent savings contribute to long-term financial well-being.",
+    "context": "The savings program is a structured initiative designed to provide financial support during emergencies, ensuring workers maintain financial stability and security [Sen 1]. Participation is strongly encouraged, as consistent savings contribute to long-term financial well-being [Sen 2].",
+    "objective-facts": [
+      "The savings program is a structured initiative aimed at providing financial support to workers during emergencies to ensure their financial stability and security.",
+      "Participation in the savings program is strongly encouraged to promote long-term financial well-being through consistent savings."
+    ],
+    "sens": [
+      "1",
+      "2"
+    ],
+    "proposed-questions": {
+      "1-questions": {
+        "question": "What is the purpose of the savings program?",
+        "objective-facts": "1",
+        "reasoning": "The answer can be deduced from the fact that the savings program is a structured initiative aimed at providing financial support to workers during emergencies to ensure their financial stability and security.",
+        "answer": "The purpose of the savings program is to provide financial support to workers during emergencies to ensure their financial stability and security [Clue 1]."
+      },
+      "2-questions": {
+        "question": "Why is participation in the savings program encouraged?",
+        "objective-facts": "2",
+        "reasoning": "The answer can be deduced from the fact that participation in the savings program is strongly encouraged to promote long-term financial well-being through consistent savings.",
+        "answer": "Participation in the savings program is encouraged to promote long-term financial well-being through consistent savings [Clue 2]."
+      },
+      "3-questions": {
+        "question": "What type of initiative is the savings program?",
+        "objective-facts": "1",
+        "reasoning": "The answer can be deduced from the fact that the savings program is described as a structured initiative aimed at providing financial support to workers during emergencies.",
+        "answer": "The savings program is a structured initiative [Clue 1]."
+      }
+    }
+  },
+  {
+    "id": "doc1_question2",
+    "question": "2) Are workers allowed to smoke in hostels?",
+    "origin_context": "2) Are workers allowed to smoke in hostels? Smoking policies in hostels are typically strict, with many accommodations prohibiting smoking indoors to ensure a safe and healthy environment. Workers are advised to follow hostel regulations and use designated smoking areas if available.",
+    "context": "Smoking policies in hostels are typically strict, with many accommodations prohibiting smoking indoors to ensure a safe and healthy environment [Sen 3]. Workers are advised to follow hostel regulations and use designated smoking areas if available [Sen 4].",
+    "objective-facts": [
+      "Many hostels prohibit smoking indoors as part of strict smoking policies to maintain a safe and healthy environment.",
+      "Workers are advised to follow hostel smoking regulations and use designated smoking areas when available."
+    ],
+    "sens": [
+      "3",
+      "4"
+    ],
+    "proposed-questions": {
+      "1-questions": {
+        "question": "What is the purpose of strict smoking policies in many hostels?",
+        "objective-facts": "1",
+        "reasoning": "The answer can be deduced from the fact that many hostels prohibit smoking indoors as part of strict smoking policies to maintain a safe and healthy environment.",
+        "answer": "The purpose is to maintain a safe and healthy environment [Clue 1]."
+      },
+      "2-questions": {
+        "question": "What are workers advised to do regarding smoking in hostels?",
+        "objective-facts": "2",
+        "reasoning": "The answer can be deduced from the fact that workers are advised to follow hostel smoking regulations and use designated smoking areas when available.",
+        "answer": "Workers are advised to follow hostel smoking regulations and use designated smoking areas when available [Clue 2]."
+      },
+      "3-questions": {
+        "question": "Where are smoking activities permitted in hostels if designated areas exist?",
+        "objective-facts": "2",
+        "reasoning": "The answer can be deduced from the fact that workers are advised to use designated smoking areas when available, implying these are the permitted locations for smoking.",
+        "answer": "Smoking activities are permitted in designated smoking areas [Clue 2]."
+      }
+    }
+  },
+  {
+    "id": "doc1_question3",
+    "question": "3) Will I return to the same job after my holiday?",
+    "origin_context": "3) Will I return to the same job after my holiday? Your reassignment depends on customer arrangements, as some may hire replacement workers during your absence. If the customer has arranged for a replacement, your previous position may no longer be available. In such cases, management will provide an alternative job placement based on availability and operational needs. Workers will be informed of their reassignment details in a timely manner. Factors such as the length of absence, customer demand, and operational requirements may influence reassignment decisions. Employees are encouraged to consult with management beforehand to understand their options.",
+    "context": "Your reassignment depends on customer arrangements, as some may hire replacement workers during your absence [Sen 5]. If the customer has arranged for a replacement, your previous position may no longer be available [Sen 6]. In such cases, management will provide an alternative job placement based on availability and operational needs [Sen 7]. Workers will be informed of their reassignment details in a timely manner [Sen 8]. Factors such as the length of absence, customer demand, and operational requirements may influence reassignment decisions [Sen 9]. Employees are encouraged to consult with management beforehand to understand their options [Sen 10].",
+    "objective-facts": [
+      "Reassignment of workers depends on customer arrangements regarding the hiring of replacement workers during an employee's absence.",
+      "If a customer has arranged for a replacement worker, the employee’s previous position may no longer be available upon return.",
+      "Management will provide an alternative job placement based on job availability and operational needs when a previous position is not available.",
+      "Workers will be informed of their reassignment details in a timely manner.",
+      "Factors influencing reassignment decisions include the length of the employee’s absence, customer demand, and operational requirements.",
+      "Employees are encouraged to consult with management prior to reassignment to understand their available options."
+    ],
+    "sens": [
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "proposed-questions": {
+      "1-questions": {
+        "question": "Under what condition might an employee’s previous position no longer be available upon return?",
+        "objective-facts": "2",
+        "reasoning": "The answer can be deduced from the fact that if a customer has arranged for a replacement worker, the employee’s previous position may no longer be available upon return [Clue 2].",
+        "answer": "An employee’s previous position may no longer be available upon return if a customer has arranged for a replacement worker [Clue 2]."
+      },
+      "2-questions": {
+        "question": "What factors influence reassignment decisions?",
+        "objective-facts": "5",
+        "reasoning": "The answer can be deduced from the fact that factors influencing reassignment decisions include the length of the employee’s absence, customer demand, and operational requirements [Clue 5].",
+        "answer": "Factors influencing reassignment decisions include the length of the employee’s absence, customer demand, and operational requirements [Clue 5]."
+      },
+      "3-questions": {
+        "question": "How will workers be informed about their reassignment details?",
+        "objective-facts": "4",
+        "reasoning": "The answer can be deduced from the fact that workers will be informed of their reassignment details in a timely manner [Clue 4].",
+        "answer": "Workers will be informed of their reassignment details in a timely manner [Clue 4]."
+      }
+    }
+  },
+  {
+    "id": "doc1_question4",
+    "question": "4) What should I do if my savings are deducted monthly but not reflected in my statement?",
+    "origin_context": "4) What should I do if my savings are deducted monthly but not reflected in my statement? Inform your immediate superior or designated interpreter as soon as possible to lodge a formal complaint. They will escalate the issue to the Payroll department to resolve the matter and ensure your statement is properly updated. Management will escalate the issue to the Payroll department for investigation and resolution. The Payroll department will review the records, correct any discrepancies, and ensure your statement is properly updated. Workers should monitor subsequent statements and confirm that the corrections have been made. If the issue persists, they should seek further clarification from the Payroll department.",
+    "context": "Inform your immediate superior or designated interpreter as soon as possible to lodge a formal complaint [Sen 11]. They will escalate the issue to the Payroll department to resolve the matter and ensure your statement is properly updated [Sen 12]. Management will escalate the issue to the Payroll department for investigation and resolution [Sen 13]. The Payroll department will review the records, correct any discrepancies, and ensure your statement is properly updated [Sen 14]. Workers should monitor subsequent statements and confirm that the corrections have been made [Sen 15]. If the issue persists, they should seek further clarification from the Payroll department [Sen 16].",
+    "objective-facts": [
+      "An employee should inform their immediate superior or designated interpreter as soon as possible to lodge a formal complaint.",
+      "The immediate superior or designated interpreter will escalate the complaint to the Payroll department for resolution and to ensure the employee's statement is properly updated.",
+      "Management is responsible for escalating the issue to the Payroll department for investigation and resolution.",
+      "The Payroll department will review payroll records, correct any discrepancies found, and ensure the employee's statement is properly updated.",
+      "Workers are expected to monitor their subsequent payroll statements to confirm that the necessary corrections have been made.",
+      "If the payroll issue persists after review, workers should seek further clarification directly from the Payroll department."
+    ],
+    "sens": [
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16"
+    ],
+    "proposed-questions": {
+      "1-questions": {
+        "question": "Who should an employee contact to lodge a formal complaint regarding a payroll issue?",
+        "objective-facts": "1",
+        "reasoning": "The answer can be deduced from the fact that an employee should inform their immediate superior or designated interpreter as soon as possible to lodge a formal complaint.",
+        "answer": "An employee should inform their immediate superior or designated interpreter [Clue 1]."
+      },
+      "2-questions": {
+        "question": "What action does the Payroll department take upon receiving a payroll complaint?",
+        "objective-facts": "4",
+        "reasoning": "The answer can be deduced from the fact that the Payroll department will review payroll records, correct any discrepancies found, and ensure the employee's statement is properly updated.",
+        "answer": "The Payroll department will review payroll records, correct any discrepancies found, and ensure the employee's statement is properly updated [Clue 4]."
+      },
+      "3-questions": {
+        "question": "What should workers do if the payroll issue remains unresolved after the Payroll department's review?",
+        "objective-facts": "6",
+        "reasoning": "The answer can be deduced from the fact that if the payroll issue persists after review, workers should seek further clarification directly from the Payroll department.",
+        "answer": "Workers should seek further clarification directly from the Payroll department [Clue 6]."
+      }
+    }
+  },
+  {
+    "id": "doc1_question5",
+    "question": "5) How do I handle an expired passport?",
+    "origin_context": "5) How do I handle an expired passport? Management continuously tracks passport expiration dates to ensure timely renewal. Workers should be aware that a passport must remain valid for at least 18 months before the work permit expires to comply with regulatory requirements. Workers will receive advance notice of their passport renewal date, along with appointment details at the respective embassy. They are advised to prepare any necessary documents beforehand to prevent delays. An interpreter will accompany the worker to the designated embassy, providing support with communication and ensuring a smooth renewal process. Passport renewal fees vary by nationality: Nepal – RM240; Bangladesh – RM305; Myanmar – RM430. Failure to renew the passport on time may result in work permit complications, fines, or penalties that could affect the worker’s employment status. Workers must adhere to renewal deadlines to prevent disruptions.",
+    "context": "Management continuously tracks passport expiration dates to ensure timely renewal [Sen 17]. Workers should be aware that a passport must remain valid for at least 18 months before the work permit expires to comply with regulatory requirements [Sen 18]. Workers will receive advance notice of their passport renewal date, along with appointment details at the respective embassy [Sen 19]. They are advised to prepare any necessary documents beforehand to prevent delays [Sen 20]. An interpreter will accompany the worker to the designated embassy, providing support with communication and ensuring a smooth renewal process [Sen 21]. Passport renewal fees vary by nationality: Nepal – RM240; Bangladesh – RM305; Myanmar – RM430 [Sen 22]. Failure to renew the passport on time may result in work permit complications, fines, or penalties that could affect the worker’s employment status [Sen 23]. Workers must adhere to renewal deadlines to prevent disruptions [Sen 24].",
+    "objective-facts": [
+      "Management continuously tracks passport expiration dates to ensure timely renewal.",
+      "Workers must ensure their passport remains valid for at least 18 months before the work permit expires to meet regulatory requirements.",
+      "Workers will receive advance notice of their passport renewal date and appointment details at the respective embassy.",
+      "Workers are advised to prepare necessary documents in advance to prevent delays in the passport renewal process.",
+      "An interpreter will accompany the worker to the designated embassy to provide communication support and ensure a smooth passport renewal process.",
+      "Passport renewal fees vary by nationality: RM240 for Nepali citizens, RM305 for Bangladeshi citizens, and RM430 for Myanmar citizens.",
+      "Failure to renew the passport on time may lead to work permit complications, fines, or penalties that could affect the worker’s employment status.",
+      "Workers must adhere to passport renewal deadlines to avoid disruptions to their employment."
+    ],
+    "sens": [
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24"
+    ],
+    "proposed-questions": {
+      "1-questions": {
+        "question": "What is the minimum validity period required for a worker's passport beyond the expiration of their work permit?",
+        "objective-facts": "2",
+        "reasoning": "The answer can be deduced from the fact that workers must ensure their passport remains valid for at least 18 months before the work permit expires to meet regulatory requirements.",
+        "answer": "18 months [Clue 2]"
+      },
+      "2-questions": {
+        "question": "What support is provided to workers during their visit to the embassy for passport renewal?",
+        "objective-facts": "5",
+        "reasoning": "The answer can be deduced from the fact that an interpreter will accompany the worker to the designated embassy to provide communication support and ensure a smooth passport renewal process.",
+        "answer": "An interpreter will accompany the worker to provide communication support [Clue 5]."
+      },
+      "3-questions": {
+        "question": "What are the passport renewal fees for citizens of Nepal, Bangladesh, and Myanmar respectively?",
+        "objective-facts": "6",
+        "reasoning": "The answer can be deduced from the fact that passport renewal fees vary by nationality: RM240 for Nepali citizens, RM305 for Bangladeshi citizens, and RM430 for Myanmar citizens.",
+        "answer": "RM240 for Nepali citizens, RM305 for Bangladeshi citizens, and RM430 for Myanmar citizens [Clue 6]."
+      }
+    }
+  },
+  {
+    "id": "doc1_question6",
+    "question": "6) What should I do if my new permit has not been issued by Immigration, despite my old permit expiring?",
+    "origin_context": "6) What should I do if my new permit has not been issued by Immigration, despite my old permit expiring? Delays in work permit issuance may occur due to various factors, such as pending FOMEMA medical results, a lost passport, or other administrative processing issues. Workers should check with management to identify the specific reason for the delay. If the new permit is delayed, a Special Pass (SP) can be issued as a temporary permit, valid for one month while awaiting the new permit. A RM100 fee is required for the Special Pass application, which should be paid as per immigration procedures. Workers should verify whether this fee is covered by the company or if they are responsible for payment. If the new permit continues to be delayed, the Special Pass will be renewed continuously until Immigration issues the new work permit. Workers should ensure they follow up regularly for status updates. The company’s administration will oversee the entire process, including permit applications and renewals. Workers are encouraged to stay informed and coordinate with management regarding their permit status.",
+    "context": "Delays in work permit issuance may occur due to various factors, such as pending FOMEMA medical results, a lost passport, or other administrative processing issues [Sen 25]. Workers should check with management to identify the specific reason for the delay [Sen 26]. If the new permit is delayed, a Special Pass (SP) can be issued as a temporary permit, valid for one month while awaiting the new permit [Sen 27]. A RM100 fee is required for the Special Pass application, which should be paid as per immigration procedures [Sen 28]. Workers should verify whether this fee is covered by the company or if they are responsible for payment [Sen 29]. If the new permit continues to be delayed, the Special Pass will be renewed continuously until Immigration issues the new work permit [Sen 30]. Workers should ensure they follow up regularly for status updates [Sen 31]. The company’s administration will oversee the entire process, including permit applications and renewals [Sen 32]. Workers are encouraged to stay informed and coordinate with management regarding their permit status [Sen 33].",
+    "objective-facts": [
+      "Delays in work permit issuance may occur due to factors such as pending FOMEMA medical results, a lost passport, or other administrative processing issues.",
+      "Workers should check with management to identify the specific reason for the delay in work permit issuance.",
+      "A Special Pass (SP) can be issued as a temporary permit valid for one month if the new work permit is delayed.",
+      "A RM100 fee is required for the Special Pass application and must be paid according to immigration procedures.",
+      "Workers should verify whether the company covers the RM100 Special Pass fee or if they are responsible for payment.",
+      "If the new work permit continues to be delayed, the Special Pass will be renewed continuously until Immigration issues the new permit.",
+      "Workers should ensure they follow up regularly for updates on their work permit status.",
+      "The company’s administration is responsible for overseeing the entire work permit process, including applications and renewals.",
+      "Workers are encouraged to stay informed and coordinate with management regarding their work permit status."
+    ],
+    "sens": [
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33"
+    ],
+    "proposed-questions": {
+      "1-questions": {
+        "question": "What are the possible reasons for delays in work permit issuance?",
+        "objective-facts": "1",
+        "reasoning": "The answer can be deduced from the fact that delays in work permit issuance may occur due to pending FOMEMA medical results, a lost passport, or other administrative processing issues.",
+        "answer": "Possible reasons for delays in work permit issuance include pending FOMEMA medical results, a lost passport, or other administrative processing issues [Clue 1]."
+      },
+      "2-questions": {
+        "question": "What is the validity period and cost of the Special Pass issued due to work permit delays?",
+        "objective-facts": "3,4",
+        "reasoning": "The answer can be deduced from the facts that a Special Pass is valid for one month and requires a RM100 fee for application. The validity comes from Clue 3 and the cost from Clue 4.",
+        "answer": "The Special Pass is valid for one month and requires a RM100 fee for application [Clue 3, 4]."
+      },
+      "3-questions": {
+        "question": "What should workers do if the new work permit is not issued within the initial one-month Special Pass period?",
+        "objective-facts": "6",
+        "reasoning": "The answer can be deduced from the fact that if the new work permit continues to be delayed, the Special Pass will be renewed continuously until Immigration issues the new permit.",
+        "answer": "The Special Pass will be renewed continuously until Immigration issues the new work permit [Clue 6]."
+      }
+    }
+  },
+  {
+    "id": "doc1_question7",
+    "question": "7) What should I do if my passport is lost?",
+    "origin_context": "7) What should I do if my passport is lost? Report the loss to your immediate superior or designated interpreter as soon as possible. It is advisable to do this promptly to avoid delays in the replacement process. Management will arrange for a police report, and the worker must accompany them to file it. Ensure all relevant details are provided accurately. After obtaining the police report, submit it along with any required supporting documents to the respective embassy to apply for a replacement passport. Workers should be aware of any applicable fees for the passport replacement process. Once the new passport is issued, proceed to the Immigration Department to apply for a valid work permit. Workers should also ensure that they securely store copies of their passport and permit.",
+    "context": "Report the loss to your immediate superior or designated interpreter as soon as possible [Sen 34]. It is advisable to do this promptly to avoid delays in the replacement process [Sen 35]. Management will arrange for a police report, and the worker must accompany them to file it [Sen 36]. Ensure all relevant details are provided accurately [Sen 37]. After obtaining the police report, submit it along with any required supporting documents to the respective embassy to apply for a replacement passport [Sen 38]. Workers should be aware of any applicable fees for the passport replacement process [Sen 39]. Once the new passport is issued, proceed to the Immigration Department to apply for a valid work permit [Sen 40]. Workers should also ensure that they securely store copies of their passport and permit [Sen 41].",
+    "objective-facts": [
+      "Workers must report the loss of their passport to their immediate superior or designated interpreter as soon as possible.",
+      "Reporting the loss promptly is advised to avoid delays in the replacement process.",
+      "Management will arrange for a police report to be filed, and the worker is required to accompany them during this process.",
+      "The worker must provide all relevant details accurately when filing the police report.",
+      "After obtaining the police report, the worker must submit it along with any required supporting documents to the respective embassy to apply for a replacement passport.",
+      "Workers should be aware of any applicable fees associated with the passport replacement process.",
+      "Once the new passport is issued, the worker must proceed to the Immigration Department to apply for a valid work permit.",
+      "Workers should securely store copies of their passport and work permit."
+    ],
+    "sens": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "proposed-questions": {
+      "1-questions": {
+        "question": "Who must workers report the loss of their passport to as soon as possible?",
+        "objective-facts": "1",
+        "reasoning": "The answer can be deduced from the fact that workers must report the loss of their passport to their immediate superior or designated interpreter as soon as possible [Clue 1].",
+        "answer": "Immediate superior or designated interpreter [Clue 1]"
+      },
+      "2-questions": {
+        "question": "What is required of the worker during the process of filing a police report for a lost passport?",
+        "objective-facts": "3,4",
+        "reasoning": "The answer can be deduced from the facts that management will arrange for a police report to be filed and the worker is required to accompany them during this process [Clue 3], and the worker must provide all relevant details accurately when filing the police report [Clue 4].",
+        "answer": "The worker is required to accompany management during the filing of the police report and must provide all relevant details accurately [Clue 3, 4]."
+      },
+      "3-questions": {
+        "question": "What steps must a worker take after obtaining a new passport?",
+        "objective-facts": "7",
+        "reasoning": "The answer can be deduced from the fact that once the new passport is issued, the worker must proceed to the Immigration Department to apply for a valid work permit [Clue 7].",
+        "answer": "Proceed to the Immigration Department to apply for a valid work permit [Clue 7]."
+      }
+    }
+  },
+  {
+    "id": "doc1_question8",
+    "question": "8) Documents retained by workers while their passports are held by management: Workers will be provided with a laminated photocopy of their passport or permit and are encouraged to keep it secure, as they may need to present it for verification when inspected by authorities.",
+    "origin_context": "8) Documents retained by workers while their passports are held by management: Workers will be provided with a laminated photocopy of their passport or permit and are encouraged to keep it secure, as they may need to present it for verification when inspected by authorities. If the laminated copy is lost or damaged, workers should promptly report it to the designated contact person for replacement. Workers are advised to carry the laminated copy whenever they go out to ensure smooth interactions with authorities and avoid unnecessary complications. If inspected by authorities, workers should present the laminated copy for verification, as digital copies may not always be accepted. Additionally, workers can access digital copies of their passport or permit through the MTS On The Go apps.",
+    "context": "If the laminated copy is lost or damaged, workers should promptly report it to the designated contact person for replacement [Sen 42]. Workers are advised to carry the laminated copy whenever they go out to ensure smooth interactions with authorities and avoid unnecessary complications [Sen 43]. If inspected by authorities, workers should present the laminated copy for verification, as digital copies may not always be accepted [Sen 44]. Additionally, workers can access digital copies of their passport or permit through the MTS On The Go apps [Sen 45].",
+    "objective-facts": [
+      "Workers should promptly report the loss or damage of the laminated copy to the designated contact person for replacement.",
+      "Workers are advised to carry the laminated copy whenever they go out to ensure smooth interactions with authorities and avoid unnecessary complications.",
+      "Workers should present the laminated copy for verification if inspected by authorities, as digital copies may not always be accepted.",
+      "Workers can access digital copies of their passport or permit through the MTS On The Go apps."
+    ],
+    "sens": [
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "proposed-questions": {
+      "1-questions": {
+        "question": "What action should workers take if the laminated copy is lost or damaged?",
+        "objective-facts": "1",
+        "reasoning": "The answer can be deduced from the fact that workers should promptly report the loss or damage of the laminated copy to the designated contact person for replacement [Clue 1].",
+        "answer": "Workers should promptly report the loss or damage of the laminated copy to the designated contact person for replacement [Clue 1]."
+      },
+      "2-questions": {
+        "question": "Why are workers advised to carry the laminated copy when going out?",
+        "objective-facts": "2",
+        "reasoning": "The answer can be deduced from the fact that carrying the laminated copy ensures smooth interactions with authorities and helps avoid unnecessary complications during inspections [Clue 2].",
+        "answer": "Carrying the laminated copy ensures smooth interactions with authorities and avoids unnecessary complications [Clue 2]."
+      },
+      "3-questions": {
+        "question": "How can workers access digital copies of their passport or permit?",
+        "objective-facts": "4",
+        "reasoning": "The answer can be deduced from the fact that workers can access digital copies of their passport or permit through the MTS On The Go apps [Clue 4].",
+        "answer": "Workers can access digital copies of their passport or permit through the MTS On The Go apps [Clue 4]."
+      }
+    }
+  },
+  {
+    "id": "doc1_question9",
+    "question": "9) How to view my salary statement?",
+    "origin_context": "9) How to view my salary statement? You can view your salary statement by logging into the MTS On The Go apps. Once logged in, navigate to the \"Salary\" section and select the option to view your statement. Salary statements for previous months may also be available. If you encounter any issues, such as missing salary details or difficulties accessing the platform, promptly contact your immediate superior or the designated interpreter for assistance.",
+    "context": "You can view your salary statement by logging into the MTS On The Go apps [Sen 46]. Once logged in, navigate to the \"Salary\" section and select the option to view your statement [Sen 47]. Salary statements for previous months may also be available [Sen 48]. If you encounter any issues, such as missing salary details or difficulties accessing the platform, promptly contact your immediate superior or the designated interpreter for assistance [Sen 49].",
+    "objective-facts": [
+      "Users can view their salary statement by logging into the MTS On The Go apps.",
+      "After logging in, users must navigate to the \"Salary\" section and select the option to view their statement.",
+      "Salary statements for previous months may be accessible through the app.",
+      "If users face issues such as missing salary details or problems accessing the platform, they should contact their immediate superior or the designated interpreter for help."
+    ],
+    "sens": [
+      "46",
+      "47",
+      "48",
+      "49"
+    ],
+    "proposed-questions": {
+      "1-questions": {
+        "question": "How can users access their salary statement according to the provided information?",
+        "objective-facts": "1,2",
+        "reasoning": "The method to access the salary statement is described in two steps across facts 1 and 2: first, users must log into the MTS On The Go apps, and then navigate to the \"Salary\" section and select the option to view their statement.",
+        "answer": "Users can access their salary statement by logging into the MTS On The Go apps, navigating to the \"Salary\" section, and selecting the option to view their statement [Clue 1, 2]."
+      },
+      "2-questions": {
+        "question": "Are salary statements for previous months available through the app?",
+        "objective-facts": "3",
+        "reasoning": "The availability of past salary statements is directly stated in fact 3, which confirms that such statements may be accessible through the app.",
+        "answer": "Yes, salary statements for previous months may be accessible through the app [Clue 3]."
+      },
+      "3-questions": {
+        "question": "What should users do if they encounter issues accessing their salary details on the platform?",
+        "objective-facts": "4",
+        "reasoning": "Fact 4 specifies the course of action for users facing access problems or missing salary information, stating they should contact their immediate superior or the designated interpreter for help.",
+        "answer": "Users should contact their immediate superior or the designated interpreter for help if they encounter issues accessing their salary details or have missing information [Clue 4]."
+      }
+    }
+  },
+  {
+    "id": "doc1_question10",
+    "question": "10) What is refund process after returning from holiday?",
+    "origin_context": "10) What is refund process after returning from holiday? Upon returning from holiday, the deposit and other related amounts, including one-way airfare, will be processed for release within one week. However, funds are disbursed every Wednesday, meaning the actual release date depends on the closest Wednesday following the worker’s return. Workers should ensure they complete any necessary administrative steps to facilitate the refund process. If there are delays, workers should promptly consult the designated department for clarification and resolution.",
+    "context": "Upon returning from holiday, the deposit and other related amounts, including one-way airfare, will be processed for release within one week [Sen 50]. However, funds are disbursed every Wednesday, meaning the actual release date depends on the closest Wednesday following the worker’s return [Sen 51]. Workers should ensure they complete any necessary administrative steps to facilitate the refund process [Sen 52]. If there are delays, workers should promptly consult the designated department for clarification and resolution [Sen 53].",
+    "objective-facts": [
+      "The deposit and other related amounts, including one-way airfare, will be processed for release within one week after the worker returns from holiday.",
+      "Funds are disbursed every Wednesday, so the actual release date depends on the closest Wednesday following the worker’s return.",
+      "Workers are required to complete any necessary administrative steps to facilitate the refund process.",
+      "If there are delays in the refund, workers should promptly consult the designated department for clarification and resolution."
+    ],
+    "sens": [
+      "50",
+      "51",
+      "52",
+      "53"
+    ],
+    "proposed-questions": {
+      "1-questions": {
+        "question": "How long after the worker returns from holiday will the deposit and other related amounts be processed for release?",
+        "objective-facts": "1",
+        "reasoning": "The answer can be deduced from the fact that the deposit and other related amounts, including one-way airfare, will be processed for release within one week after the worker returns from holiday.",
+        "answer": "Within one week after the worker returns from holiday [Clue 1]."
+      },
+      "2-questions": {
+        "question": "On which day of the week are funds disbursed for the refund process?",
+        "objective-facts": "2",
+        "reasoning": "The answer can be deduced from the fact that funds are disbursed every Wednesday, indicating a fixed weekly disbursement schedule.",
+        "answer": "Wednesday [Clue 2]."
+      },
+      "3-questions": {
+        "question": "What action should workers take if there are delays in receiving their refund?",
+        "objective-facts": "4",
+        "reasoning": "The answer can be deduced from the fact that if there are delays in the refund, workers should promptly consult the designated department for clarification and resolution.",
+        "answer": "Workers should promptly consult the designated department for clarification and resolution [Clue 4]."
+      }
+    }
+  }
+]

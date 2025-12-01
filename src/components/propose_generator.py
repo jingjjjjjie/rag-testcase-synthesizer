@@ -3,21 +3,15 @@ import random
 import json
 import re
 from tqdm import tqdm
-from typing import Optional
-from .. import (
-    OpenAIModel,
-    convert_set_to_list,
-    reformat_objective_facts,
-    CUSTOM_CORPUS_HOME,
-    CLIENT,
-    MODEL_NAME
-)
+import threading
 
-from entity_graph_constructor import EntityRelationshipGraph
+from .. import PROJECT_ROOT
+from src.components.entity_graph_constructor import EntityRelationshipGraph
 from concurrent.futures import ThreadPoolExecutor, as_completed
-
-
-
+from src.tools.api import call_api_qwen
+from src.tools.string_utils import reformat_objective_facts, convert_set_to_list 
+from src.tools.string_utils import read_text_file
+from src.tools.json_utils import save_json, load_json
 
 
 TEMPERATURE = float(os.getenv("TEMPERATURE", 0.6))
@@ -126,10 +120,7 @@ def count_actual_numbers(numbers_and_ranges):
     return total_count
 
 class ProposeGenerator:
-    def __init__(self, save_interval=20):
-        self.CLIENT = CLIENT
-        self.MODEL_NAME = MODEL_NAME
-
+    def __init__(self, save_interval=10):
         self.PROPOSE_GENERATOR_INPUT_PATH, self.PROPOSE_GENERATOR_PROMPT_PATH, self.PROPOSE_GENERATOR_OUTPUT_PATH = None, None, None
         if os.getenv("PROPOSE_GENERATOR_CONTENT_INPUT_PATH", None) != None:
             self.PROPOSE_GENERATOR_INPUT_PATH = os.getenv("PROPOSE_GENERATOR_CONTENT_INPUT_PATH")
@@ -144,37 +135,37 @@ class ProposeGenerator:
         else:
             raise EnvironmentError("Environment variable 'PROPOSE_GENERATOR_CONTENT_INPUT_PATH' or 'PROPOSE_GENERATOR_ENTITYGRAPH_INPUT_PATH' is not set.")
         
-        self.PROPOSE_GENERATOR_INPUT_PATH = os.path.join(CUSTOM_CORPUS_HOME, self.PROPOSE_GENERATOR_INPUT_PATH)
-        self.PROPOSE_GENERATOR_PROMPT_PATH = os.path.join(CUSTOM_CORPUS_HOME, self.PROPOSE_GENERATOR_PROMPT_PATH)
-        self.PROPOSE_GENERATOR_OUTPUT_PATH = os.path.join(CUSTOM_CORPUS_HOME, self.PROPOSE_GENERATOR_OUTPUT_PATH)
+        # token usage tracker
+        self.total_prompt_tokens = 0
+        self.total_completion_tokens = 0
+        self.token_lock = threading.Lock()
 
-        self.PROPOSE_GENERATOR_STOP_WORDS = os.getenv("PROPOSE_GENERATOR_STOP_WORDS", None)
-        self.PROPOSE_GENERATOR_MAX_NEW_TOKENS = os.getenv("PROPOSE_GENERATOR_MAX_NEW_TOKENS", None)
+        self.PROPOSE_GENERATOR_INPUT_PATH = os.path.join(PROJECT_ROOT, self.PROPOSE_GENERATOR_INPUT_PATH)
+        self.PROPOSE_GENERATOR_PROMPT_PATH = os.path.join(PROJECT_ROOT, self.PROPOSE_GENERATOR_PROMPT_PATH)
+        self.PROPOSE_GENERATOR_OUTPUT_PATH = os.path.join(PROJECT_ROOT, self.PROPOSE_GENERATOR_OUTPUT_PATH)
+
         self.PROPOSE_GENERATOR_NUM_WORKERS = int(os.getenv("PROPOSE_GENERATOR_NUM_WORKERS", 4))
         self.PROPOSE_GENERATOR_MAX_GEN_TIMES = int(os.getenv("PROPOSE_GENERATOR_MAX_GEN_TIMES", 300))
 
         if self.PROPOSE_GENERATOR_GENERATED_TYPE in ['content']:
             if os.path.exists(self.PROPOSE_GENERATOR_OUTPUT_PATH):
-                with open(self.PROPOSE_GENERATOR_OUTPUT_PATH, "r", encoding="utf-8") as f:
-                    self.inputs = json.load(f)
-                print(f"Loaded propose generator {len(self.inputs)} examples from {os.path.relpath(self.PROPOSE_GENERATOR_OUTPUT_PATH, CUSTOM_CORPUS_HOME)}.")
+                self.inputs = load_json(self.PROPOSE_GENERATOR_OUTPUT_PATH)
+                print(f"Loaded propose generator {len(self.inputs)} examples from {os.path.relpath(self.PROPOSE_GENERATOR_OUTPUT_PATH, PROJECT_ROOT)}.")
             else:
-                with open(self.PROPOSE_GENERATOR_INPUT_PATH, "r", encoding="utf-8") as f:
-                    self.inputs = json.load(f)
-                print(f"Loaded propose generator {len(self.inputs)} examples from {os.path.relpath(self.PROPOSE_GENERATOR_INPUT_PATH, CUSTOM_CORPUS_HOME)}.")
+                self.inputs = load_json(self.PROPOSE_GENERATOR_INPUT_PATH)
+                print(f"Loaded propose generator {len(self.inputs)} examples from {os.path.relpath(self.PROPOSE_GENERATOR_INPUT_PATH, PROJECT_ROOT)}.")
             
         elif self.PROPOSE_GENERATOR_GENERATED_TYPE in ['entity_graph']:
-            with open(self.PROPOSE_GENERATOR_INPUT_PATH, "r", encoding="utf-8") as f:
-                self.inputs = json.load(f)
+            self.inputs = load_json(self.PROPOSE_GENERATOR_INPUT_PATH)
+            # convert the propose generator input into entity relationship graph
             self.entity_relationship_graph = EntityRelationshipGraph(self.inputs)
-            print(f"Loaded propose generator {len(self.inputs)} examples from {os.path.relpath(self.PROPOSE_GENERATOR_INPUT_PATH, CUSTOM_CORPUS_HOME)}.")
+            print(f"Loaded propose generator {len(self.inputs)} examples from {os.path.relpath(self.PROPOSE_GENERATOR_INPUT_PATH, PROJECT_ROOT)}.")
         else:
             raise ValueError(f"Invalid value for 'PROPOSE_GENERATOR_GENERATED_TYPE': {self.PROPOSE_GENERATOR_GENERATED_TYPE}")
 
         if self.PROPOSE_GENERATOR_MAX_GEN_TIMES == -1:
             self.PROPOSE_GENERATOR_MAX_GEN_TIMES = len(self.inputs)
-            
-        self.openai_model = OpenAIModel(MODEL_NAME, self.PROPOSE_GENERATOR_STOP_WORDS, self.PROPOSE_GENERATOR_MAX_NEW_TOKENS)
+
         self.save_interval = save_interval
 
     def _entity_relationship_graph_2_entity_relationship_prompt(self, entity_relationship_graph, strategy="random_relationship"):
@@ -207,9 +198,15 @@ class ProposeGenerator:
         else:
             raise NotImplementedError(f"Invalid value for 'strategy': {strategy}")
 
-    def process_input_content(self, cur_input, CLIENT, cur_propose_generator_prompt, i):
+    def process_input_content(self, cur_input, cur_propose_generator_prompt, i):
         try:
-            propose_generator_response, _ = self.openai_model.generate(CLIENT, cur_propose_generator_prompt, TEMPERATURE)
+            propose_generator_response, prompt_tokens, completion_tokens, _ = call_api_qwen(cur_propose_generator_prompt, TEMPERATURE)
+            
+            # Thread-safe token accumulation
+            with self.token_lock:
+                self.total_prompt_tokens += prompt_tokens
+                self.total_completion_tokens += completion_tokens
+            
             proposed_questions = extract_execution_output_content(propose_generator_response)
             result = {
                 **cur_input,
@@ -222,9 +219,10 @@ class ProposeGenerator:
 
     def run(self):
 
-        with open(self.PROPOSE_GENERATOR_PROMPT_PATH, "r", encoding="utf-8") as f:
-            propose_generator_prompt = f.read()
-        print(f"Loaded propose generator prompt from {os.path.relpath(self.PROPOSE_GENERATOR_PROMPT_PATH, CUSTOM_CORPUS_HOME)}.")
+        # read the propose generator prompt
+        # mult purposed, differenciated in the __init__ function, load from "content" path or "entity graph" path
+        purpose_generator_prompt = read_text_file(self.PROPOSE_GENERATOR_PROMPT_PATH)
+        print(f"Loaded propose generator prompt from {os.path.relpath(self.PROPOSE_GENERATOR_PROMPT_PATH, PROJECT_ROOT)}.")
 
         if self.PROPOSE_GENERATOR_GENERATED_TYPE in ['content']:
 
@@ -237,8 +235,8 @@ class ProposeGenerator:
                         continue
                     
                     context = reformat_objective_facts(cur_input)
-                    cur_propose_generator_prompt = propose_generator_prompt.replace('[[CONTEXT]]', context)
-                    future = executor.submit(self.process_input_content, cur_input, self.CLIENT, cur_propose_generator_prompt, i)
+                    cur_propose_generator_prompt = purpose_generator_prompt.replace('[[CONTEXT]]', context)
+                    future = executor.submit(self.process_input_content, cur_input, cur_propose_generator_prompt, i)
                     tasks.append(future)
 
                 all_num = len(tasks)
@@ -250,28 +248,27 @@ class ProposeGenerator:
                         
                         success_num += 1
                         if success_num % self.save_interval == 0:
-                            dir_path = os.path.dirname(self.PROPOSE_GENERATOR_OUTPUT_PATH)
-                            os.makedirs(dir_path, exist_ok=True)
-                            print(f'Saving {success_num}/{all_num} outputs to {os.path.relpath(self.PROPOSE_GENERATOR_OUTPUT_PATH, CUSTOM_CORPUS_HOME)}.')
-                            with open(self.PROPOSE_GENERATOR_OUTPUT_PATH, 'w', encoding="utf-8") as f:
-                                json.dump(self.inputs, f, indent=2, ensure_ascii=False)
+                            print(f'Saving {success_num}/{all_num} outputs to {os.path.relpath(self.PROPOSE_GENERATOR_OUTPUT_PATH, PROJECT_ROOT)}.')
+                            save_json(self.inputs,self.PROPOSE_GENERATOR_OUTPUT_PATH)
                     except Exception as e:
-                        print(f"Error processing input id {cur_input['id']}: {e}")
+                        print(f"Error during processing: {e}")
+
             if success_num or not os.path.exists(self.PROPOSE_GENERATOR_OUTPUT_PATH):
-                dir_path = os.path.dirname(self.PROPOSE_GENERATOR_OUTPUT_PATH)
-                os.makedirs(dir_path, exist_ok=True)
-                print(f'Saving {success_num}/{all_num} outputs to {os.path.relpath(self.PROPOSE_GENERATOR_OUTPUT_PATH, CUSTOM_CORPUS_HOME)}.')
-                with open(self.PROPOSE_GENERATOR_OUTPUT_PATH, 'w', encoding="utf-8") as f:
-                    json.dump(self.inputs, f, indent=2, ensure_ascii=False)
-            
-            return success_num, all_num
+                print(f'Saving {success_num}/{all_num} outputs to {os.path.relpath(self.PROPOSE_GENERATOR_OUTPUT_PATH, PROJECT_ROOT)}.')
+                save_json(self.inputs,self.PROPOSE_GENERATOR_OUTPUT_PATH)
+
+            print(f"Total prompt tokens: {self.total_prompt_tokens}")
+            print(f"Total completion tokens: {self.total_completion_tokens}")
+            print(f"Success rate: {success_num}/{all_num} = {success_num/all_num*100:.2f}%" if all_num > 0 else "Success rate: N/A")
+
+            return self.total_prompt_tokens, self.total_completion_tokens, success_num, all_num
 
         elif self.PROPOSE_GENERATOR_GENERATED_TYPE in ['entity_graph']:
             outputs = {}
             if os.path.exists(self.PROPOSE_GENERATOR_OUTPUT_PATH):
-                with open(self.PROPOSE_GENERATOR_OUTPUT_PATH, "r", encoding="utf-8") as f:
-                    outputs = json.load(f)
-                print(f"Loaded {len(outputs)} outputs from {os.path.relpath(self.PROPOSE_GENERATOR_OUTPUT_PATH, CUSTOM_CORPUS_HOME)}.")
+                outputs = load_json(self.PROPOSE_GENERATOR_OUTPUT_PATH)
+                print(f"Loaded {len(outputs)} outputs from {os.path.relpath(self.PROPOSE_GENERATOR_OUTPUT_PATH, PROJECT_ROOT)}.")
+
             already_done_entity_ids = set(outputs.keys())
             already_done_entity_ids = set([int(entity_id) for entity_id in already_done_entity_ids])
 
@@ -293,9 +290,9 @@ class ProposeGenerator:
                     if entity_relationship_prompt == "" or len(cur_objective_relationship_prompts) <= 1:
                         continue
                     
-                    cur_propose_generator_prompt = propose_generator_prompt.replace('[[ENTITY_NAME]]', public_entity_name)
-                    cur_propose_generator_prompt = propose_generator_prompt.replace('[[CONTEXT]]', entity_relationship_prompt)
-                    future = executor.submit(self.openai_model.generate, self.CLIENT, cur_propose_generator_prompt, TEMPERATURE)
+                    cur_propose_generator_prompt = purpose_generator_prompt.replace('[[ENTITY_NAME]]', public_entity_name)
+                    cur_propose_generator_prompt = cur_propose_generator_prompt.replace('[[CONTEXT]]', entity_relationship_prompt)
+                    future = executor.submit(call_api_qwen, cur_propose_generator_prompt, TEMPERATURE)
                     tasks.append((future, cur_entity_id, subgraph_depth_1, cur_objective_relationships, cur_objective_relationship_prompts))
 
                 all_num = len(tasks)
@@ -306,7 +303,12 @@ class ProposeGenerator:
                     cur_entity_id, subgraph_depth_1, cur_objective_relationships, cur_objective_relationship_prompts = tasks[idx][1], tasks[idx][2], tasks[idx][3], tasks[idx][4]
                     
                     try:
-                        propose_generator_response, _ = future.result(timeout=10*60)
+                        propose_generator_response, prompt_tokens, completion_tokens, _ = future.result(timeout=10*60)
+
+                        # Thread-safe token accumulation
+                        with self.token_lock:
+                            self.total_prompt_tokens += prompt_tokens
+                            self.total_completion_tokens += completion_tokens
 
                         tmp_proposed_questions = extract_execution_output_entity_graph(propose_generator_response)
                         proposed_questions = {}
@@ -332,19 +334,16 @@ class ProposeGenerator:
 
                         success_num += 1
                         if success_num % self.save_interval == 0:
-                            dir_path = os.path.dirname(self.PROPOSE_GENERATOR_OUTPUT_PATH)
-                            os.makedirs(dir_path, exist_ok=True)
-                            print(f'Saving {success_num}/{all_num} outputs to {os.path.relpath(self.PROPOSE_GENERATOR_OUTPUT_PATH, CUSTOM_CORPUS_HOME)}.')
-                            with open(self.PROPOSE_GENERATOR_OUTPUT_PATH, 'w', encoding="utf-8") as f:
-                                json.dump(outputs, f, indent=2, ensure_ascii=False)
+                            save_json(outputs, self.PROPOSE_GENERATOR_OUTPUT_PATH)
                     except Exception as e:
                         print(f"Error processing entity {cur_entity_id}: {e}")
 
             if success_num or not os.path.exists(self.PROPOSE_GENERATOR_OUTPUT_PATH):
-                dir_path = os.path.dirname(self.PROPOSE_GENERATOR_OUTPUT_PATH)
-                os.makedirs(dir_path, exist_ok=True)
-                print(f'Saving {success_num}/{all_num} outputs to {os.path.relpath(self.PROPOSE_GENERATOR_OUTPUT_PATH, CUSTOM_CORPUS_HOME)}.')
-                with open(self.PROPOSE_GENERATOR_OUTPUT_PATH, 'w', encoding="utf-8") as f:
-                    json.dump(outputs, f, indent=2, ensure_ascii=False)
-            
-            return success_num, all_num
+                print(f'Saving {success_num}/{all_num} outputs to {os.path.relpath(self.PROPOSE_GENERATOR_OUTPUT_PATH, PROJECT_ROOT)}.')
+                save_json(outputs, self.PROPOSE_GENERATOR_OUTPUT_PATH)
+
+            print(f"Total prompt tokens: {self.total_prompt_tokens}")
+            print(f"Total completion tokens: {self.total_completion_tokens}")
+            print(f"Success rate: {success_num}/{all_num} = {success_num/all_num*100:.2f}%" if all_num > 0 else "Success rate: N/A")
+
+            return self.total_prompt_tokens, self.total_completion_tokens, success_num, all_num
