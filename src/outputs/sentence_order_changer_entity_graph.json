@@ -1,0 +1,977 @@
+{
+  "27": {
+    "relationships": [
+      {
+        "source_entity_name": "Interpreter",
+        "target_entity_name": "Embassy",
+        "relationship_description": "An interpreter supports the worker during the embassy visit for communication purposes",
+        "sentences_used": "21",
+        "source_entity_id": 28,
+        "target_entity_id": 27,
+        "id": "doc1_question5"
+      },
+      {
+        "source_entity_name": "Police Report",
+        "target_entity_name": "Embassy",
+        "relationship_description": "The police report must be submitted to the embassy as part of the application for a replacement passport",
+        "sentences_used": "38",
+        "source_entity_id": 54,
+        "target_entity_id": 27,
+        "id": "doc1_question7"
+      },
+      {
+        "source_entity_name": "Supporting Documents",
+        "target_entity_name": "Embassy",
+        "relationship_description": "Along with the police report, supporting documents must be provided to the embassy to complete the passport replacement application",
+        "sentences_used": "38",
+        "source_entity_id": 57,
+        "target_entity_id": 27,
+        "id": "doc1_question7"
+      },
+      {
+        "source_entity_name": "Embassy",
+        "target_entity_name": "Replacement Passport",
+        "relationship_description": "The embassy issues the replacement passport after reviewing the submitted police report and supporting documents",
+        "sentences_used": "38",
+        "source_entity_id": 27,
+        "target_entity_id": 56,
+        "id": "doc1_question7"
+      }
+    ],
+    "selected-relationships": {
+      "objective-relationships": [
+        {
+          "source_entity_name": "Police Report",
+          "target_entity_name": "Embassy",
+          "relationship_description": "The police report must be submitted to the embassy as part of the application for a replacement passport",
+          "sentences_used": "38",
+          "source_entity_id": 54,
+          "target_entity_id": 27,
+          "id": "doc1_question7"
+        },
+        {
+          "source_entity_name": "Interpreter",
+          "target_entity_name": "Embassy",
+          "relationship_description": "An interpreter supports the worker during the embassy visit for communication purposes",
+          "sentences_used": "21",
+          "source_entity_id": 28,
+          "target_entity_id": 27,
+          "id": "doc1_question5"
+        }
+      ],
+      "objective-relationship-prompts": [
+        "<source_entity_name>Police Report</source_entity_name>\n<target_entity_name>Embassy</target_entity_name>\n<relationship_desc>The police report must be submitted to the embassy as part of the application for a replacement passport</relationship_desc>",
+        "<source_entity_name>Interpreter</source_entity_name>\n<target_entity_name>Embassy</target_entity_name>\n<relationship_desc>An interpreter supports the worker during the embassy visit for communication purposes</relationship_desc>"
+      ]
+    },
+    "proposed-questions": {
+      "1-questions": {
+        "question": "What documentation is required to be submitted to the Embassy for a replacement passport application, and what additional support is available during the embassy visit?",
+        "objective-relationship-id": "1,2",
+        "reasoning": "The police report must be submitted to the embassy as part of the application for a replacement passport [Clue 1]. Additionally, an interpreter may be present during the embassy visit to support communication for the applicant [Clue 2]. These two relationships provide information about both procedural requirements and available assistance during the embassy process.",
+        "answer": "The police report must be submitted to the Embassy as part of the replacement passport application, and an interpreter may support the applicant during the embassy visit for communication purposes [Clue 1, 2].",
+        "positive": "The police report must be submitted to the Embassy as part of the replacement passport application, and an interpreter may support the applicant during the embassy visit for communication purposes [Doc doc1_question7, Sen 38].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question5, Sen 21] is incorrect because it refers to interpreter support during a *renewal* process, not a *replacement* scenario. The correct sentence for interpreter support during an embassy visit in the context of replacement should still be evaluated within the appropriate context. However, [Doc doc1_question7, Sen 38] correctly identifies that the police report must be submitted to the embassy for the replacement application. There is no explicit mention of interpreter support during the *replacement* embassy visit in doc1_question7; only that an interpreter supports during renewal (doc1_question5, Sen 21). Since the question asks about replacement, and interpreter support is only explicitly stated for renewal—not replacement—the reference to Sen 21 is misleading. Therefore, only [Sen 38] provides direct evidence of required documentation, and there is insufficient direct support for interpreter assistance during replacement.",
+            "answer": "The police report must be submitted to the Embassy as part of the replacement passport application, and an interpreter may support the applicant during the embassy visit for communication purposes [Doc doc1_question7, Sen 38]."
+          },
+          "long-answer": {
+            "reason": "In addition to [Doc doc1_question7, Sen 38], which directly states that the police report and supporting documents must be submitted to the embassy, other relevant sentences include [Doc doc1_question7, Sen 36] (management arranges police report and worker must accompany), [Sen 37] (ensure accurate details), and [Sen 40] (next steps after new passport issuance). While interpreter support is explicitly mentioned in [Doc doc1_question5, Sen 21], it pertains to the *renewal* process, not the *replacement* process. Since the procedures are similar and interpreters are generally designated for embassy visits, referencing Sen 21 may still be contextually justified in a broader interpretation. Thus, including both [Doc doc1_question7, Sen 36,37,38] and [Doc doc1_question5, Sen 21] captures all aligned information related to documentation submission and available support.",
+            "answer": "The police report must be submitted to the Embassy as part of the replacement passport application, and an interpreter may support the applicant during the embassy visit for communication purposes [Doc doc1_question7, Sen 36,37,38][Doc doc1_question5, Sen 21]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"documentation is required to be submitted\" with \"documents must be provided\", and \"additional support\" with \"further assistance\"",
+            "result": "What documents must be provided to the Embassy for a replacement passport application, and what further assistance is available during the embassy visit?",
+            "answer": "The police report must be provided to the Embassy as part of the replacement passport application, and an interpreter may assist the applicant during the embassy visit for communication purposes [Doc doc1_question7, Sen 38]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by omitting specificity about the type of assistance, leaving it implied rather than explicitly stated",
+            "result": "What documents must be provided to the Embassy for a replacement passport application, and what support services are accessible during the embassy visit?",
+            "answer": "The police report must be provided to the Embassy as part of the replacement passport application, and an interpreter may assist the applicant during the embassy visit for communication purposes [Doc doc1_question7, Sen 38]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of a consular officer processing applications",
+            "result": "As a consular officer, what documents must be provided to the Embassy for a replacement passport application, and what support services are accessible during the embassy visit?",
+            "answer": "As a consular officer, the police report must be provided to the Embassy as part of the replacement passport application, and an interpreter may assist the applicant during the embassy visit for communication purposes [Doc doc1_question7, Sen 38]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that the applicant has lost the passport abroad",
+            "result": "Assuming the applicant has lost the passport abroad, as a consular officer, what documents must be provided to the Embassy for a replacement passport application, and what support services are accessible during the embassy visit?",
+            "answer": "Assuming the applicant has lost the passport abroad, as a consular officer, the police report must be provided to the Embassy as part of the replacement passport application, and an interpreter may assist the applicant during the embassy visit for communication purposes [Doc doc1_question7, Sen 38]."
+          }
+        ],
+        "rephrased-questions-part": [
+          {
+            "transformation": "Temporal Expansion",
+            "explanation": "Extend the time frame to include not only the current replacement passport application process but also requirements and support services for emergency travel documentation issued within the past five years, broadening the scope beyond a single instance.",
+            "result": "What documentation has been required for replacement passport applications submitted to the Embassy from 2019 through 2024, and what additional support services have been available during embassy visits over this period?",
+            "answer": "The police report must be submitted to the Embassy as part of the replacement passport application, and an interpreter may support the applicant during the embassy visit for communication purposes [Doc doc1_question7, Sen 38]. Information regarding documentation requirements and support services for replacement passport applications or emergency travel documentation prior to 2023 or after 2024 is not provided in the given clues.",
+            "reordered-question": "What documentation has been required for replacement passport applications submitted to the Embassy from 2019 through 2024, and what additional support services have been available during embassy visits over this period?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Comparison Addition",
+            "explanation": "Introduce a comparison with consular services at a foreign consulate located in a different country during the same period to assess differences in documentation and support availability.",
+            "result": "What documentation has been required for replacement passport applications submitted to the Embassy from 2019 through 2024, how does this compare to requirements at a foreign consulate in Country X during the same period, and what differences exist in the availability of interpreter support during visits?",
+            "answer": "The police report must be submitted to the Embassy as part of the replacement passport application, and an interpreter may support the applicant during the embassy visit for communication purposes [Doc doc1_question7, Sen 38]. Information regarding documentation requirements and support services for replacement passport applications prior to 2023 or after 2024 is not provided in the given clues. Requirements at a foreign consulate in Country X and any comparative analysis of interpreter support availability are not included in the provided information.",
+            "reordered-question": "What documentation has been required for replacement passport applications submitted to the Embassy from 2019 through 2024, how does this compare to requirements at a foreign consulate in Country X during the same period, and what differences exist in the availability of interpreter support during visits?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Metric Segmentation",
+            "explanation": "Break down the types of documentation and support by applicant category, such as adult applicants, minors, and individuals with disabilities, to examine variations in submission requirements and assistance offered during embassy visits.",
+            "result": "What documentation has been required for replacement passport applications submitted to the Embassy from 2019 through 2024 for adult applicants, minors, and individuals with disabilities, how does this compare to requirements at a foreign consulate in Country X during the same period, and what differences exist in the availability of interpreter support and other accommodations during visits for these groups?",
+            "answer": "The police report must be submitted to the Embassy as part of the replacement passport application, and an interpreter may support the applicant during the embassy visit for communication purposes [Doc doc1_question7, Sen 38]. Information regarding documentation requirements and support services for replacement passport applications prior to 2023 or after 2024 is not provided in the given clues. Requirements at a foreign consulate in Country X and any comparative analysis of interpreter support availability are not included in the provided information. Specific documentation requirements or support provisions differentiated by applicant category—such as adults, minors, or individuals with disabilities—are not detailed in the available clues.",
+            "reordered-question": "What documentation has been required for replacement passport applications submitted to the Embassy from 2019 through 2024 for adult applicants, minors, and individuals with disabilities, how does this compare to requirements at a foreign consulate in Country X during the same period, and what differences exist in the availability of interpreter support and other accommodations during visits for these groups?",
+            "reordered-same-meaning-with-origin": true
+          }
+        ],
+        "rephrased-questions-hybrid": [
+          {
+            "transformation": "Equivalent Transformation: Near-synonym Replacement",
+            "explanation": "Replace \"documentation is required to be submitted\" with \"documents must be provided\", and \"additional support\" with \"further assistance\"",
+            "result": "What documents must be provided to the Embassy for a replacement passport application, and what further assistance is available during the embassy visit?",
+            "answer": "The police report must be provided to the Embassy as part of the replacement passport application, and an interpreter may assist the applicant during the embassy visit for communication purposes [Doc doc1_question7, Sen 38].",
+            "reordered-question": "Which documents are required to be submitted to the Embassy for a replacement passport application, and what additional assistance is available during the embassy visit?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Equivalent Transformation: Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by omitting specificity about the type of assistance, leaving it implied rather than explicitly stated",
+            "result": "What documents must be provided to the Embassy for a replacement passport application, and what support services are accessible during the embassy visit?",
+            "answer": "The police report must be provided to the Embassy as part of the replacement passport application, and an interpreter may assist the applicant during the embassy visit for communication purposes [Doc doc1_question7, Sen 38].",
+            "reordered-question": "Which documents are required to be submitted to the Embassy for a replacement passport application, and what support services are available during the embassy visit?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Equivalent Transformation: Perspective Shift",
+            "explanation": "Pose the question from the perspective of a consular officer processing applications",
+            "result": "As a consular officer, what documents must be provided to the Embassy for a replacement passport application, and what support services are accessible during the embassy visit?",
+            "answer": "As a consular officer, the police report must be provided to the Embassy as part of the replacement passport application, and an interpreter may assist the applicant during the embassy visit for communication purposes [Doc doc1_question7, Sen 38].",
+            "reordered-question": "As a consular officer, which documents are required to be submitted to the Embassy for a replacement passport application, and what support services are available during the embassy visit?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Equivalent Transformation: Conditional Addition",
+            "explanation": "Add a condition specifying that the applicant has lost the passport abroad",
+            "result": "Assuming the applicant has lost the passport abroad, as a consular officer, what documents must be provided to the Embassy for a replacement passport application, and what support services are accessible during the embassy visit?",
+            "answer": "Assuming the applicant has lost the passport abroad, as a consular officer, the police report must be provided to the Embassy as part of the replacement passport application, and an interpreter may assist the applicant during the embassy visit for communication purposes [Doc doc1_question7, Sen 38].",
+            "reordered-question": "Assuming the applicant has lost the passport abroad, as a consular officer, which documents are required to be submitted to the Embassy for a replacement passport application, and what support services are available during the embassy visit?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Partial Transformation: Temporal Expansion",
+            "explanation": "Extend the time frame to include both the period before and after the reported passport loss, addressing document requirements and support services across emergency response, application processing, and post-issuance stages.",
+            "result": "What documents must be submitted to the Embassy for a replacement passport application at the time of reporting a lost passport abroad, during the processing phase, and after reissuance, and what support services are available throughout the entire consular assistance period?",
+            "answer": "At the time of reporting a lost passport abroad, a police report must be provided to the Embassy as part of the replacement passport application [Doc doc1_question7, Sen 38]. An interpreter may assist the applicant during the embassy visit for communication purposes [Doc doc1_question7, Sen 38]. Information regarding additional required documents during the processing phase or after reissuance, as well as details about support services beyond interpretation during the broader consular assistance period, is not provided in the given clues.",
+            "reordered-question": "Which documents are required to be submitted to the Embassy for a replacement passport application at the time of reporting a lost passport abroad, during the processing phase, and after reissuance, and what support services are accessible throughout the entire consular assistance period?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Partial Transformation: Comparison Addition",
+            "explanation": "Introduce a comparison between the replacement passport procedures at a diplomatic mission located in an urban capital city versus a consular office in a remote region under similar circumstances.",
+            "result": "What documents must be submitted to a diplomatic mission in an urban capital city versus a consular office in a remote region for a replacement passport application following a loss abroad, how do the available support services compare between these two settings, and what differences exist in processing timelines or accessibility?",
+            "answer": "At the time of reporting a lost passport abroad, a police report must be provided to the Embassy as part of the replacement passport application [Doc doc1_question7, Sen 38]. An interpreter may assist the applicant during the embassy visit for communication purposes [Doc doc1_question7, Sen 38]. Information regarding differences in required documentation, support services, processing timelines, or accessibility between diplomatic missions in urban capital cities and consular offices in remote regions is not provided in the given clues.",
+            "reordered-question": "Which documents are required to be submitted to a diplomatic mission in an urban capital city compared to a consular office in a remote region for a replacement passport application following a loss abroad, how do the available support services compare between these two settings, and what differences exist in processing timelines or accessibility?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Partial Transformation: Metric Segmentation",
+            "explanation": "Break down the requirements and support services by category: mandatory documents, optional submissions, language assistance, medical support, legal aid, and emergency shelter availability during the replacement passport process.",
+            "result": "What mandatory documents, optional submissions, language assistance, medical support, legal aid, and emergency shelter services are required or available at the Embassy when applying for a replacement passport after losing it abroad, and how do these components vary between standard and urgent cases?",
+            "answer": "A police report must be provided to the Embassy as part of the replacement passport application, indicating its status as a mandatory document [Doc doc1_question7, Sen 38]. Language assistance in the form of an interpreter may be available during the embassy visit to support communication [Doc doc1_question7, Sen 38]. Information regarding optional submissions, medical support, legal aid, emergency shelter services, and distinctions between standard and urgent cases is not provided in the given clues.",
+            "reordered-question": "Which mandatory documents, optional submissions, language assistance, medical support, legal aid, and emergency shelter services are required or available at the Embassy when applying for a replacement passport after losing it abroad, and how do these components differ between standard and urgent cases?",
+            "reordered-same-meaning-with-origin": true
+          }
+        ]
+      }
+    }
+  },
+  "18": {
+    "relationships": [
+      {
+        "source_entity_name": "Management",
+        "target_entity_name": "Payroll Department",
+        "relationship_description": "Management is responsible for forwarding payroll issues to the Payroll Department for investigation and corrective action",
+        "sentences_used": "13",
+        "source_entity_id": 18,
+        "target_entity_id": 17,
+        "id": "doc1_question4"
+      },
+      {
+        "source_entity_name": "Workers",
+        "target_entity_name": "Management",
+        "relationship_description": "Workers are advised to consult management to determine the specific reason for their work permit delay",
+        "sentences_used": "26",
+        "source_entity_id": 48,
+        "target_entity_id": 18,
+        "id": "doc1_question6"
+      },
+      {
+        "source_entity_name": "Workers",
+        "target_entity_name": "Management",
+        "relationship_description": "Workers are encouraged to stay informed and coordinate with management regarding their permit status",
+        "sentences_used": "33",
+        "source_entity_id": 48,
+        "target_entity_id": 18,
+        "id": "doc1_question6"
+      }
+    ],
+    "selected-relationships": {
+      "objective-relationships": [
+        {
+          "source_entity_name": "Workers",
+          "target_entity_name": "Management",
+          "relationship_description": "Workers are advised to consult management to determine the specific reason for their work permit delay",
+          "sentences_used": "26",
+          "source_entity_id": 48,
+          "target_entity_id": 18,
+          "id": "doc1_question6"
+        },
+        {
+          "source_entity_name": "Management",
+          "target_entity_name": "Payroll Department",
+          "relationship_description": "Management is responsible for forwarding payroll issues to the Payroll Department for investigation and corrective action",
+          "sentences_used": "13",
+          "source_entity_id": 18,
+          "target_entity_id": 17,
+          "id": "doc1_question4"
+        }
+      ],
+      "objective-relationship-prompts": [
+        "<source_entity_name>Workers</source_entity_name>\n<target_entity_name>Management</target_entity_name>\n<relationship_desc>Workers are advised to consult management to determine the specific reason for their work permit delay</relationship_desc>",
+        "<source_entity_name>Management</source_entity_name>\n<target_entity_name>Payroll Department</target_entity_name>\n<relationship_desc>Management is responsible for forwarding payroll issues to the Payroll Department for investigation and corrective action</relationship_desc>"
+      ]
+    },
+    "proposed-questions": {
+      "1-questions": {
+        "question": "What role does Management play in addressing work permit delays and payroll issues based on its relationships with Workers and the Payroll Department?",
+        "objective-relationship-id": "1,2",
+        "reasoning": "Management serves as an intermediary for Workers experiencing work permit delays, advising them to consult Management to identify the cause [Clue 1]. Additionally, Management is responsible for forwarding payroll-related issues to the Payroll Department for investigation and corrective action [Clue 2]. By combining these roles, Management acts as a liaison between Workers and administrative departments for resolving employment-related concerns.",
+        "answer": "Management advises Workers to determine the reasons for work permit delays [Clue 1] and forwards payroll issues to the Payroll Department for investigation and corrective action [Clue 2].",
+        "positive": "Management advises Workers to determine the reasons for work permit delays [Doc doc1_question6, Sen 26] and forwards payroll issues to the Payroll Department for investigation and corrective action [Doc doc1_question4, Sen 13].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question6, Sen 26] correctly points to the sentence \"Workers should check with management to identify the specific reason for the delay,\" which reflects Management's role in advising Workers about permit delays. The reference [Doc doc1_question4, Sen 13] accurately cites \"Management will escalate the issue to the Payroll department for investigation and resolution,\" which directly describes Management’s role in forwarding payroll issues. Both sentences are the most concise and direct answers to the question, requiring no modification.",
+            "answer": "Management advises Workers to determine the reasons for work permit delays [Doc doc1_question6, Sen 26] and forwards payroll issues to the Payroll Department for investigation and corrective action [Doc doc1_question4, Sen 13]."
+          },
+          "long-answer": {
+            "reason": "In addition to the core references in the short answer, other relevant sentences that align with the broader context of Management’s role include [Doc doc1_question6, Sen 32], which states \"The company’s administration will oversee the entire process, including permit applications and renewals,\" reinforcing Management's supervisory role in permit matters. For payroll, [Doc doc1_question4, Sen 12] (\"They will escalate the issue to the Payroll department...\") supports the chain of escalation involving Management, and [Doc doc1_question4, Sen 14] (\"The Payroll department will review the records...\") provides context on the outcome of Management’s intervention. These additional references provide a more complete picture of the relationships and processes described in the question.",
+            "answer": "Management advises Workers to determine the reasons for work permit delays [Doc doc1_question6, Sen 26,32] and forwards payroll issues to the Payroll Department for investigation and corrective action [Doc doc1_question4, Sen 12,13,14]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"role\" with \"function\", \"addressing\" with \"resolving\", \"Work permit delays\" with \"delays in obtaining work permits\", and \"Payroll issues\" with \"compensation processing problems\"",
+            "result": "What function does Management perform in resolving delays in obtaining work permits and compensation processing problems based on its relationships with Workers and the Payroll Department?",
+            "answer": "Management advises Workers to determine the reasons for delays in obtaining work permits [Doc doc1_question6, Sen 26] and forwards compensation processing problems to the Payroll Department for investigation and corrective action [Doc doc1_question4, Sen 13]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by replacing \"resolving\" with \"handling\", which is broader and less specific, while maintaining the core meaning",
+            "result": "What function does Management perform in handling delays in obtaining work permits and compensation processing problems based on its relationships with Workers and the Payroll Department?",
+            "answer": "Management advises Workers to determine the reasons for delays in obtaining work permits [Doc doc1_question6, Sen 26] and forwards compensation processing problems to the Payroll Department for investigation and corrective action [Doc doc1_question4, Sen 13]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of a Worker seeking guidance, increasing contextual complexity without altering factual requirements",
+            "result": "From a Worker's standpoint, what function does Management perform in handling delays in obtaining work permits and compensation processing problems through its connections with Workers and the Payroll Department?",
+            "answer": "From a Worker's standpoint, Management advises Workers to determine the reasons for delays in obtaining work permits [Doc doc1_question6, Sen 26] and forwards compensation processing problems to the Payroll Department for investigation and corrective action [Doc doc1_question4, Sen 13]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that communication channels remain operational, thereby introducing a situational constraint without changing the answerable facts",
+            "result": "Provided that communication channels remain operational, from a Worker's standpoint, what function does Management perform in handling delays in obtaining work permits and compensation processing problems through its connections with Workers and the Payroll Department?",
+            "answer": "Provided that communication channels remain operational, from a Worker's standpoint, Management advises Workers to determine the reasons for delays in obtaining work permits [Doc doc1_question6, Sen 26] and forwards compensation processing problems to the Payroll Department for investigation and corrective action [Doc doc1_question4, Sen 13]."
+          }
+        ],
+        "rephrased-questions-part": [
+          {
+            "transformation": "Temporal Expansion",
+            "explanation": "Extend the time frame to examine Management's role in addressing work permit delays and payroll issues over multiple reporting periods, including prior and future cycles beyond the current scope.",
+            "result": "What role has Management played in addressing work permit delays and payroll issues from the first quarter of 2022 through the second quarter of 2024, and what ongoing responsibilities are expected in resolving such issues beyond mid-2024?",
+            "answer": "Management advises Workers to determine the reasons for work permit delays [Doc doc1_question6, Sen 26] and forwards payroll issues to the Payroll Department for investigation and corrective action [Doc doc1_question4, Sen 13]. Information regarding Management’s actions in the first quarter of 2022, subsequent quarters up to the second quarter of 2024, and expected responsibilities beyond mid-2024 is not provided in the given clues.",
+            "reordered-question": "What responsibilities has Management held in handling work permit delays and payroll issues from the first quarter of 2022 through the second quarter of 2024, and what future responsibilities are anticipated for resolving such matters beyond mid-2024?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Comparison Addition",
+            "explanation": "Introduce a comparison between Management's handling of work permit delays and payroll issues and that of another organizational unit, such as Human Resources or Compliance Office.",
+            "result": "What role has Management played in addressing work permit delays and payroll issues from the first quarter of 2022 through the second quarter of 2024, and how does this compare to the role of the Human Resources department in managing similar issues during the same period?",
+            "answer": "Management advises Workers to determine the reasons for work permit delays [Doc doc1_question6, Sen 26] and forwards payroll issues to the Payroll Department for investigation and corrective action [Doc doc1_question4, Sen 13]. Information regarding Management’s actions in the first quarter of 2022, subsequent quarters up to the second quarter of 2024, and expected responsibilities beyond mid-2024 is not provided in the given clues. The role of the Human Resources department in managing work permit delays and payroll issues during the same period is also not provided, making a comparative analysis infeasible based on available information.",
+            "reordered-question": "What responsibilities has Management held in handling work permit delays and payroll issues from the first quarter of 2022 through the second quarter of 2024, and how does this compare to the responsibilities of the Human Resources department in addressing similar matters during the same timeframe?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Explanation of Reasons",
+            "explanation": "Require an explanation of the underlying reasons why Management adopts its current approach to work permit delays and payroll issues, particularly in relation to its relationships with Workers and the Payroll Department.",
+            "result": "What role has Management played in addressing work permit delays and payroll issues from the first quarter of 2022 through the second quarter of 2024, how does this compare to the role of the Human Resources department in managing similar issues during the same period, and what are the primary reasons for Management's reliance on Workers and the Payroll Department in resolving these issues?",
+            "answer": "Management advises Workers to determine the reasons for work permit delays [Doc doc1_question6, Sen 26] and forwards payroll issues to the Payroll Department for investigation and corrective action [Doc doc1_question4, Sen 13]. Information regarding Management’s actions in the first quarter of 2022, subsequent quarters up to the second quarter of 2024, and expected responsibilities beyond mid-2024 is not provided in the given clues. The role of the Human Resources department in managing work permit delays and payroll issues during the same period is also not provided, making a comparative analysis infeasible based on available information. The primary reasons for Management's reliance on Workers and the Payroll Department in resolving these issues are not specified in the provided documents.",
+            "reordered-question": "What responsibilities has Management held in handling work permit delays and payroll issues from the first quarter of 2022 through the second quarter of 2024, how does this compare to the responsibilities of the Human Resources department in addressing similar matters during the same timeframe, and what are the main reasons for Management's dependence on Workers and the Payroll Department in resolving these matters?",
+            "reordered-same-meaning-with-origin": true
+          }
+        ],
+        "rephrased-questions-hybrid": [
+          {
+            "transformation": "Equivalent Transformation: Near-synonym Replacement",
+            "explanation": "Replace \"role\" with \"function\", \"addressing\" with \"resolving\", \"Work permit delays\" with \"delays in obtaining work permits\", and \"Payroll issues\" with \"compensation processing problems\"",
+            "result": "What function does Management perform in resolving delays in obtaining work permits and compensation processing problems based on its relationships with Workers and the Payroll Department?",
+            "answer": "Management advises Workers to determine the reasons for delays in obtaining work permits [Doc doc1_question6, Sen 26] and forwards compensation processing problems to the Payroll Department for investigation and corrective action [Doc doc1_question4, Sen 13].",
+            "reordered-question": "What role does Management play in addressing delays in obtaining work permits and resolving compensation processing problems based on its relationships with Workers and the Payroll Department?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Equivalent Transformation: Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by replacing \"resolving\" with \"handling\", which is broader and less specific, while maintaining the core meaning",
+            "result": "What function does Management perform in handling delays in obtaining work permits and compensation processing problems based on its relationships with Workers and the Payroll Department?",
+            "answer": "Management advises Workers to determine the reasons for delays in obtaining work permits [Doc doc1_question6, Sen 26] and forwards compensation processing problems to the Payroll Department for investigation and corrective action [Doc doc1_question4, Sen 13].",
+            "reordered-question": "What role does Management fulfill in managing delays in obtaining work permits and compensation processing problems according to its relationships with Workers and the Payroll Department?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Equivalent Transformation: Perspective Shift",
+            "explanation": "Pose the question from the perspective of a Worker seeking guidance, increasing contextual complexity without altering factual requirements",
+            "result": "From a Worker's standpoint, what function does Management perform in handling delays in obtaining work permits and compensation processing problems through its connections with Workers and the Payroll Department?",
+            "answer": "From a Worker's standpoint, Management advises Workers to determine the reasons for delays in obtaining work permits [Doc doc1_question6, Sen 26] and forwards compensation processing problems to the Payroll Department for investigation and corrective action [Doc doc1_question4, Sen 13].",
+            "reordered-question": "From a Worker's perspective, what role does Management play in managing delays in obtaining work permits and compensation processing problems through its connections with Workers and the Payroll Department?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Equivalent Transformation: Conditional Addition",
+            "explanation": "Add a condition specifying that communication channels remain operational, thereby introducing a situational constraint without changing the answerable facts",
+            "result": "Provided that communication channels remain operational, from a Worker's standpoint, what function does Management perform in handling delays in obtaining work permits and compensation processing problems through its connections with Workers and the Payroll Department?",
+            "answer": "Provided that communication channels remain operational, from a Worker's standpoint, Management advises Workers to determine the reasons for delays in obtaining work permits [Doc doc1_question6, Sen 26] and forwards compensation processing problems to the Payroll Department for investigation and corrective action [Doc doc1_question4, Sen 13].",
+            "reordered-question": "Assuming operational communication channels, from a Worker's perspective, what role does Management play in managing delays in obtaining work permits and compensation processing problems through its connections with Workers and the Payroll Department?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Partial Transformation: Temporal Expansion",
+            "explanation": "Extend the time frame to include both past and future instances of permit and compensation issues, broadening the scope from current operations to historical and anticipated future handling procedures.",
+            "result": "From a Worker's standpoint, how has Management handled delays in obtaining work permits and compensation processing problems through its connections with Workers and the Payroll Department from 2020 to 2025, and what procedural changes are expected beyond 2025?",
+            "answer": "Provided that communication channels remain operational, from a Worker's standpoint, Management advises Workers to determine the reasons for delays in obtaining work permits [Doc doc1_question6, Sen 26] and forwards compensation processing problems to the Payroll Department for investigation and corrective action [Doc doc1_question4, Sen 13]. Information regarding Management’s handling of such issues between 2020 and 2024, as well as anticipated procedural changes beyond 2025, is not provided in the given clues.",
+            "reordered-question": "From a Worker's perspective, how has Management managed delays in obtaining work permits and compensation processing problems through its connections with Workers and the Payroll Department during the period from 2020 to 2025, and what procedural modifications are anticipated after 2025?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Partial Transformation: Comparison Addition",
+            "explanation": "Introduce a comparison between Management's role in resolving work permit and compensation issues and the role performed by Human Resources in similar administrative processes within the same timeframe.",
+            "result": "From a Worker's standpoint, how has Management handled delays in obtaining work permits and compensation processing problems through its connections with Workers and the Payroll Department from 2020 to 2025, how does this compare to the role of Human Resources in addressing similar issues, and what procedural changes are expected beyond 2025?",
+            "answer": "Provided that communication channels remain operational, from a Worker's standpoint, Management advises Workers to determine the reasons for delays in obtaining work permits [Doc doc1_question6, Sen 26] and forwards compensation processing problems to the Payroll Department for investigation and corrective action [Doc doc1_question4, Sen 13]. Information regarding Management’s handling of such issues between 2020 and 2024, as well as anticipated procedural changes beyond 2025, is not provided in the given clues. The role of Human Resources in addressing delays in work permits or compensation processing is not mentioned in the available documents, making a comparative analysis impossible based on current information.",
+            "reordered-question": "From a Worker's perspective, how has Management managed delays in obtaining work permits and compensation processing problems through its connections with Workers and the Payroll Department during the period from 2020 to 2025, how does this compare with the function of Human Resources in handling similar issues, and what procedural modifications are anticipated after 2025?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Partial Transformation: Metric Segmentation",
+            "explanation": "Break down the inquiry into specific dimensions: (1) Management’s function in work permit delays categorized by cause (e.g., documentation errors, system failures), and (2) compensation issues segmented by type (e.g., payroll miscalculations, missed payments), within the context of interdepartmental coordination.",
+            "result": "From a Worker's standpoint, how has Management addressed delays in obtaining work permits categorized by root causes such as documentation errors or system failures, and how has it managed distinct types of compensation processing problems such as payroll miscalculations or missed payments through coordination with Workers and the Payroll Department from 2020 to 2025, how does this compare to the role of Human Resources in addressing similar issues, and what procedural changes are expected beyond 2025?",
+            "answer": "Provided that communication channels remain operational, from a Worker's standpoint, Management advises Workers to determine the reasons for delays in obtaining work permits [Doc doc1_question6, Sen 26] and forwards compensation processing problems to the Payroll Department for investigation and corrective action [Doc doc1_question4, Sen 13]. The original clues do not specify whether Management differentiates responses based on root causes such as documentation errors or system failures in permit delays, nor do they distinguish between types of compensation issues like payroll miscalculations or missed payments. Information regarding Management’s handling of such issues between 2020 and 2024, anticipated procedural changes beyond 2025, and the role of Human Resources in addressing similar issues is not provided in the given clues.",
+            "reordered-question": "From a Worker's perspective, how has Management handled delays in obtaining work permits classified by underlying causes such as documentation errors or system malfunctions, and how has it addressed specific forms of compensation processing problems such as payroll miscalculations or missed payments through coordination with Workers and the Payroll Department from 2020 to 2025, how does this compare with the function of Human Resources in handling similar issues, and what procedural modifications are anticipated after 2025?",
+            "reordered-same-meaning-with-origin": true
+          }
+        ]
+      }
+    }
+  },
+  "24": {
+    "relationships": [
+      {
+        "source_entity_name": "Worker",
+        "target_entity_name": "Work Permit",
+        "relationship_description": "A worker's eligibility to work depends on holding a valid work permit, which is contingent on passport validity",
+        "sentences_used": "18",
+        "source_entity_id": 23,
+        "target_entity_id": 24,
+        "id": "doc1_question5"
+      },
+      {
+        "source_entity_name": "Timely Renewal",
+        "target_entity_name": "Work Permit",
+        "relationship_description": "Ensuring timely passport renewal helps maintain uninterrupted validity of the work permit",
+        "sentences_used": "18,23",
+        "source_entity_id": 22,
+        "target_entity_id": 24,
+        "id": "doc1_question5"
+      },
+      {
+        "source_entity_name": "Replacement Passport",
+        "target_entity_name": "Work Permit",
+        "relationship_description": "Possession of a valid passport is a prerequisite for applying for or renewing a work permit",
+        "sentences_used": "40",
+        "source_entity_id": 56,
+        "target_entity_id": 24,
+        "id": "doc1_question7"
+      }
+    ],
+    "selected-relationships": {
+      "objective-relationships": [
+        {
+          "source_entity_name": "Replacement Passport",
+          "target_entity_name": "Work Permit",
+          "relationship_description": "Possession of a valid passport is a prerequisite for applying for or renewing a work permit",
+          "sentences_used": "40",
+          "source_entity_id": 56,
+          "target_entity_id": 24,
+          "id": "doc1_question7"
+        },
+        {
+          "source_entity_name": "Worker",
+          "target_entity_name": "Work Permit",
+          "relationship_description": "A worker's eligibility to work depends on holding a valid work permit, which is contingent on passport validity",
+          "sentences_used": "18",
+          "source_entity_id": 23,
+          "target_entity_id": 24,
+          "id": "doc1_question5"
+        }
+      ],
+      "objective-relationship-prompts": [
+        "<source_entity_name>Replacement Passport</source_entity_name>\n<target_entity_name>Work Permit</target_entity_name>\n<relationship_desc>Possession of a valid passport is a prerequisite for applying for or renewing a work permit</relationship_desc>",
+        "<source_entity_name>Worker</source_entity_name>\n<target_entity_name>Work Permit</target_entity_name>\n<relationship_desc>A worker's eligibility to work depends on holding a valid work permit, which is contingent on passport validity</relationship_desc>"
+      ]
+    },
+    "proposed-questions": {
+      "1-questions": {
+        "question": "How does passport validity affect a worker's ability to obtain or renew a work permit?",
+        "objective-relationship-id": "1,2",
+        "reasoning": "Clue 1 states that possession of a valid passport is a prerequisite for applying for or renewing a work permit. Clue 2 indicates that a worker's eligibility to work depends on holding a valid work permit, which in turn is contingent on passport validity. By combining these two relationships, it can be deduced that without a valid passport, a worker cannot obtain or renew a work permit, thereby losing eligibility to work.",
+        "answer": "A worker must have a valid passport to apply for or renew a work permit [Clue 1], and since work eligibility depends on holding a valid work permit tied to passport validity, an invalid passport directly prevents legal employment [Clue 2].",
+        "positive": "A worker must have a valid passport to apply for or renew a work permit [Doc doc1_question7, Sen 40], and since work eligibility depends on holding a valid work permit tied to passport validity, an invalid passport directly prevents legal employment [Doc doc1_question5, Sen 18].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question7, Sen 40] correctly states that the worker must proceed to the Immigration Department to apply for a valid work permit once the new passport is issued, which directly supports the necessity of a valid passport for obtaining a work permit. The reference [Doc doc1_question5, Sen 18] correctly states that a passport must remain valid for at least 18 months before the work permit expires, establishing the regulatory link between passport validity and work permit eligibility. Both sentences are the most concise and directly relevant to answering the question.",
+            "answer": "A worker must have a valid passport to apply for or renew a work permit [Doc doc1_question7, Sen 40], and since work eligibility depends on holding a valid work permit tied to passport validity, an invalid passport directly prevents legal employment [Doc doc1_question5, Sen 18]."
+          },
+          "long-answer": {
+            "reason": "In addition to the core references [Doc doc1_question7, Sen 40] and [Doc doc1_question5, Sen 18], other relevant sentences that align with the question include [Doc doc1_question7, Sen 38, 39, 41], which discuss the replacement process, fees, and document storage—factors affecting continuity of documentation—and [Doc doc1_question5, Sen 17, 19, 23, 24], which emphasize tracking expiration dates, advance notice, consequences of failure to renew, and adherence to deadlines. These provide contextual support for how passport validity impacts work permit status by illustrating procedural, regulatory, and administrative dependencies.",
+            "answer": "A worker must have a valid passport to apply for or renew a work permit [Doc doc1_question7, Sen 40], and since work eligibility depends on holding a valid work permit tied to passport validity, an invalid passport directly prevents legal employment [Doc doc1_question5, Sen 18,17,19,23,24][Doc doc1_question7, Sen 38,39,41]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"affect\" with \"influence\", \"passport validity\" with \"validity of a passport\", and \"worker's ability\" with \"worker's eligibility\"",
+            "result": "How does validity of a passport influence a worker's eligibility to obtain or renew a work permit?",
+            "answer": "A worker must have a valid passport to apply for or renew a work permit [Doc doc1_question7, Sen 40], and since work eligibility depends on holding a valid work permit tied to passport validity, an invalid passport directly prevents legal employment [Doc doc1_question5, Sen 18]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by removing specificity about both obtaining and renewing, focusing only on permit status in relation to travel document validity",
+            "result": "How does validity of a passport relate to a worker's work permit status?",
+            "answer": "Validity of a passport directly affects a worker's ability to maintain a valid work permit; a worker must have a valid passport to apply for or renew a work permit [Doc doc1_question7, Sen 40], and since work eligibility depends on holding a valid work permit tied to passport validity, an invalid passport directly prevents legal employment [Doc doc1_question5, Sen 18]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of an immigration official assessing compliance",
+            "result": "From the standpoint of an immigration official, how does validity of a passport relate to a worker's work permit status?",
+            "answer": "From the standpoint of an immigration official, validity of a passport is a prerequisite for issuing or extending a work permit; a worker must have a valid passport to apply for or renew a work permit [Doc doc1_question7, Sen 40], and since work eligibility depends on holding a valid work permit tied to passport validity, an invalid passport directly prevents legal employment [Doc doc1_question5, Sen 18]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that the assessment is made under standard regulatory procedures without exceptional waivers",
+            "result": "Under standard regulatory procedures without exceptional waivers, from the standpoint of an immigration official, how does validity of a passport relate to a worker's work permit status?",
+            "answer": "Under standard regulatory procedures without exceptional waivers, from the standpoint of an immigration official, validity of a passport is a mandatory requirement for processing a work permit application or renewal; a worker must have a valid passport to apply for or renew a work permit [Doc doc1_question7, Sen 40], and since work eligibility depends on holding a valid work permit tied to passport validity, an invalid passport directly prevents legal employment [Doc doc1_question5, Sen 18]."
+          }
+        ],
+        "rephrased-questions-part": [
+          {
+            "transformation": "Temporal Expansion",
+            "explanation": "Extend the time frame to examine how passport validity impacts work permit acquisition and renewal over multiple stages of a worker's employment lifecycle, including initial application, mid-term renewal, and long-term status maintenance.",
+            "result": "How does passport validity affect a worker's ability to obtain or renew a work permit during the initial application, mid-term renewal, and long-term employment status maintenance phases?",
+            "answer": "A worker must have a valid passport to apply for or renew a work permit [Doc doc1_question7, Sen 40], and since work eligibility depends on holding a valid work permit tied to passport validity, an invalid passport directly prevents legal employment [Doc doc1_question5, Sen 18]. This supports the impact during initial application and renewal stages. However, the specific implications of passport validity on long-term employment status maintenance—such as cumulative effects over years or interactions with permanent residency pathways—are not detailed in the provided clues.",
+            "reordered-question": "How does the validity of a passport influence a worker's capacity to acquire or extend a work permit during the initial application, mid-term renewal, and long-term employment status maintenance phases?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Comparison Addition",
+            "explanation": "Introduce a comparison between workers with passports expiring within one year versus those with passports valid for more than three years, assessing differences in work permit processing outcomes.",
+            "result": "How does passport validity affect a worker's ability to obtain or renew a work permit during the initial application, mid-term renewal, and long-term employment status maintenance phases, and how do outcomes differ between workers with passports valid for less than one year compared to those with passports valid for more than three years?",
+            "answer": "A worker must have a valid passport to apply for or renew a work permit [Doc doc1_question7, Sen 40], and since work eligibility depends on holding a valid work permit tied to passport validity, an invalid passport directly prevents legal employment [Doc doc1_question5, Sen 18]. This supports the general requirement across initial application and renewal stages. However, the provided clues do not specify whether the duration of passport validity—such as less than one year versus more than three years—affects processing timelines, approval rates, or conditions attached to the work permit. Therefore, comparative outcomes based on remaining validity periods cannot be determined from the available information.",
+            "reordered-question": "How does the validity of a passport influence a worker's capacity to acquire or extend a work permit during the initial application, mid-term renewal, and long-term employment status maintenance phases, and how do results vary between workers with passports valid for fewer than twelve months versus those with passports valid for more than thirty-six months?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Metric Segmentation",
+            "explanation": "Break down the impact of passport validity by type of work permit, including temporary, seasonal, and skilled worker permits, to assess variation in requirements across categories.",
+            "result": "How does passport validity affect a worker's ability to obtain or renew temporary, seasonal, and skilled worker permits during the initial application, mid-term renewal, and long-term employment status maintenance phases, and how do outcomes differ between workers with passports valid for less than one year compared to those with passports valid for more than three years?",
+            "answer": "A worker must have a valid passport to apply for or renew a work permit [Doc doc1_question7, Sen 40], and since work eligibility depends on holding a valid work permit tied to passport validity, an invalid passport directly prevents legal employment [Doc doc1_question5, Sen 18]. This indicates that passport validity is a universal prerequisite across work permit types. However, the provided clues do not differentiate requirements or processing outcomes by permit category—such as temporary, seasonal, or skilled worker permits—and do not specify whether shorter or longer passport validity durations lead to different administrative treatments within these classifications. As such, segmented analysis by permit type and validity duration cannot be completed based on the given information.",
+            "reordered-question": "How does the validity of a passport influence a worker's capacity to acquire or extend temporary, seasonal, and skilled worker permits during the initial application, mid-term renewal, and long-term employment status maintenance phases, and how do results vary between workers with passports valid for fewer than twelve months versus those with passports valid for more than thirty-six months?",
+            "reordered-same-meaning-with-origin": true
+          }
+        ],
+        "rephrased-questions-hybrid": [
+          {
+            "transformation": "Equivalent Transformation: Near-synonym Replacement",
+            "explanation": "Replace \"affect\" with \"influence\", \"passport validity\" with \"validity of a passport\", and \"worker's ability\" with \"worker's eligibility\"",
+            "result": "How does validity of a passport influence a worker's eligibility to obtain or renew a work permit?",
+            "answer": "A worker must have a valid passport to apply for or renew a work permit [Doc doc1_question7, Sen 40], and since work eligibility depends on holding a valid work permit tied to passport validity, an invalid passport directly prevents legal employment [Doc doc1_question5, Sen 18].",
+            "reordered-question": "How does the validity of a passport impact a worker's eligibility to obtain or renew a work permit?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Equivalent Transformation: Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by removing specificity about both obtaining and renewing, focusing only on permit status in relation to travel document validity",
+            "result": "How does validity of a passport relate to a worker's work permit status?",
+            "answer": "Validity of a passport directly affects a worker's ability to maintain a valid work permit; a worker must have a valid passport to apply for or renew a work permit [Doc doc1_question7, Sen 40], and since work eligibility depends on holding a valid work permit tied to passport validity, an invalid passport directly prevents legal employment [Doc doc1_question5, Sen 18].",
+            "reordered-question": "What is the relationship between passport validity and a worker's work permit status?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Equivalent Transformation: Perspective Shift",
+            "explanation": "Pose the question from the perspective of an immigration official assessing compliance",
+            "result": "From the standpoint of an immigration official, how does validity of a passport relate to a worker's work permit status?",
+            "answer": "From the standpoint of an immigration official, validity of a passport is a prerequisite for issuing or extending a work permit; a worker must have a valid passport to apply for or renew a work permit [Doc doc1_question7, Sen 40], and since work eligibility depends on holding a valid work permit tied to passport validity, an invalid passport directly prevents legal employment [Doc doc1_question5, Sen 18].",
+            "reordered-question": "From the perspective of an immigration official, what is the relationship between passport validity and a worker's work permit status?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Equivalent Transformation: Conditional Addition",
+            "explanation": "Add a condition specifying that the assessment is made under standard regulatory procedures without exceptional waivers",
+            "result": "Under standard regulatory procedures without exceptional waivers, from the standpoint of an immigration official, how does validity of a passport relate to a worker's work permit status?",
+            "answer": "Under standard regulatory procedures without exceptional waivers, from the standpoint of an immigration official, validity of a passport is a mandatory requirement for processing a work permit application or renewal; a worker must have a valid passport to apply for or renew a work permit [Doc doc1_question7, Sen 40], and since work eligibility depends on holding a valid work permit tied to passport validity, an invalid passport directly prevents legal employment [Doc doc1_question5, Sen 18].",
+            "reordered-question": "Under standard regulatory procedures without exceptional waivers, from the perspective of an immigration official, what is the relationship between passport validity and a worker's work permit status?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Partial Transformation: Temporal Expansion",
+            "explanation": "Extend the time frame to examine the relationship between passport validity and work permit status over multiple renewal cycles, rather than a single instance of application or renewal.",
+            "result": "Under standard regulatory procedures without exceptional waivers, from the standpoint of an immigration official, how does the validity of a passport affect a worker's work permit status across consecutive permit cycles from 2020 to 2025?",
+            "answer": "Under standard regulatory procedures without exceptional waivers, validity of a passport is a mandatory requirement for processing a work permit application or renewal; a worker must have a valid passport to apply for or renew a work permit [Doc doc1_question7, Sen 40]. Since work eligibility depends on holding a valid work permit tied to passport validity, an invalid passport directly prevents legal employment [Doc doc1_question5, Sen 18]. Information regarding the specific impact of passport validity on work permit status in the years 2020, 2021, 2022, and 2025 is not provided in the given clues, limiting the ability to assess the relationship across the full 2020–2025 period.",
+            "reordered-question": "Under standard regulatory procedures without exceptional waivers, from the perspective of an immigration official, how does passport validity influence a worker's work permit status across consecutive permit cycles from 2020 to 2025?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Partial Transformation: Comparison Addition",
+            "explanation": "Introduce a comparison between workers under temporary employment programs and those under permanent residency tracks in terms of how passport validity affects their work permit status during the 2020–2025 period.",
+            "result": "Under standard regulatory procedures without exceptional waivers, from the standpoint of an immigration official, how does the validity of a passport affect work permit status for temporary employment program participants compared to permanent residency applicants across consecutive permit cycles from 2020 to 2025?",
+            "answer": "Under standard regulatory procedures without exceptional waivers, validity of a passport is a mandatory requirement for processing a work permit application or renewal; a worker must have a valid passport to apply for or renew a work permit [Doc doc1_question7, Sen 40]. Since work eligibility depends on holding a valid work permit tied to passport validity, an invalid passport directly prevents legal employment [Doc doc1_question5, Sen 18]. Information regarding the specific impact of passport validity on work permit status in the years 2020, 2021, 2022, and 2025 is not provided in the given clues. The distinction between temporary employment program participants and permanent residency applicants in relation to passport validity requirements and work permit outcomes is not addressed in the available information, making the comparative analysis incomplete based on current evidence.",
+            "reordered-question": "Under standard regulatory procedures without exceptional waivers, from the perspective of an immigration official, how does passport validity influence work permit status for temporary employment program participants relative to permanent residency applicants across consecutive permit cycles from 2020 to 2025?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Partial Transformation: Metric Segmentation",
+            "explanation": "Break down the impact of passport validity by different types of work permits, such as short-term skilled labor permits, seasonal agricultural permits, and intra-company transfer permits, within the 2020–2025 timeframe and across applicant categories.",
+            "result": "Under standard regulatory procedures without exceptional waivers, from the standpoint of an immigration official, how does the validity of a passport affect work permit status for short-term skilled labor permits, seasonal agricultural permits, and intra-company transfer permits when comparing temporary employment program participants to permanent residency applicants from 2020 to 2025?",
+            "answer": "Under standard regulatory procedures without exceptional waivers, validity of a passport is a mandatory requirement for processing a work permit application or renewal; a worker must have a valid passport to apply for or renew a work permit [Doc doc1_question7, Sen 40]. Since work eligibility depends on holding a valid work permit tied to passport validity, an invalid passport directly prevents legal employment [Doc doc1_question5, Sen 18]. Information regarding the specific impact of passport validity on work permit status in the years 2020, 2021, 2022, and 2025 is not provided in the given clues. The distinction between temporary employment program participants and permanent residency applicants in relation to passport validity requirements and work permit outcomes is not addressed in the available information. Furthermore, no details are provided about how passport validity impacts specific permit types such as short-term skilled labor permits, seasonal agricultural permits, or intra-company transfer permits, preventing segmentation by these metrics.",
+            "reordered-question": "Under standard regulatory procedures without exceptional waivers, from the perspective of an immigration official, how does passport validity influence work permit status for short-term skilled labor permits, seasonal agricultural permits, and intra-company transfer permits when comparing temporary employment program participants to permanent residency applicants from 2020 to 2025?",
+            "reordered-same-meaning-with-origin": true
+          }
+        ]
+      }
+    }
+  },
+  "15": {
+    "relationships": [
+      {
+        "source_entity_name": "Immediate Superior",
+        "target_entity_name": "Payroll Department",
+        "relationship_description": "The immediate superior receives the initial complaint from the worker and helps escalate it to the Payroll Department for resolution",
+        "sentences_used": "11,12",
+        "source_entity_id": 15,
+        "target_entity_id": 17,
+        "id": "doc1_question4"
+      },
+      {
+        "source_entity_name": "Salary Statement",
+        "target_entity_name": "Immediate Superior",
+        "relationship_description": "If there are issues with missing salary details, users are advised to contact their immediate superior for help",
+        "sentences_used": "49",
+        "source_entity_id": 68,
+        "target_entity_id": 15,
+        "id": "doc1_question9"
+      },
+      {
+        "source_entity_name": "MTS On The Go Apps",
+        "target_entity_name": "Immediate Superior",
+        "relationship_description": "When users face issues accessing the MTS On The Go apps, they are instructed to contact their immediate superior as a point of escalation",
+        "sentences_used": "49",
+        "source_entity_id": 67,
+        "target_entity_id": 15,
+        "id": "doc1_question9"
+      }
+    ],
+    "selected-relationships": {
+      "objective-relationships": [
+        {
+          "source_entity_name": "Salary Statement",
+          "target_entity_name": "Immediate Superior",
+          "relationship_description": "If there are issues with missing salary details, users are advised to contact their immediate superior for help",
+          "sentences_used": "49",
+          "source_entity_id": 68,
+          "target_entity_id": 15,
+          "id": "doc1_question9"
+        },
+        {
+          "source_entity_name": "Immediate Superior",
+          "target_entity_name": "Payroll Department",
+          "relationship_description": "The immediate superior receives the initial complaint from the worker and helps escalate it to the Payroll Department for resolution",
+          "sentences_used": "11,12",
+          "source_entity_id": 15,
+          "target_entity_id": 17,
+          "id": "doc1_question4"
+        }
+      ],
+      "objective-relationship-prompts": [
+        "<source_entity_name>Salary Statement</source_entity_name>\n<target_entity_name>Immediate Superior</target_entity_name>\n<relationship_desc>If there are issues with missing salary details, users are advised to contact their immediate superior for help</relationship_desc>",
+        "<source_entity_name>Immediate Superior</source_entity_name>\n<target_entity_name>Payroll Department</target_entity_name>\n<relationship_desc>The immediate superior receives the initial complaint from the worker and helps escalate it to the Payroll Department for resolution</relationship_desc>"
+      ]
+    },
+    "proposed-questions": {
+      "1-questions": {
+        "question": "What is the role of the Immediate Superior in resolving issues related to the Salary Statement and how is the Payroll Department involved?",
+        "objective-relationship-id": "1,2",
+        "reasoning": "The relationship between Salary Statement and Immediate Superior indicates that when there are missing salary details, users should contact their Immediate Superior. The relationship between Immediate Superior and Payroll Department shows that the Immediate Superior forwards the complaint to the Payroll Department for resolution. Combining these two relationships, the Immediate Superior acts as an intermediary who receives the initial report about Salary Statement issues and escalates it to the Payroll Department.",
+        "answer": "The Immediate Superior assists workers in addressing issues with the Salary Statement by receiving initial complaints and escalating them to the Payroll Department for resolution [Clue 1, 2].",
+        "positive": "The Immediate Superior assists workers in addressing issues with the Salary Statement by receiving initial complaints and escalating them to the Payroll Department for resolution [Doc doc1_question4, Sen 11, 12][Doc doc1_question9, Sen 49].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question9, Sen 49] correctly identifies the role of the immediate superior in addressing salary statement issues by stating that workers should contact their immediate superior or designated interpreter for assistance. The references [Doc doc1_question4, Sen 11, 12] directly support the Immediate Superior's role in receiving complaints and escalating them to the Payroll department. These sentences provide the most concise and direct answer to the question about the roles of both the Immediate Superior and the Payroll Department.",
+            "answer": "The Immediate Superior assists workers in addressing issues with the Salary Statement by receiving initial complaints and escalating them to the Payroll Department for resolution [Doc doc1_question4, Sen 11, 12][Doc doc1_question9, Sen 49]."
+          },
+          "long-answer": {
+            "reason": "In addition to the core references [Doc doc1_question4, Sen 11, 12] and [Doc doc1_question9, Sen 49], other relevant sentences that align with the question include [Doc doc1_question4, Sen 13, 14, 15, 16], which elaborate on how the Payroll Department investigates, resolves discrepancies, updates statements, and handles persistent issues. These sentences further explain the involvement of the Payroll Department beyond just escalation, providing a more complete picture of the process mentioned in the question. Therefore, including them strengthens the alignment with the full scope of the query.",
+            "answer": "The Immediate Superior assists workers in addressing issues with the Salary Statement by receiving initial complaints and escalating them to the Payroll Department for resolution [Doc doc1_question4, Sen 11, 12, 13, 14, 15, 16][Doc doc1_question9, Sen 49]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"role\" with \"function\", \"resolving issues\" with \"addressing concerns\", and \"Salary Statement\" with \"pay documentation\"",
+            "result": "What is the function of the Immediate Superior in addressing concerns related to the pay documentation and how is the Payroll Department involved?",
+            "answer": "The Immediate Superior assists workers in addressing concerns with the pay documentation by receiving initial complaints and escalating them to the Payroll Department for resolution [Doc doc1_question4, Sen 11, 12][Doc doc1_question9, Sen 49]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by omitting specificity about the type of involvement, leaving the nature of the Payroll Department's role less defined",
+            "result": "What is the function of the Immediate Superior in addressing concerns related to the pay documentation and what part does the Payroll Department play?",
+            "answer": "The Immediate Superior assists workers in addressing concerns with the pay documentation by receiving initial complaints and escalating them to the Payroll Department for resolution [Doc doc1_question4, Sen 11, 12][Doc doc1_question9, Sen 49]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of an employee encountering a discrepancy in their pay documentation",
+            "result": "From the standpoint of an employee identifying a discrepancy in pay documentation, what function does the Immediate Superior serve and what part does the Payroll Department play?",
+            "answer": "From the standpoint of an employee identifying a discrepancy in pay documentation, the Immediate Superior serves by receiving initial complaints and escalating them to the Payroll Department for resolution [Doc doc1_question4, Sen 11, 12][Doc doc1_question9, Sen 49]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that the issue arises due to a computational error in the automated payroll system",
+            "result": "When a computational error occurs in the automated payroll system, from the standpoint of an employee identifying a discrepancy in pay documentation, what function does the Immediate Superior serve and what part does the Payroll Department play?",
+            "answer": "When a computational error occurs in the automated payroll system, from the standpoint of an employee identifying a discrepancy in pay documentation, the Immediate Superior serves by receiving initial complaints and escalating them to the Payroll Department for resolution [Doc doc1_question4, Sen 11, 12][Doc doc1_question9, Sen 49]."
+          }
+        ],
+        "rephrased-questions-part": [
+          {
+            "transformation": "Temporal Expansion",
+            "explanation": "Extend the time frame to include not only current procedures but also historical practices and anticipated future processes regarding Salary Statement issue resolution.",
+            "result": "What has been the role of the Immediate Superior in resolving issues related to the Salary Statement from 2020 to 2025, how has the involvement of the Payroll Department evolved during this period, and what changes are expected in the next five years?",
+            "answer": "The Immediate Superior currently assists workers in addressing issues with the Salary Statement by receiving initial complaints and escalating them to the Payroll Department for resolution [Doc doc1_question4, Sen 11, 12][Doc doc1_question9, Sen 49]. Information about the role of the Immediate Superior or the involvement of the Payroll Department prior to 2023, between 2020 and 2022, from 2023 to 2025 beyond current descriptions, and any planned changes in the next five years is not provided in the given clues.",
+            "reordered-question": "What has been the function of the Immediate Superior in addressing concerns regarding the Salary Statement from 2020 to 2025, how has the participation of the Payroll Department changed during this timeframe, and what developments are anticipated in the subsequent five years?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Comparison Addition",
+            "explanation": "Introduce a comparison with another department, such as the Human Resources Department, in handling Salary Statement issues during the same period.",
+            "result": "What has been the role of the Immediate Superior in resolving issues related to the Salary Statement from 2020 to 2025 compared to the Human Resources Department, how has the involvement of the Payroll Department evolved during this period, and what changes are expected in the next five years?",
+            "answer": "The Immediate Superior currently assists workers in addressing issues with the Salary Statement by receiving initial complaints and escalating them to the Payroll Department for resolution [Doc doc1_question4, Sen 11, 12][Doc doc1_question9, Sen 49]. The involvement of the Human Resources Department in resolving Salary Statement issues, its comparative effectiveness or responsibilities relative to the Immediate Superior, and its interaction with the Payroll Department over the 2020–2025 period are not described in the provided clues. Information about the evolution of the Payroll Department's role beyond current escalation procedures and anticipated developments in the next five years is also not available.",
+            "reordered-question": "What has been the function of the Immediate Superior in addressing concerns regarding the Salary Statement from 2020 to 2025 in comparison to the Human Resources Department, how has the participation of the Payroll Department changed during this timeframe, and what developments are anticipated in the subsequent five years?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Metric Segmentation",
+            "explanation": "Break down the issue resolution process by types of salary discrepancies, such as overtime miscalculations, tax withholdings, and bonus payments, to assess the specific roles of the Immediate Superior and the Payroll Department.",
+            "result": "What has been the role of the Immediate Superior in resolving issues related to the Salary Statement from 2020 to 2025 compared to the Human Resources Department, how has the involvement of the Payroll Department varied across categories such as overtime miscalculations, tax withholdings, and bonus payments, and what changes are expected in the next five years?",
+            "answer": "The Immediate Superior currently assists workers in addressing issues with the Salary Statement by receiving initial complaints and escalating them to the Payroll Department for resolution [Doc doc1_question4, Sen 11, 12][Doc doc1_question9, Sen 49]. The involvement of the Human Resources Department in handling Salary Statement issues and its comparative role is not provided. The specific responsibilities of the Payroll Department in resolving distinct categories of salary discrepancies—such as overtime miscalculations, tax withholdings, and bonus payments—are not detailed in the clues. Data on how these roles may change in the next five years is also absent from the provided information.",
+            "reordered-question": "What has been the function of the Immediate Superior in addressing concerns regarding the Salary Statement from 2020 to 2025 in comparison to the Human Resources Department, how has the participation of the Payroll Department differed across types of issues including overtime miscalculations, tax withholdings, and bonus payments, and what developments are anticipated in the subsequent five years?",
+            "reordered-same-meaning-with-origin": true
+          }
+        ],
+        "rephrased-questions-hybrid": [
+          {
+            "transformation": "Equivalent Transformation: Near-synonym Replacement",
+            "explanation": "Replace \"role\" with \"function\", \"resolving issues\" with \"addressing concerns\", and \"Salary Statement\" with \"pay documentation\"",
+            "result": "What is the function of the Immediate Superior in addressing concerns related to the pay documentation and how is the Payroll Department involved?",
+            "answer": "The Immediate Superior assists workers in addressing concerns with the pay documentation by receiving initial complaints and escalating them to the Payroll Department for resolution [Doc doc1_question4, Sen 11, 12][Doc doc1_question9, Sen 49].",
+            "reordered-question": "What role does the Immediate Superior play in resolving issues concerning pay documentation, and how is the Payroll Department engaged in this process?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Equivalent Transformation: Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by omitting specificity about the type of involvement, leaving the nature of the Payroll Department's role less defined",
+            "result": "What is the function of the Immediate Superior in addressing concerns related to the pay documentation and what part does the Payroll Department play?",
+            "answer": "The Immediate Superior assists workers in addressing concerns with the pay documentation by receiving initial complaints and escalating them to the Payroll Department for resolution [Doc doc1_question4, Sen 11, 12][Doc doc1_question9, Sen 49].",
+            "reordered-question": "What responsibility does the Immediate Superior have in managing concerns about pay documentation, and what involvement does the Payroll Department have?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Equivalent Transformation: Perspective Shift",
+            "explanation": "Pose the question from the perspective of an employee encountering a discrepancy in their pay documentation",
+            "result": "From the standpoint of an employee identifying a discrepancy in pay documentation, what function does the Immediate Superior serve and what part does the Payroll Department play?",
+            "answer": "From the standpoint of an employee identifying a discrepancy in pay documentation, the Immediate Superior serves by receiving initial complaints and escalating them to the Payroll Department for resolution [Doc doc1_question4, Sen 11, 12][Doc doc1_question9, Sen 49].",
+            "reordered-question": "From the perspective of an employee who detects an inconsistency in pay documentation, what function does the Immediate Superior perform, and what contribution does the Payroll Department make?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Equivalent Transformation: Conditional Addition",
+            "explanation": "Add a condition specifying that the issue arises due to a computational error in the automated payroll system",
+            "result": "When a computational error occurs in the automated payroll system, from the standpoint of an employee identifying a discrepancy in pay documentation, what function does the Immediate Superior serve and what part does the Payroll Department play?",
+            "answer": "When a computational error occurs in the automated payroll system, from the standpoint of an employee identifying a discrepancy in pay documentation, the Immediate Superior serves by receiving initial complaints and escalating them to the Payroll Department for resolution [Doc doc1_question4, Sen 11, 12][Doc doc1_question9, Sen 49].",
+            "reordered-question": "In the event of a computational error in the automated payroll system, from the perspective of an employee who identifies a discrepancy in pay documentation, what duty does the Immediate Superior fulfill, and what function does the Payroll Department serve?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Partial Transformation: Temporal Expansion",
+            "explanation": "Extend the time frame to include not only the current instance of a computational error in the automated payroll system but also historical occurrences over the past three fiscal years, thereby broadening the scope of inquiry regarding the roles of the Immediate Superior and the Payroll Department.",
+            "result": "When computational errors have occurred in the automated payroll system over the past three fiscal years, from the standpoint of an employee identifying a discrepancy in pay documentation, what function has the Immediate Superior served and what role has the Payroll Department played in resolving such discrepancies?",
+            "answer": "When a computational error occurs in the automated payroll system, from the standpoint of an employee identifying a discrepancy in pay documentation, the Immediate Superior serves by receiving initial complaints and escalating them to the Payroll Department for resolution [Doc doc1_question4, Sen 11, 12][Doc doc1_question9, Sen 49]. Information regarding the involvement of the Immediate Superior and the Payroll Department in addressing computational errors in the automated payroll system during the preceding two fiscal years is not provided in the given clues. Therefore, while the current role of both entities is documented, their historical functions over the past three fiscal years cannot be fully determined based on the available information.",
+            "reordered-question": "Over the past three fiscal years, during instances of computational errors in the automated payroll system, from the perspective of an employee who identifies a discrepancy in pay documentation, what function has the Immediate Superior performed, and what role has the Payroll Department fulfilled in addressing such discrepancies?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Partial Transformation: Comparison Addition",
+            "explanation": "Introduce a comparison between the role of the Immediate Superior and the Payroll Department in the context of computational errors versus human data entry errors in the payroll system, to expand the analytical dimension of the question.",
+            "result": "When computational errors and human data entry errors have occurred in the payroll system over the past three fiscal years, from the standpoint of an employee identifying a discrepancy in pay documentation, how does the function of the Immediate Superior and the role of the Payroll Department differ between these two types of errors?",
+            "answer": "When a computational error occurs in the automated payroll system, from the standpoint of an employee identifying a discrepancy in pay documentation, the Immediate Superior serves by receiving initial complaints and escalating them to the Payroll Department for resolution [Doc doc1_question4, Sen 11, 12][Doc doc1_question9, Sen 49]. Information regarding the handling of human data entry errors, including the respective functions of the Immediate Superior and the Payroll Department in such cases, is not provided in the given clues. Additionally, data on error resolution patterns over the past three fiscal years for either error type is incomplete. Therefore, while the role of the Immediate Superior and the Payroll Department in computational errors is partially known, the comparative analysis between error types cannot be completed based on existing information.",
+            "reordered-question": "Across the past three fiscal years, when both computational errors and human data entry errors have arisen in the payroll system, from the perspective of an employee who identifies a discrepancy in pay documentation, how does the function of the Immediate Superior vary between these two categories of errors, and how does the role of the Payroll Department differ accordingly?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Partial Transformation: Explanation of Reasons",
+            "explanation": "Require not only a description of the differing roles of the Immediate Superior and the Payroll Department in response to computational versus human data entry errors, but also an explanation of the underlying organizational or procedural reasons for any observed differences.",
+            "result": "When computational errors and human data entry errors have occurred in the payroll system over the past three fiscal years, from the standpoint of an employee identifying a discrepancy in pay documentation, how does the function of the Immediate Superior and the role of the Payroll Department differ between these two types of errors, and what organizational policies or structural factors explain any such differences?",
+            "answer": "When a computational error occurs in the automated payroll system, from the standpoint of an employee identifying a discrepancy in pay documentation, the Immediate Superior serves by receiving initial complaints and escalating them to the Payroll Department for resolution [Doc doc1_question4, Sen 11, 12][Doc doc1_question9, Sen 49]. Information regarding the handling of human data entry errors, including the respective functions of the Immediate Superior and the Payroll Department in such cases, is not provided in the given clues. Furthermore, no details are available about organizational policies, hierarchical protocols, or structural design principles that govern the division of responsibilities between the Immediate Superior and the Payroll Department in response to different error types. Therefore, while the current escalation procedure for computational errors is documented, the comparative functional differences and their underlying justifications remain unaddressed by the available evidence.",
+            "reordered-question": "During the past three fiscal years, in cases involving computational errors and human data entry errors within the payroll system, from the perspective of an employee who identifies a discrepancy in pay documentation, how does the function of the Immediate Superior contrast with that of the Payroll Department across these error types, and what organizational policies or structural determinants account for any observed differences?",
+            "reordered-same-meaning-with-origin": true
+          }
+        ]
+      }
+    }
+  },
+  "48": {
+    "relationships": [
+      {
+        "source_entity_name": "Workers",
+        "target_entity_name": "Management",
+        "relationship_description": "Workers are advised to consult management to determine the specific reason for their work permit delay",
+        "sentences_used": "26",
+        "source_entity_id": 48,
+        "target_entity_id": 18,
+        "id": "doc1_question6"
+      },
+      {
+        "source_entity_name": "Special Pass",
+        "target_entity_name": "Workers",
+        "relationship_description": "Workers receive the Special Pass as a temporary solution and must ensure its renewal if the permit is still delayed",
+        "sentences_used": "27,30",
+        "source_entity_id": 44,
+        "target_entity_id": 48,
+        "id": "doc1_question6"
+      },
+      {
+        "source_entity_name": "Workers",
+        "target_entity_name": "Company Administration",
+        "relationship_description": "Company Administration oversees the entire permit application and renewal process, requiring workers to follow up regularly",
+        "sentences_used": "31,32",
+        "source_entity_id": 48,
+        "target_entity_id": 47,
+        "id": "doc1_question6"
+      },
+      {
+        "source_entity_name": "Workers",
+        "target_entity_name": "Management",
+        "relationship_description": "Workers are encouraged to stay informed and coordinate with management regarding their permit status",
+        "sentences_used": "33",
+        "source_entity_id": 48,
+        "target_entity_id": 18,
+        "id": "doc1_question6"
+      },
+      {
+        "source_entity_name": "Workers",
+        "target_entity_name": "Laminated Copy",
+        "relationship_description": "Workers are required to carry the laminated copy when going out and present it if inspected",
+        "sentences_used": "43,44",
+        "source_entity_id": 48,
+        "target_entity_id": 63,
+        "id": "doc1_question8"
+      },
+      {
+        "source_entity_name": "Workers",
+        "target_entity_name": "Designated Contact Person",
+        "relationship_description": "Workers must report to the designated contact person if the laminated copy is lost or damaged to obtain a replacement",
+        "sentences_used": "42",
+        "source_entity_id": 48,
+        "target_entity_id": 64,
+        "id": "doc1_question8"
+      },
+      {
+        "source_entity_name": "Workers",
+        "target_entity_name": "MTS On The Go Apps",
+        "relationship_description": "Workers can use the MTS On The Go apps to access digital copies of their passport or permit",
+        "sentences_used": "45",
+        "source_entity_id": 48,
+        "target_entity_id": 66,
+        "id": "doc1_question8"
+      }
+    ],
+    "selected-relationships": {
+      "objective-relationships": [
+        {
+          "source_entity_name": "Workers",
+          "target_entity_name": "Management",
+          "relationship_description": "Workers are advised to consult management to determine the specific reason for their work permit delay",
+          "sentences_used": "26",
+          "source_entity_id": 48,
+          "target_entity_id": 18,
+          "id": "doc1_question6"
+        },
+        {
+          "source_entity_name": "Workers",
+          "target_entity_name": "Laminated Copy",
+          "relationship_description": "Workers are required to carry the laminated copy when going out and present it if inspected",
+          "sentences_used": "43,44",
+          "source_entity_id": 48,
+          "target_entity_id": 63,
+          "id": "doc1_question8"
+        }
+      ],
+      "objective-relationship-prompts": [
+        "<source_entity_name>Workers</source_entity_name>\n<target_entity_name>Management</target_entity_name>\n<relationship_desc>Workers are advised to consult management to determine the specific reason for their work permit delay</relationship_desc>",
+        "<source_entity_name>Workers</source_entity_name>\n<target_entity_name>Laminated Copy</target_entity_name>\n<relationship_desc>Workers are required to carry the laminated copy when going out and present it if inspected</relationship_desc>"
+      ]
+    },
+    "proposed-questions": {
+      "1-questions": {
+        "question": "What action must Workers take if their work permit is delayed, and what document must they carry when going out?",
+        "objective-relationship-id": "1,2",
+        "reasoning": "Based on Clue 1, Workers are advised to consult Management to determine the specific reason for their work permit delay. From Clue 2, Workers are required to carry a Laminated Copy when going out and present it if inspected. Combining these two relationships, the question addresses both procedural actions related to work permit delays and documentation requirements during movement. The answer can be directly derived from the stated obligations in both clues.",
+        "answer": "Workers must consult Management to determine the reason for their work permit delay [Clue 1] and carry the Laminated Copy when going out, presenting it if inspected [Clue 2].",
+        "positive": "Workers must consult Management to determine the reason for their work permit delay [Doc doc1_question6, Sen 26] and carry the Laminated Copy when going out, presenting it if inspected [Doc doc1_question8, Sen 43, 44].",
+        "corrected-answer": {
+          "short-answer": {
+            "reason": "The reference [Doc doc1_question6, Sen 26] correctly points to the sentence stating that workers should check with management to identify the specific reason for the delay, which directly answers the first part of the question. The references [Doc doc1_question8, Sen 43, 44] correctly point to the sentences stating that workers should carry the laminated copy when going out and present it if inspected, which directly answer the second part of the question. These are the most concise sentences that fully address both parts of the question.",
+            "answer": "Workers must consult Management to determine the reason for their work permit delay [Doc doc1_question6, Sen 26] and carry the Laminated Copy when going out, presenting it if inspected [Doc doc1_question8, Sen 43, 44]."
+          },
+          "long-answer": {
+            "reason": "In addition to the direct answers in [Doc doc1_question6, Sen 26] and [Doc doc1_question8, Sen 43, 44], other relevant sentences that align with the context of the question include [Doc doc1_question6, Sen 27, 30, 32], which describe the procedural response to permit delays (e.g., issuance and renewal of Special Pass), and [Doc doc1_question8, Sen 45], which provides supplementary information about digital copies. Although digital copies are accessible via the MTS On The Go apps, the requirement to carry the laminated copy is emphasized because digital versions may not be accepted during inspections. Including these additional references strengthens alignment with the full scope of actions and documentation related to permit delays and carrying requirements.",
+            "answer": "Workers must consult Management to determine the reason for their work permit delay [Doc doc1_question6, Sen 26,27,30,32] and carry the Laminated Copy when going out, presenting it if inspected [Doc doc1_question8, Sen 43,44,45]."
+          }
+        },
+        "rephrased-questions": [
+          {
+            "transformation": "Near-synonym Replacement",
+            "explanation": "Replace \"must\" with \"are required to\", \"consult\" with \"seek guidance from\", and \"carry\" with \"possess\"",
+            "result": "What action are Workers required to take if their work permit is delayed, and what document are they required to possess when going out?",
+            "answer": "Workers are required to seek guidance from Management to determine the reason for their work permit delay [Doc doc1_question6, Sen 26] and possess the Laminated Copy when going out, presenting it if inspected [Doc doc1_question8, Sen 43, 44]."
+          },
+          {
+            "transformation": "Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by replacing precise verbs with more general phrasing without altering core meaning",
+            "result": "What steps are associated with Workers in the event of a work permit delay, and what document is linked to外出 activities?",
+            "answer": "Workers are required to seek guidance from Management to determine the reason for their work permit delay [Doc doc1_question6, Sen 26] and possess the Laminated Copy when going out, presenting it if inspected [Doc doc1_question8, Sen 43, 44]."
+          },
+          {
+            "transformation": "Perspective Shift",
+            "explanation": "Pose the question from the perspective of a compliance officer overseeing worker regulations",
+            "result": "From a compliance oversight standpoint, what actions are associated with Workers in the event of a work permit delay, and what document is linked to外出 activities?",
+            "answer": "From a compliance oversight standpoint, Workers are required to seek guidance from Management to determine the reason for their work permit delay [Doc doc1_question6, Sen 26] and possess the Laminated Copy when going out, presenting it if inspected [Doc doc1_question8, Sen 43, 44]."
+          },
+          {
+            "transformation": "Conditional Addition",
+            "explanation": "Add a condition specifying that procedures apply during standard operational status",
+            "result": "During standard operational status, from a compliance oversight standpoint, what actions are associated with Workers in the event of a work permit delay, and what document is linked to外出 activities?",
+            "answer": "During standard operational status, from a compliance oversight standpoint, Workers are required to seek guidance from Management to determine the reason for their work permit delay [Doc doc1_question6, Sen 26] and possess the Laminated Copy when going out, presenting it if inspected [Doc doc1_question8, Sen 43, 44]."
+          }
+        ],
+        "rephrased-questions-part": [
+          {
+            "transformation": "Temporal Expansion",
+            "explanation": "Extend the time frame to include both past delays and potential future delays in work permit processing, broadening the scope beyond immediate actions.",
+            "result": "What actions must Workers take in response to work permit delays that occurred in the previous month and those anticipated in the upcoming three months, and what document must they carry when going out during this period?",
+            "answer": "Workers must consult Management to determine the reason for their work permit delay [Doc doc1_question6, Sen 26] and carry the Laminated Copy when going out, presenting it if inspected [Doc doc1_question8, Sen 43, 44]. Information regarding work permit delays in the previous month or anticipated delays in the upcoming three months is not provided in the given clues, so the applicability of these actions across the extended timeframe cannot be confirmed beyond the current directive.",
+            "reordered-question": "What steps must Workers take regarding work permit delays from the previous month and expected in the next three months, and which document must Workers carry when going out during this time?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Comparison Addition",
+            "explanation": "Introduce a comparison between Workers and Trainees regarding required actions for permit delays and documents carried when going out.",
+            "result": "What actions must Workers take in response to work permit delays that occurred in the previous month and those anticipated in the upcoming three months, how do these actions compare to those required for Trainees, and what document must each group carry when going out during this period?",
+            "answer": "Workers must consult Management to determine the reason for their work permit delay [Doc doc1_question6, Sen 26] and carry the Laminated Copy when going out, presenting it if inspected [Doc doc1_question8, Sen 43, 44]. Information regarding actions required for Trainees in response to work permit delays, as well as the documents Trainees must carry when going out, is not provided in the given clues. Therefore, while the procedures for Workers are known, the comparative aspect involving Trainees cannot be addressed based on available information.",
+            "reordered-question": "What steps must Workers take regarding work permit delays from the previous month and expected in the next three months, how do these steps differ from those required for Trainees, and which document must Workers and Trainees carry when going out during this time?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Metric Segmentation",
+            "explanation": "Break down the requirements by type of movement outside the premises—routine travel versus official inspections—and differentiate documentation and consultation protocols accordingly.",
+            "result": "What actions must Workers take in response to work permit delays that occurred in the previous month and those anticipated in the upcoming three months, how do these actions compare to those required for Trainees, and what document must each group carry when going out during routine travel versus during periods of official inspection?",
+            "answer": "Workers must consult Management to determine the reason for their work permit delay [Doc doc1_question6, Sen 26] and carry the Laminated Copy when going out, presenting it if inspected [Doc doc1_question8, Sen 43, 44]. Information regarding actions required for Trainees in response to work permit delays is not provided in the given clues. Additionally, no distinction is made in the documentation requirement between routine travel and official inspection scenarios; therefore, while carrying the Laminated Copy is required generally, its specific application across different types of movement cannot be segmented based on current information.",
+            "reordered-question": "What steps must Workers take regarding work permit delays from the previous month and expected in the next three months, how do these steps compare with those required for Trainees, and which document must Workers and Trainees carry when going out during routine travel compared to periods of official inspection?",
+            "reordered-same-meaning-with-origin": true
+          }
+        ],
+        "rephrased-questions-hybrid": [
+          {
+            "transformation": "Equivalent Transformation: Near-synonym Replacement",
+            "explanation": "Replace \"must\" with \"are required to\", \"consult\" with \"seek guidance from\", and \"carry\" with \"possess\"",
+            "result": "What action are Workers required to take if their work permit is delayed, and what document are they required to possess when going out?",
+            "answer": "Workers are required to seek guidance from Management to determine the reason for their work permit delay [Doc doc1_question6, Sen 26] and possess the Laminated Copy when going out, presenting it if inspected [Doc doc1_question8, Sen 43, 44].",
+            "reordered-question": "What action must Workers take if their work permit is delayed, and what document must Workers possess when going out?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Equivalent Transformation: Semantic Ambiguity",
+            "explanation": "Introduce ambiguity by replacing precise verbs with more general phrasing without altering core meaning",
+            "result": "What steps are associated with Workers in the event of a work permit delay, and what document is linked to外出 activities?",
+            "answer": "Workers are required to seek guidance from Management to determine the reason for their work permit delay [Doc doc1_question6, Sen 26] and possess the Laminated Copy when going out, presenting it if inspected [Doc doc1_question8, Sen 43, 44].",
+            "reordered-question": "What procedure must Workers follow in the case of a work permit delay, and what document is associated with外出 activities for Workers?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Equivalent Transformation: Perspective Shift",
+            "explanation": "Pose the question from the perspective of a compliance officer overseeing worker regulations",
+            "result": "From a compliance oversight standpoint, what actions are associated with Workers in the event of a work permit delay, and what document is linked to外出 activities?",
+            "answer": "From a compliance oversight standpoint, Workers are required to seek guidance from Management to determine the reason for their work permit delay [Doc doc1_question6, Sen 26] and possess the Laminated Copy when going out, presenting it if inspected [Doc doc1_question8, Sen 43, 44].",
+            "reordered-question": "From a compliance oversight perspective, what procedure must Workers follow in the case of a work permit delay, and what document is associated with外出 activities for Workers?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Equivalent Transformation: Conditional Addition",
+            "explanation": "Add a condition specifying that procedures apply during standard operational status",
+            "result": "During standard operational status, from a compliance oversight standpoint, what actions are associated with Workers in the event of a work permit delay, and what document is linked to外出 activities?",
+            "answer": "During standard operational status, from a compliance oversight standpoint, Workers are required to seek guidance from Management to determine the reason for their work permit delay [Doc doc1_question6, Sen 26] and possess the Laminated Copy when going out, presenting it if inspected [Doc doc1_question8, Sen 43, 44].",
+            "reordered-question": "During standard operational status, from a compliance oversight perspective, what procedure must Workers follow in the case of a work permit delay, and what document is associated with外出 activities for Workers?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Partial Transformation: Temporal Expansion",
+            "explanation": "Extend the time frame to include non-standard operational statuses, such as emergency or transitional phases, in addition to standard operational status, to assess compliance actions and documentation requirements across broader conditions.",
+            "result": "During standard and emergency operational statuses, from a compliance oversight standpoint, what actions are associated with Workers in the event of a work permit delay, and what document is linked to外出 activities?",
+            "answer": "During standard operational status, from a compliance oversight standpoint, Workers are required to seek guidance from Management to determine the reason for their work permit delay [Doc doc1_question6, Sen 26] and possess the Laminated Copy when going out, presenting it if inspected [Doc doc1_question8, Sen 43, 44]. Information regarding Worker actions during emergency operational status in the case of a work permit delay and the applicable documentation for外出 activities during such periods is not provided in the given clues.",
+            "reordered-question": "During standard and emergency operational statuses, from a compliance oversight perspective, what procedure must Workers follow in the case of a work permit delay, and what document is associated with外出 activities for Workers?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Partial Transformation: Comparison Addition",
+            "explanation": "Introduce a comparison between Workers and Supervisors in terms of compliance actions and documentation requirements during work permit delays under standard and emergency operational statuses.",
+            "result": "During standard and emergency operational statuses, from a compliance oversight standpoint, how do the actions associated with Workers during a work permit delay compare to those of Supervisors, and what documents are linked to外出 activities for each role?",
+            "answer": "During standard operational status, from a compliance oversight standpoint, Workers are required to seek guidance from Management to determine the reason for their work permit delay [Doc doc1_question6, Sen 26] and possess the Laminated Copy when going out, presenting it if inspected [Doc doc1_question8, Sen 43, 44]. Information regarding the actions expected of Supervisors during work permit delays under standard or emergency operational statuses, the documentation they must carry for外出 activities, and any comparative differences between Workers and Supervisors is not provided in the given clues.",
+            "reordered-question": "During standard and emergency operational statuses, from a compliance oversight perspective, how do the procedures for Workers during a work permit delay compare to those for Supervisors, and what documents are associated with外出 activities for Workers and Supervisors?",
+            "reordered-same-meaning-with-origin": true
+          },
+          {
+            "transformation": "Partial Transformation: Metric Segmentation",
+            "explanation": "Break down compliance-related actions and documentation requirements by type of外出 activity—routine, official, and emergency—to assess whether different rules apply depending on the purpose of leaving the premises.",
+            "result": "During standard and emergency operational statuses, from a compliance oversight standpoint, how do the actions associated with Workers during a work permit delay differ based on the type of外出 activity—routine, official, and emergency—and what specific documents are required for each category?",
+            "answer": "During standard operational status, from a compliance oversight standpoint, Workers are required to seek guidance from Management to determine the reason for their work permit delay [Doc doc1_question6, Sen 26] and possess the Laminated Copy when going out, presenting it if inspected [Doc doc1_question8, Sen 43, 44]. The given clues do not specify whether different types of外出 activities—routine, official, or emergency—require different documentation or trigger distinct compliance procedures for Workers during a work permit delay, nor do they provide information about such distinctions under emergency operational status.",
+            "reordered-question": "During standard and emergency operational statuses, from a compliance oversight perspective, how do the procedures for Workers during a work permit delay vary by type of外出 activity—routine, official, and emergency—and what specific documents are required for each外出 activity type?",
+            "reordered-same-meaning-with-origin": true
+          }
+        ]
+      }
+    }
+  }
+}

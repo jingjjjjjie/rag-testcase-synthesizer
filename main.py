@@ -14,9 +14,10 @@ from src.components.final_answer_generator import FinalAnswerGenerator
 from src.components.rephrase_generator import RephraseGenerator
 from src.components.rephrase_generator_part import RephraseGeneratorPart
 from src.components.rephrase_generator_hybrid import RephraseGeneratorHybrid
+from src.components.paraphraser import Paraphraser
 
 parser = argparse.ArgumentParser(description='RAG Test Case Synthesizer')
-parser.add_argument('--env', type=str, default='multi_hop.env', help='Path to environment file (default: single_hop.env)')
+parser.add_argument('--env', type=str, default='single_hop.env', help='Path to environment file (default: single_hop.env)')
                     
 args = parser.parse_args()
 
@@ -121,18 +122,27 @@ load_dotenv(args.env)
 #     print(f"Rephrase Generator Part Complete: {success_num}/{all_num} items | Tokens: {prompt_tokens + completion_tokens:,}")
 #     print("=" * 80 + "\n")
 
-if os.getenv("REPHRASE_GENERATOR_HYBRID_CONTENT_INPUT_PATH", None) != None or os.getenv("REPHRASE_GENERATOR_HYBRID_ENTITYGRAPH_INPUT_PATH", None) != None:
+# if os.getenv("REPHRASE_GENERATOR_HYBRID_CONTENT_INPUT_PATH", None) != None or os.getenv("REPHRASE_GENERATOR_HYBRID_ENTITYGRAPH_INPUT_PATH", None) != None:
+#     print("=" * 80)
+#     print("RUNNING REPHRASE GENERATOR HYBRID".center(80))
+#     print("=" * 80)
+#     REPHRASE_GENERATOR_SAVE_INTERVAL = int(os.getenv("REPHRASE_GENERATOR_SAVE_INTERVAL", None))
+#     rephrase_generator_hybrid = RephraseGeneratorHybrid(save_interval=REPHRASE_GENERATOR_SAVE_INTERVAL)
+#     prompt_tokens, completion_tokens, success_num, all_num = rephrase_generator_hybrid.run()
+#     print("\n" + "=" * 80)
+#     print(f"Rephrase Generator Hybrid Complete: {success_num}/{all_num} items | Tokens: {prompt_tokens + completion_tokens:,}")
+#     print("=" * 80 + "\n")
+
+if os.getenv("SENTENCE_ORDER_CHANGER_CONTENT_INPUT_PATH", None) != None or os.getenv("SENTENCE_ORDER_CHANGER_ENTITYGRAPH_INPUT_PATH", None) != None:
     print("=" * 80)
-    print("RUNNING REPHRASE GENERATOR HYBRID".center(80))
+    print("RUNNING SENTENCE ORDER CHANGER".center(80))
     print("=" * 80)
-    REPHRASE_GENERATOR_SAVE_INTERVAL = int(os.getenv("REPHRASE_GENERATOR_SAVE_INTERVAL", None))
-    rephrase_generator_hybrid = RephraseGeneratorHybrid(save_interval=REPHRASE_GENERATOR_SAVE_INTERVAL)
-    prompt_tokens, completion_tokens, success_num, all_num = rephrase_generator_hybrid.run()
+    SENTENCE_ORDER_CHANGER_SAVE_INTERVAL = int(os.getenv("SENTENCE_ORDER_CHANGER_SAVE_INTERVAL", None))
+    paraphraser = Paraphraser(save_interval=SENTENCE_ORDER_CHANGER_SAVE_INTERVAL)
+    prompt_tokens, completion_tokens, success_num, all_num = paraphraser.run()
     print("\n" + "=" * 80)
-    print(f"Rephrase Generator Hybrid Complete: {success_num}/{all_num} items | Tokens: {prompt_tokens + completion_tokens:,}")
+    print(f"Sentence Order Changer Complete: {success_num}/{all_num} items | Tokens: {prompt_tokens + completion_tokens:,}")
     print("=" * 80 + "\n")
-
-
 
 # total_prompt_tokens = preprocessor_prompt_tokens + fact_extractor_prompt_tokens
 # total_completion_tokens = preprocessor_completion_tokens + fact_extractor_completion_tokens
