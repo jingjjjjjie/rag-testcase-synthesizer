@@ -1,0 +1,44 @@
+I will provide you with a question, referred to as the "original question", an answer to the original question, and a rephrased "new question" derived from the original question. Your task is to help me generate detailed scoring criteria for this "new question".
+------
+Examples:
+
+Original Question: How much has Apple's revenue increased its revenue compared to last year?
+Answer: Apple's revenue increased by 6% year-over-year, reaching $94.9 billion.
+Rephrased Question:
+    <transformed-action>Temporal Expansion</transformed-action>
+    <transformed-explanation>Extend the time frame to inquire about revenue growth over multiple years.</transformed-explanation>
+    <transformed-question>What has been the revenue growth of Apple over the past three years compared to each preceding year?</transformed-question>
+    <transformed-answer>Apple's revenue increased by 6% year-over-year, reaching $94.9 billion [Doc https_www.trendforce.com_news_2024_11_01_news-apple-reports-6, Sen 2, 5]. I didn't get any information about the revenue growth in the previous two years, so a complete analysis over the past three years cannot be conducted based on the given clues.</transformed-answer>
+Scoring Criteria: If the response demonstrates the respondent's awareness of missing information for the two preceding years, award 1 point.
+
+Original Question: What has been the revenue growth of Apple over the past three years compared to each preceding year?
+Answer: Apple's revenue increased by 6% year-over-year, reaching $94.9 billion [Doc https_www.trendforce.com_news_2024_11_01_news-apple-reports-6, Sen 2, 5]. I didn't get any information about the revenue growth in the previous two years, so a complete analysis over the past three years cannot be conducted based on the given clues.
+Rephrased Question:
+    <transformed-action>Comparison Addition</transformed-action>
+    <transformed-explanation>Introduce a comparison with the revenue growth of key competitors during the same period.</transformed-explanation>
+    <transformed-question>What has been the revenue growth of Apple over the past three years compared to each preceding year, and how does this growth compare to that of its main competitors?</transformed-question>
+    <transformed-answer>Apple's revenue increased by 6% year-over-year, reaching $94.9 billion [Doc https_www.trendforce.com_news_2024_11_01_news-apple-reports-6, Sen 2, 5]. However, I didn't get any information about the revenue in the previous two years or the growth of Apple's main competitors, so a comparison cannot be made based on the available clues.</transformed-answer>
+Scoring Criteria: If the response indicates the respondent's awareness that there is no available information regarding the growth of Apple's main competitors, award 1 point.
+
+Original Question: What has been the revenue growth of Apple over the past three years compared to each preceding year, and how does this growth compare to that of its main competitors?
+Answer: Apple's revenue increased by 6% year-over-year, reaching $94.9 billion [Doc https_www.trendforce.com_news_2024_11_01_news-apple-reports-6, Sen 2, 5]. However, I didn't get any information about the revenue in the previous two years or the growth of Apple's main competitors, so a comparison cannot be made based on the available clues.
+Rephrased Question:
+    <transformed-action>Metric Segmentation</transformed-action>
+    <transformed-explanation>Break down the revenue growth by specific product categories, such as hardware and services.</transformed-explanation>
+    <transformed-question>How does the revenue growth of Apple's overall revenue, along with hardware and services divisions over the past three years compare to each preceding year, and how does this growth compare to that of its main competitors?</transformed-question>
+    <transformed-answer>Apple's revenue increased by 6% year-over-year, reaching $94.9 billion [Doc https_www.trendforce.com_news_2024_11_01_news-apple-reports-6, Sen 2, 5]. However, I don't have specific data on the revenue growth of Apple's hardware and services divisions over the past three years, and I don't know anything about its competitors, so a detailed breakdown cannot be provided based on the given clues.</transformed-answer>
+Scoring Criteria: If the response demonstrates the respondent's understanding of the inability to provide detailed information about hardware and services divisions due to missing information, award 1 point.
+------
+Please note:
+(1) The scoring criteria should be formulated by comparing the original question with the transformed question, considering the answer, and reflecting on the transformation that led to the "new question".
+(2) Your scoring criteria should be detailed and comprehensive, meaning they should be clear enough to allow scoring based solely on the criteria, question, and answer, without needing additional knowledge.
+(3) The scoring criteria should begin with "If the response shows that the respondent recognizes/knows/understands ..." to indicate the expected behavior for awarding points.
+(4) The scoring criteria should focus on the respondent's understanding that the new sub-question about the change cannot be answered.
+
+Your output should strictly follow the format below.
+Scoring Criteria: (Here goes the scoring criterion)
+------
+[[TRANSFORMED QUESTION]]
+
+Begin! Please note that the maximum score for your evaluation criteria is only 1 point. It is crucial that you strictly generate the scoring criteria based on the differences between the transformed question and the original question, indicating that the generated answer should reflect its awareness of this "difference" and thus cannot be answered.
+------

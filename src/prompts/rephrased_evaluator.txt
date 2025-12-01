@@ -1,0 +1,53 @@
+I will provide you with a question, referred to as the "original question", an answer to the original question, and a rephrased "new question" derived from the original question. Your task is to help me generate detailed scoring criteria for this "new question".
+------
+Examples:
+
+Original Question: How much has Apple's revenue increased its revenue compared to last year?
+Answer: Apple's revenue increased by 6% year-over-year, reaching $94.9 billion.
+Rephrased Question:
+    <transformed-action>Near-synonym Replacement</transformed-action>
+    <transformed-explanation>Replace "Apple" with "the company led by Tim Cook"</transformed-explanation>
+    <transformed-question>How much has the company led by Tim Cook grown its revenue compared to last year?</transformed-question>
+    <transformed-answer>The company led by Tim Cook experienced a 6% growth in revenue year-over-year, reaching $94.9 billion [Doc https_www.trendforce.com_news_2024_11_01_news-apple-reports-6, Sen 2, 5].</transformed-answer>
+Scoring Criteria: If the response shows that the respondent understands "the company led by Tim Cook" refers to Apple and correctly associates it with revenue growth, award 1 point.
+
+Original Question: How much has the company led by Tim Cook grown its revenue compared to last year?
+Answer: The company led by Tim Cook experienced a 6% growth in revenue year-over-year, reaching $94.9 billion [Doc https_www.trendforce.com_news_2024_11_01_news-apple-reports-6, Sen 2, 5].
+Rephrased Question:
+    <transformed-action>Semantic Ambiguity</transformed-action>
+    <transformed-explanation>Introduce ambiguity by asking about revenue change without specifying the direction explicitly</transformed-explanation>
+    <transformed-question>What is the change in revenue for the company led by Tim Cook compared to the previous year?</transformed-question>
+    <transformed-answer>The company led by Tim Cook saw its revenue rise by 6% year-over-year, totaling $94.9 billion [Doc https_www.trendforce.com_news_2024_11_01_news-apple-reports-6, Sen 2, 5].</transformed-answer>
+Scoring Criteria: If the response demonstrates that the respondent knows the correct 6% year-over-year revenue increase and the total revenue of $94.9 billion, despite any ambiguity, award 1 point.
+
+Original Question: What is the change in revenue for the company led by Tim Cook compared to the previous year?
+Answer: The company led by Tim Cook saw its revenue rise by 6% year-over-year, totaling $94.9 billion [Doc https_www.trendforce.com_news_2024_11_01_news-apple-reports-6, Sen 2, 5].
+Rephrased Question:
+    <transformed-action>Perspective Shift</transformed-action>
+    <transformed-explanation>Pose the question from the perspective of a financial analyst</transformed-explanation>
+    <transformed-question>As a financial analyst, do you know the revenue change of the company led by Tim Cook compared to the previous fiscal year?</transformed-question>
+    <transformed-answer>From a financial analyst's perspective, the company led by Tim Cook demonstrated a 6% increase in revenue year-over-year, amounting to $94.9 billion [Doc https_www.trendforce.com_news_2024_11_01_news-apple-reports-6, Sen 2, 5].</transformed-answer>
+Scoring Criteria: If the response shows that the respondent recognizes "as a financial analyst" as irrelevant information and provides the correct revenue change, award 1 point.
+
+Original Question: As a financial analyst, do you know the revenue change of the company led by Tim Cook compared to the previous fiscal year?
+Answer: From a financial analyst's perspective, the company led by Tim Cook demonstrated a 6% increase in revenue year-over-year, amounting to $94.9 billion [Doc https_www.trendforce.com_news_2024_11_01_news-apple-reports-6, Sen 2, 5].
+Rephrased Question:
+    <transformed-action>Conditional Addition</transformed-action>
+    <transformed-explanation>Add a condition related to stable market conditions while maintaining the financial analyst perspective</transformed-explanation>
+    <transformed-question>As a financial analyst, do you know the revenue change of the company led by Tim Cook compared to the previous fiscal year, assuming stable market conditions?</transformed-question>
+    <transformed-answer>Assuming stable market conditions, from a financial analyst's perspective, the company led by Tim Cook achieved a 6% revenue growth year-over-year, reaching $94.9 billion [Doc https_www.trendforce.com_news_2024_11_01_news-apple-reports-6, Sen 2, 5].</transformed-answer>
+Scoring Criteria: If the response shows that the respondent recognizes "the condition of assuming stable market conditions" as irrelevant information and provides the correct revenue change, award 1 point.
+
+------
+Please note:
+(1) The scoring criteria should be formulated by comparing the original question with the transformed question, considering the answer, and reflecting on the transformation that led to the "new question".
+(2) The scoring criteria should be detailed and comprehensive, meaning they should be clear enough to allow scoring based solely on the criteria, question, and answer, without needing additional knowledge.
+(3) The scoring criteria should begin with "If the response shows that the respondent recognizes/knows/understands ..." to indicate the expected behavior for awarding points.
+
+Your output should strictly follow the format below.
+Scoring Criteria: (Here goes the scoring criterion)
+------
+[[TRANSFORMED QUESTION]]
+
+Begin!
+------

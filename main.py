@@ -4,6 +4,7 @@ import re
 import argparse
 from dotenv import load_dotenv
 
+from src import PROJECT_ROOT
 from src.components.preprocessor import Preprocessor
 from src.components.fact_extractor import FactExtractor
 from src.components.entity_extractor import EntityExtractor
@@ -15,6 +16,7 @@ from src.components.rephrase_generator import RephraseGenerator
 from src.components.rephrase_generator_part import RephraseGeneratorPart
 from src.components.rephrase_generator_hybrid import RephraseGeneratorHybrid
 from src.components.paraphraser import Paraphraser
+from src.components.rephrase_evaluator import rephrase_evaluator
 
 parser = argparse.ArgumentParser(description='RAG Test Case Synthesizer')
 parser.add_argument('--env', type=str, default='single_hop.env', help='Path to environment file (default: single_hop.env)')
@@ -23,6 +25,7 @@ args = parser.parse_args()
 
 load_dotenv()
 load_dotenv(args.env)
+
 
 
 # # Run the preprocessor
@@ -133,16 +136,41 @@ load_dotenv(args.env)
 #     print(f"Rephrase Generator Hybrid Complete: {success_num}/{all_num} items | Tokens: {prompt_tokens + completion_tokens:,}")
 #     print("=" * 80 + "\n")
 
-if os.getenv("SENTENCE_ORDER_CHANGER_CONTENT_INPUT_PATH", None) != None or os.getenv("SENTENCE_ORDER_CHANGER_ENTITYGRAPH_INPUT_PATH", None) != None:
-    print("=" * 80)
-    print("RUNNING SENTENCE ORDER CHANGER".center(80))
-    print("=" * 80)
-    SENTENCE_ORDER_CHANGER_SAVE_INTERVAL = int(os.getenv("SENTENCE_ORDER_CHANGER_SAVE_INTERVAL", None))
-    paraphraser = Paraphraser(save_interval=SENTENCE_ORDER_CHANGER_SAVE_INTERVAL)
-    prompt_tokens, completion_tokens, success_num, all_num = paraphraser.run()
-    print("\n" + "=" * 80)
-    print(f"Sentence Order Changer Complete: {success_num}/{all_num} items | Tokens: {prompt_tokens + completion_tokens:,}")
-    print("=" * 80 + "\n")
+# if os.getenv("SENTENCE_ORDER_CHANGER_CONTENT_INPUT_PATH", None) != None or os.getenv("SENTENCE_ORDER_CHANGER_ENTITYGRAPH_INPUT_PATH", None) != None:
+#     print("=" * 80)
+#     print("RUNNING SENTENCE ORDER CHANGER".center(80))
+#     print("=" * 80)
+#     SENTENCE_ORDER_CHANGER_SAVE_INTERVAL = int(os.getenv("SENTENCE_ORDER_CHANGER_SAVE_INTERVAL", None))
+#     paraphraser = Paraphraser(save_interval=SENTENCE_ORDER_CHANGER_SAVE_INTERVAL)
+#     prompt_tokens, completion_tokens, success_num, all_num = paraphraser.run()
+#     print("\n" + "=" * 80)
+#     print(f"Sentence Order Changer Complete: {success_num}/{all_num} items | Tokens: {prompt_tokens + completion_tokens:,}")
+#     print("=" * 80 + "\n")
+
+if os.getenv("REPHRASE_EVALUATOR_CONTENT_INPUT_PATH", None) != None or os.getenv("REPHRASE_EVALUATOR_ENTITYGRAPH_INPUT_PATH", None) != None:
+    print("Running Rephrase Evaluator")
+    REPHRASE_EVALUATOR_INPUT_PATH, REPHRASE_EVALUATOR_OUTPUT_PATH = None, None
+    if os.getenv("REPHRASE_EVALUATOR_CONTENT_INPUT_PATH", None) != None:
+        REPHRASE_EVALUATOR_INPUT_PATH = os.getenv("REPHRASE_EVALUATOR_CONTENT_INPUT_PATH")
+        REPHRASE_EVALUATOR_OUTPUT_PATH = os.getenv("REPHRASE_EVALUATOR_CONTENT_OUTPUT_PATH")
+    elif os.getenv("REPHRASE_EVALUATOR_ENTITYGRAPH_INPUT_PATH", None) != None:
+        REPHRASE_EVALUATOR_INPUT_PATH = os.getenv("REPHRASE_EVALUATOR_ENTITYGRAPH_INPUT_PATH")
+        REPHRASE_EVALUATOR_OUTPUT_PATH = os.getenv("REPHRASE_EVALUATOR_ENTITYGRAPH_OUTPUT_PATH")
+    else:
+        raise EnvironmentError("Environment variable 'REPHRASE_EVALUATOR_CONTENT_INPUT_PATH' or 'REPHRASE_EVALUATOR_ENTITYGRAPH_INPUT_PATH' is not set.")
+    REPHRASE_EVALUATOR_SAVE_INTERVAL = int(os.getenv("REPHRASE_EVALUATOR_SAVE_INTERVAL", 100))
+    REPHRASE_EVALUATOR_NUM_WORKERS = int(os.getenv("REPHRASE_EVALUATOR_NUM_WORKERS", 4))
+    REPHRASE_EVALUATOR_MAX_GEN_TIMES = int(os.getenv("REPHRASE_EVALUATOR_MAX_GEN_TIMES", 300))
+
+    rephrase_evaluator(
+        os.path.join(PROJECT_ROOT, REPHRASE_EVALUATOR_INPUT_PATH),
+        os.path.join(PROJECT_ROOT, REPHRASE_EVALUATOR_OUTPUT_PATH),
+        REPHRASE_EVALUATOR_SAVE_INTERVAL,
+        REPHRASE_EVALUATOR_NUM_WORKERS,
+        REPHRASE_EVALUATOR_MAX_GEN_TIMES
+    )
+    print("-" * 50)
+
 
 # total_prompt_tokens = preprocessor_prompt_tokens + fact_extractor_prompt_tokens
 # total_completion_tokens = preprocessor_completion_tokens + fact_extractor_completion_tokens
