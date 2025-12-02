@@ -1,0 +1,25 @@
+services:
+  logits-server:
+    container_name: logits-server
+    image: pytorch/pytorch:2.8.0-cuda12.8-cudnn9-devel
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app:ro
+    working_dir: /app
+    command: >
+      bash -c "pip uninstall -y torch torchvision &&
+               pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu128 &&
+               pip install --no-cache-dir -r requirements.txt &&
+               python logits.py"
+    environment:
+      - CUDA_VISIBLE_DEVICES=0  # Use GPU 0 (change to 2 if you prefer GPU 2)
+      - MODEL_PATH=/app/models/qwen2.5-7b-instruct
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ['0']  # Specify GPU 0
+              capabilities: [gpu]
+    restart: unless-stopped

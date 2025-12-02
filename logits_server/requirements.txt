@@ -1,6 +1,6 @@
 dotenv
 openai
-torch 
+torch
 torchvision
 tiktoken
 numpy
