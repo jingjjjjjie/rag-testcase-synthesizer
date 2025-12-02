@@ -54,5 +54,20 @@ def get_qwen_embeddings(texts, dim=1024):
     return embeddings, total_tokens
 
 
+def get_qwen_logprobs(prompt, answer):
+    client = OpenAI(
+        api_key=os.getenv("QWEN_API_KEY"),
+        base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+    )
+    
+    response = client.chat.completions.create(
+        model="qwen-turbo",
+        messages=[{"role": "user", "content": prompt}],
+        logprobs=True,  # Try this - may return null
+        top_logprobs=5
+    )
+    
+    print(response.choices[0].logprobs)  # Check if it's null
+    return response
 if __name__ == "__main__":
-    pass
+    get_qwen_logprobs("hello","bro")
