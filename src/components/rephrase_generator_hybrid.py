@@ -10,21 +10,9 @@ from src import PROJECT_ROOT
 from src.tools.json_utils import load_json,save_json
 from src.tools.api import call_api_qwen
 from src.tools.string_utils import read_text_file
+from src.tools.rag_utils import expand_numbers_and_ranges
 
 TEMPERATURE = float(os.getenv("TEMPERATURE", 0.6))
-
-def expand_numbers_and_ranges(numbers_and_ranges):
-    expanded_numbers = []
-    for item in numbers_and_ranges:
-        if '-' in item:  # It's a range like 'xx1-xx2'
-            start, end = map(int, item.split('-'))
-            if start > end:
-                start, end = end, start
-            expanded_numbers.extend(range(start, end + 1))
-        else:  # It's a single number
-            expanded_numbers.append(int(item))
-    expanded_numbers = list(sorted(list(set(expanded_numbers))))
-    return expanded_numbers
 
 
 def parse_transformations(text):

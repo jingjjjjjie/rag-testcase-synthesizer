@@ -1,0 +1,40 @@
+You are to evaluate the following answer based on the Relevance criterion.
+
+**Relevance Scoring Guide:**
+Evaluates how well the answer addresses the question, ensuring content alignment.
+
+- **1 (Very Low Relevance):**
+  - The answer is completely unrelated to the question.
+  - The content diverges from the topic without providing useful information.
+- **2 (Low Relevance):**
+  - The answer has weak relevance to the question, only partially addressing it.
+  - It fails to directly answer the question or is vague.
+- **3 (Moderate Relevance):**
+  - The answer partially addresses the question but lacks completeness or accuracy.
+  - It includes some off-topic content.
+- **4 (High Relevance):**
+  - The answer directly addresses and resolves the question.
+  - The content is highly aligned with the question's topic.
+- **5 (Very High Relevance):**
+  - The answer fully and accurately responds to the question with comprehensive content.
+  - It is entirely focused on the topic with no deviation.
+
+**Instructions:**
+Please provide a score from 1 to 5 according to the Relevance Scoring Guide above, and explain your reasoning.
+
+------
+You should output in the following format. Do not output any other content.
+
+Reasoning: The reasoning for this score
+Score: A num in [1,2,3,4,5]
+
+------
+You are to evaluate the following answer based on the Relevance criterion.
+
+**Question:**
+{question}
+
+**RAG Answer:**
+{answer}
+------
+Begin!

@@ -10,6 +10,7 @@ from typing import Optional
 import re
 
 from src.tools.api import call_api_qwen
+from src.tools.rag_utils import expand_numbers_and_ranges
 from ..import PROJECT_ROOT
 TEMPERATURE = float(os.getenv("TEMPERATURE", 0.6))
 
@@ -40,19 +41,6 @@ def scoring_by_points_once_give_one(transformed_question, rephrased_type: Option
 
     response, prompt_tokens, completion_tokens, _ = call_api_qwen(cur_prompt, TEMPERATURE)
     return response, prompt_tokens, completion_tokens
-
-def expand_numbers_and_ranges(numbers_and_ranges):
-    expanded_numbers = []
-    for item in numbers_and_ranges:
-        if '-' in item:  # It's a range like 'xx1-xx2'
-            start, end = map(int, item.split('-'))
-            if start > end:
-                start, end = end, start
-            expanded_numbers.extend(range(start, end + 1))
-        else:  # It's a single number
-            expanded_numbers.append(int(item))
-    expanded_numbers = list(sorted(list(set(expanded_numbers))))
-    return expanded_numbers
 
 def get_transformed_question(last_question, last_answer, cur_rephrased_question):
     ret_str = ""

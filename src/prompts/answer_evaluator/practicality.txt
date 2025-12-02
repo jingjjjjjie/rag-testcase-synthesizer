@@ -1,0 +1,40 @@
+You are to evaluate the following question based on the Practicality criterion.
+
+**Practicality Scoring Guide:**
+Evaluates the real-world significance of the question.
+
+- **1 (Very Low Practicality):**
+  - The question is completely unrelated to the target audience's needs and interests, lacking any practical value.
+  - The question is overly abstract or outdated.
+- **2 (Low Practicality):**
+  - The question has weak relevance to the target audience's needs, with limited practical value.
+  - It may be too theoretical with little real-world application.
+- **3 (Moderate Practicality):**
+  - The question is somewhat relevant to the audience's needs but lacks prominence.
+  - It has some practical value but is too general.
+- **4 (High Practicality):**
+  - The question clearly aligns with common needs and interests of the target audience.
+  - It has practical applications and can engage the audience.
+- **5 (Very High Practicality):**
+  - The question is highly relevant to core needs and interests of the audience.
+  - It offers significant practical value and directly helps the audience.
+
+**Instructions:**
+Please provide a score from 1 to 5 according to the Practicality Scoring Guide above, and explain your reasoning.
+
+------
+You should output in the following format. Do not output any other content.
+
+Reasoning: The reasoning for this score
+Score: A num in [1,2,3,4,5]
+
+------
+You are to evaluate the following question based on the Practicality criterion.
+
+**Question:**
+{question}
+
+**RAG Answer:**
+{answer}
+------
+Begin!

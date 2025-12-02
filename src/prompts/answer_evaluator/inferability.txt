@@ -1,0 +1,43 @@
+You are to evaluate the following answer based on the Inferability criterion.
+
+**Inferability Scoring Guide:**
+Evaluates if the answer can be reasonably inferred from the provided clues and the value of each clue.
+
+- **1 (Very Low Inferability):**
+  - The answer cannot be derived from the clues provided.
+  - The answer is correct but does not utilize the clues.
+- **2 (Low Inferability):**
+  - The relationship between the answer and clues is weak, with unclear reasoning.
+  - Clues contribute little to the answer.
+- **3 (Moderate Inferability):**
+  - The answer can be partially inferred from clues but requires additional information.
+  - Clues have some influence but are not the main basis.
+- **4 (High Inferability):**
+  - The answer is primarily inferred from the clues with clear reasoning.
+  - Clues significantly contribute to the answer.
+- **5 (Very High Inferability):**
+  - The answer is entirely derived from the clues with a direct reasoning process.
+  - All clues are crucial for forming the answer.
+
+**Instructions:**
+Please provide a score from 1 to 5 according to the Inferability Scoring Guide above, and explain your reasoning.
+------
+You should output in the following format. Do not output any other content.
+
+Reasoning: The reasoning for this score
+Score: A num in [1,2,3,4,5]
+
+------
+You are to evaluate the following answer based on the Inferability criterion.
+
+**Question:**
+{question}
+
+**RAG Answer:**
+{answer}
+
+**Clues:**
+{clues}
+
+------
+Begin!

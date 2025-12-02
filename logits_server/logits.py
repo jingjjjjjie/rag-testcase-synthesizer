@@ -7,7 +7,15 @@ import threading
 import queue
 from typing import List
 
-app = FastAPI()
+app = FastAPI(
+    title="Logits Server",
+    description="FastAPI service for calculating token probabilities using Qwen2.5-7B model",
+    version="1.0.0",
+    contact={
+        "name": "Jingjie",
+        "email": "zenkit@wiseai.tech"
+    }
+)
 
 # Create a global request queue
 request_queue = queue.Queue()
@@ -181,11 +189,7 @@ def calculate_probabilities(request: ProbabilityRequest):
     return response_data
 
 if __name__ == '__main__':
-    # LOGITS_MODEL_NAME = os.getenv("LOGITS_MODEL_NAME")
-    # print(f"Using model: {LOGITS_MODEL_NAME}")
-
-    # Use environment variable for model path, with fallback for local/Docker
-    model_path = os.getenv("MODEL_PATH", "/home/jingjie/rag-testcase-synthesizer/logits_server/models/qwen2.5-7b-instruct")
+    model_path = os.getenv("MODEL_PATH", None)
 
     # Load the tokenizer
     tokenizer = AutoTokenizer.from_pretrained(model_path, local_files_only=True, fix_mistral_regex=True)

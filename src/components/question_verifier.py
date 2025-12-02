@@ -7,31 +7,14 @@ from scipy.spatial.distance import jensenshannon
 from scipy.special import kl_div
 import numpy as np
 
-from .. import (
-    OpenAIModel,
-    CUSTOM_CORPUS_HOME,
-    CLIENT,
-    MODEL_NAME
-)
-
-def expand_numbers_and_ranges(numbers_and_ranges):
-    expanded_numbers = []
-    for item in numbers_and_ranges:
-        if '-' in item:  # It's a range like 'xx1-xx2'
-            start, end = map(int, item.split('-'))
-            if start > end:
-                start, end = end, start
-            expanded_numbers.extend(range(start, end + 1))
-        else:  # It's a single number
-            expanded_numbers.append(int(item))
-    expanded_numbers = list(sorted(list(set(expanded_numbers))))
-    return expanded_numbers
+from src import PROJECT_ROOT
+from src.tools.api import call_api_qwen
+from src.tools.json_utils import load_json,save_json
+from src.tools.string_utils import read_text_file
+from src.tools.rag_utils import expand_numbers_and_ranges
 
 class QuestionVerifier():
     def __init__(self, save_interval):
-        self.CLIENT = CLIENT
-        self.MODEL_NAME = MODEL_NAME
-
         self.QUESTION_VERIFIER_INPUT_PATH, self.QUESTION_VERIFIER_PROMPT_PATH, self.QUESTION_VERIFIER_OUTPUT_PATH = None, None, None
         if os.getenv("QUESTION_VERIFIER_CONTENT_INPUT_PATH", None) != None:
             self.QUESTION_VERIFIER_INPUT_PATH = os.getenv("QUESTION_VERIFIER_CONTENT_INPUT_PATH")
@@ -53,12 +36,10 @@ class QuestionVerifier():
         self.QUESTION_VERIFIER_MAX_GEN_TIMES = int(os.getenv("QUESTION_VERIFIER_MAX_GEN_TIMES", 300))
 
         if os.path.exists(self.QUESTION_VERIFIER_OUTPUT_PATH):
-            with open(self.QUESTION_VERIFIER_OUTPUT_PATH, "r", encoding="utf-8") as f:
-                self.inputs = json.load(f)
+            self.inputs = load_json(self.QUESTION_VERIFIER_OUTPUT_PATH)
             print(f"Loaded rephrase generator {len(self.inputs)} examples from {os.path.relpath(self.QUESTION_VERIFIER_OUTPUT_PATH, CUSTOM_CORPUS_HOME)}.")
         else:
-            with open(self.QUESTION_VERIFIER_INPUT_PATH, "r", encoding="utf-8") as f:
-                self.inputs = json.load(f)
+            self.inputs = load_json(self.QUESTION_VERIFIER_INPUT_PATH)
             print(f"Loaded rephrase generator {len(self.inputs)} examples from {os.path.relpath(self.QUESTION_VERIFIER_INPUT_PATH, CUSTOM_CORPUS_HOME)}.")
 
         if self.QUESTION_VERIFIER_MAX_GEN_TIMES == -1:
@@ -84,24 +65,31 @@ class QuestionVerifier():
             success_num = 0
             for i, cur_input in tqdm(enumerate(self.inputs), desc="Processing", total=len(self.inputs), dynamic_ncols=True):
 
-                proposed_questions = cur_input['proposed-questions']
-                objective_facts = cur_input['objective-facts']
+                proposed_questions = cur_input['proposed-questions'] # Dict of questions to verify
+                objective_facts = cur_input['objective-facts'] # List of all available clues/facts
                 
+                # Dictionary to store processed questions with verification results
                 clue_seqs = {}
-                if_already_processed = True
-                for proposed_question_type, proposed_question_dict in proposed_questions.items():
+                if_already_processed = True # Flag to check if this item has already been fully processed
+                # Check all proposed questions to see if they already have verification results
+                for proposed_question_type, proposed_question_dict in proposed_questions.items(): 
                     base_prob_key = self.LOGITS_MODEL_NAME + '-base-prob'
+                    # If any question lacks base probability, item needs processing
                     if base_prob_key not in proposed_question_dict or proposed_question_dict[base_prob_key] == None:
                         if_already_processed = False
 
                 if if_already_processed:
-                    continue
+                    continue # Skip this item if all questions already have verification results
 
+                # Process each proposed question for this input item
                 for proposed_question_type, proposed_question_dict in proposed_questions.items():
                     question_clue_ids = re.findall(r'\d+-\d+|\d+', proposed_question_dict['objective-facts'].strip())
                     question_clue_ids = expand_numbers_and_ranges(question_clue_ids)
+
+                     # Get the actual clue text for each ID (subtract 1 because IDs are 1-indexed) --- what ??
                     needed_clues = [objective_facts[int(clue_id)-1] for clue_id in question_clue_ids]
 
+                    # Construct the BASE prompt with ALL clues included
                     base_prompt = "Given clues:\n"
                     for idx, cur_clue in enumerate(needed_clues, start=1):
                         base_prompt += f"{idx}. {cur_clue}\n"
@@ -109,7 +97,9 @@ class QuestionVerifier():
                     base_prompt += f"Question: {proposed_question_dict['question']}\n"
                     base_prompt = question_verifier_prompt.replace("[[CONTEXT]]", base_prompt)
 
+                    # Create MODIFIED prompts, each with one clue removed
                     prompts = []
+                    # For each clue, create a version of the prompt without that clue
                     for clue_to_remove in range(len(needed_clues)):
                         modified_prompt = "Given clues:\n"
                         meet_or_not = False
@@ -128,6 +118,8 @@ class QuestionVerifier():
                     base_prob_key = self.LOGITS_MODEL_NAME + '-base-prob'
                     new_probs_key = self.LOGITS_MODEL_NAME + '-new-probs'
                     try:
+                         # Evaluate: compare base probability vs probabilities with each clue removed
+                        # Returns: base_prob (with all clues), new_probs (list with each clue removed), differences (KL divergences)
                         base_prob, new_probs, differences = self.evaluate_prompts(base_prompt, prompts, proposed_question_dict['answer'], method='kl')
                         proposed_question_dict[base_prob_key] = base_prob
                         proposed_question_dict[new_probs_key] = new_probs

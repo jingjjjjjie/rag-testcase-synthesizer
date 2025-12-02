@@ -1,9 +1,6 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-# Set the model name
 model_name = "Qwen/Qwen2.5-7B-Instruct"
-
-# Where to save it locally
 local_path = "./models/qwen2.5-7b-instruct"
 
 print("Downloading tokenizer...")
