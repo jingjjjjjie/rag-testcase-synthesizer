@@ -16,7 +16,8 @@ from src.components.rephrase_generator import RephraseGenerator
 from src.components.rephrase_generator_part import RephraseGeneratorPart
 from src.components.rephrase_generator_hybrid import RephraseGeneratorHybrid
 from src.components.paraphraser import Paraphraser
-from src.components.rephrase_evaluator import rephrase_evaluator
+from src.components.rephrase_evaluator import RephraseEvaluator
+from src.components.answer_evaluator import AnswerEvaluator
 
 parser = argparse.ArgumentParser(description='RAG Test Case Synthesizer')
 parser.add_argument('--env', type=str, default='single_hop.env', help='Path to environment file (default: single_hop.env)')
@@ -147,29 +148,35 @@ load_dotenv(args.env)
 #     print(f"Sentence Order Changer Complete: {success_num}/{all_num} items | Tokens: {prompt_tokens + completion_tokens:,}")
 #     print("=" * 80 + "\n")
 
-if os.getenv("REPHRASE_EVALUATOR_CONTENT_INPUT_PATH", None) != None or os.getenv("REPHRASE_EVALUATOR_ENTITYGRAPH_INPUT_PATH", None) != None:
-    print("Running Rephrase Evaluator")
-    REPHRASE_EVALUATOR_INPUT_PATH, REPHRASE_EVALUATOR_OUTPUT_PATH = None, None
-    if os.getenv("REPHRASE_EVALUATOR_CONTENT_INPUT_PATH", None) != None:
-        REPHRASE_EVALUATOR_INPUT_PATH = os.getenv("REPHRASE_EVALUATOR_CONTENT_INPUT_PATH")
-        REPHRASE_EVALUATOR_OUTPUT_PATH = os.getenv("REPHRASE_EVALUATOR_CONTENT_OUTPUT_PATH")
-    elif os.getenv("REPHRASE_EVALUATOR_ENTITYGRAPH_INPUT_PATH", None) != None:
-        REPHRASE_EVALUATOR_INPUT_PATH = os.getenv("REPHRASE_EVALUATOR_ENTITYGRAPH_INPUT_PATH")
-        REPHRASE_EVALUATOR_OUTPUT_PATH = os.getenv("REPHRASE_EVALUATOR_ENTITYGRAPH_OUTPUT_PATH")
-    else:
-        raise EnvironmentError("Environment variable 'REPHRASE_EVALUATOR_CONTENT_INPUT_PATH' or 'REPHRASE_EVALUATOR_ENTITYGRAPH_INPUT_PATH' is not set.")
-    REPHRASE_EVALUATOR_SAVE_INTERVAL = int(os.getenv("REPHRASE_EVALUATOR_SAVE_INTERVAL", 100))
-    REPHRASE_EVALUATOR_NUM_WORKERS = int(os.getenv("REPHRASE_EVALUATOR_NUM_WORKERS", 4))
-    REPHRASE_EVALUATOR_MAX_GEN_TIMES = int(os.getenv("REPHRASE_EVALUATOR_MAX_GEN_TIMES", 300))
+# if os.getenv("REPHRASE_EVALUATOR_CONTENT_INPUT_PATH", None) != None or os.getenv("REPHRASE_EVALUATOR_ENTITYGRAPH_INPUT_PATH", None) != None:
+#     print("=" * 80)
+#     print("RUNNING REPHRASE EVALUATOR".center(80))
+#     print("=" * 80)
+#     REPHRASE_EVALUATOR_SAVE_INTERVAL = int(os.getenv("REPHRASE_EVALUATOR_SAVE_INTERVAL", 100))
+#     rephrase_evaluator = RephraseEvaluator(save_interval=REPHRASE_EVALUATOR_SAVE_INTERVAL)
+#     new_gen_num, all_num, prompt_tokens, completion_tokens = rephrase_evaluator.run()
+#     print("\n" + "=" * 80)
+#     print(f"Rephrase Evaluator Complete: {new_gen_num}/{all_num} evaluations")
+#     print(f"Token Usage: Prompt={prompt_tokens:,} | Completion={completion_tokens:,} | Total={prompt_tokens + completion_tokens:,}")
+#     print("=" * 80 + "\n")
 
-    rephrase_evaluator(
-        os.path.join(PROJECT_ROOT, REPHRASE_EVALUATOR_INPUT_PATH),
-        os.path.join(PROJECT_ROOT, REPHRASE_EVALUATOR_OUTPUT_PATH),
-        REPHRASE_EVALUATOR_SAVE_INTERVAL,
-        REPHRASE_EVALUATOR_NUM_WORKERS,
-        REPHRASE_EVALUATOR_MAX_GEN_TIMES
-    )
-    print("-" * 50)
+if os.getenv("ANSWER_EVALUATOR_CONTENT_INPUT_PATH", None) != None or os.getenv("ANSWER_EVALUATOR_ENTITYGRAPH_INPUT_PATH", None) != None:
+    print("=" * 80)
+    print("RUNNING ANSWER EVALUATOR".center(80))
+    print("=" * 80)
+    ANSWER_EVALUATOR_SAVE_INTERVAL = int(os.getenv("ANSWER_EVALUATOR_SAVE_INTERVAL", 10))
+    answer_evaluator = AnswerEvaluator(save_interval=ANSWER_EVALUATOR_SAVE_INTERVAL)
+    new_gen_num, all_num, prompt_tokens, completion_tokens = answer_evaluator.run()
+    print("\n" + "=" * 80)
+    print(f"Answer Evaluator Complete: {new_gen_num}/{all_num} evaluations")
+    print(f"Token Usage: Prompt={prompt_tokens:,} | Completion={completion_tokens:,} | Total={prompt_tokens + completion_tokens:,}")
+    print("=" * 80 + "\n")
+
+   # if os.getenv("QUESTION_VERIFIER_CONTENT_INPUT_PATH", None) != None or os.getenv("QUESTION_VERIFIER_ENTITYGRAPH_INPUT_PATH", None) != None:
+    #     print("Running Question Verifier")
+    #     QUESTION_VERIFIER_SAVE_INTERVAL = int(os.getenv("QUESTION_VERIFIER_SAVE_INTERVAL", None))
+    #     question_verifier = QuestionVerifier(save_interval=QUESTION_VERIFIER_SAVE_INTERVAL)
+    #     question_verifier.run()
 
 
 # total_prompt_tokens = preprocessor_prompt_tokens + fact_extractor_prompt_tokens
